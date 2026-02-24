@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from "react-router";
 import { useRef, useEffect } from "react";
+import { Footer, Header } from "../shared/components/Semantic/Semantic";
 
 function MainLayout() {
     const mainRef = useRef<HTMLElement>(null);
@@ -12,7 +13,7 @@ function MainLayout() {
     return (
         <>
             <header className="Header">
-                
+                <Header />
             </header>
 
             <button
@@ -32,7 +33,7 @@ function MainLayout() {
                 <Outlet />
             </main>
 
-            {/* <Footer /> */}
+            <Footer />
         </>
     );
 }

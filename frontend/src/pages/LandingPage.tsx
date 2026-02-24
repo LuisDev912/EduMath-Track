@@ -3,7 +3,7 @@ import Card from "../shared/components/Cards/Card";
 export default function LandingPage() {
     return (
         <section>
-            <h1 className="heading-primary">MathTrack</h1>
+            <h1 className="heading-primary">Landing Page</h1>
             <p className="prose">Improve your math skills with real-time feedback and tracking</p>
             <div className="buttons">
                 <button>
