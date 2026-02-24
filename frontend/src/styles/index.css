@@ -176,3 +176,10 @@ button:active {
     gap: var(--space-sm);
     align-items: center;
 }
+
+.buttons-container{
+    display: grid;
+    gap: var(--space-sm);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: stretch;
+}
