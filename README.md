@@ -46,13 +46,40 @@ backend/
     index.ts
 
 frontend/
-  public/
-  src/
-    components/
-    pages/
-    hooks/
-    styles/
-    layout/
+  public/ # contains static files
+  src/ # Main directory 
+    app/ # Global app configuration
+
+    features/ # Organizes code based on functionalities (feature-based-architecture)
+      auth/
+        components/
+        hooks/
+        services/
+
+      game/ 
+        components/
+        hooks/
+        utils/
+
+      stats/
+        components/
+        hooks/
+
+      settings/
+        components/
+        hooks/
+
+    pages/ # Contains pages associated to the routes
+
+    shared/ # Contains reusable code without specific feature
+      components/
+      hooks/
+      utils/
+      types/
+
+    styles/ # Contains global UI
+
+    main.tsx
 
 .gitignore
 LICENSE

@@ -1,9 +1,9 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-const MainLayout = lazy(() => import('./layout/MainLayout.tsx'));
-const LandingPage = lazy(() => import('./pages/LandingPage.tsx'));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage.tsx'))
+const MainLayout = lazy(() => import('./MainLayout.tsx'));
+const LandingPage = lazy(() => import('../pages/LandingPage.tsx'));
+const NotFoundPage = lazy(() => import('../pages/NotFoundPage.tsx'))
 
 function App() {
   return (
