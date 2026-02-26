@@ -48,14 +48,6 @@ section {
     padding-block: 4rem;
 }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    max-width: 1270px;
-}
-
 /* --- text --- */
 
 .heading-primary {
