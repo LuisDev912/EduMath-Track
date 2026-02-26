@@ -1,3 +1,4 @@
+import NavItem from '../NavItem/NavItem';
 import SemanticStyles from './Semantic.module.css';
 
 export function Footer() {
@@ -24,7 +25,23 @@ export function Footer() {
 export function Header() {
     return (
         <header>
-            <h2 className={SemanticStyles.text}>MathTrack</h2>
+            <nav>
+                <ul>
+                    <li>
+                        <NavItem
+                            to='/'
+                        >
+                            MathTrack
+                        </NavItem>
+
+                        <NavItem
+                            to='/404'
+                        >
+                            404 page (temporal)
+                        </NavItem>
+                    </li>
+                </ul>
+            </nav>
         </header>
     );
 };
