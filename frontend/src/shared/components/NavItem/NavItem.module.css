@@ -1,0 +1,10 @@
+.itemAnchor {
+    color: var(--text-primary);
+}
+
+.active {
+    color: var(--color-accent);
+    font-weight: var(--weight-semibold);
+    text-decoration: underline;
+    text-decoration-thickness: 1.4px;
+}
