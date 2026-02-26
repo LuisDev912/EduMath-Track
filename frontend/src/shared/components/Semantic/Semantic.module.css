@@ -1,22 +1,18 @@
-/* === Header === */
+/* === Nav Bar === */
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: var(--space-sm);
-    gap: var(--space-sm);
-    background: var(--color-primary);
-    color: white;
+.nav{
+    display: grid;
+    background-color: #1c3a6d;
+    border-bottom: 1px solid var(--button-hover);
 }
 
-/* Header text */
+.nav ul{
+    list-style: none;
+    display: flex;
+}
 
-.text {
-    font-size: clamp(var(--font-size-lg), calc(4vw + 1rem), var(--font-size-xxl));
-    text-align: center;
-    font-style: italic;
-    font-family: var(--font-family-title);
+.homeLi{
+    margin-right: auto;
 }
 
 /* === Footer === */

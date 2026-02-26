@@ -25,15 +25,17 @@ export function Footer() {
 export function Header() {
     return (
         <header>
-            <nav>
+            <nav className={SemanticStyles.nav} aria-label='Main navigation'>
                 <ul>
-                    <li>
+                    <li className={SemanticStyles.homeLi}>
                         <NavItem
                             to='/'
                         >
                             MathTrack
                         </NavItem>
+                    </li>
 
+                    <li>
                         <NavItem
                             to='/404'
                         >

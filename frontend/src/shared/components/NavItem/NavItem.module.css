@@ -1,5 +1,7 @@
 .itemAnchor {
     color: var(--text-primary);
+    display: flex;
+    padding: var(--space-md) var(--space-xl);
 }
 
 .active {
