@@ -35,12 +35,19 @@ export function Header() {
                         </NavItem>
                     </li>
 
-                    <li>
-                        <NavItem
-                            to='/404'
-                        >
-                            404 page (temporal)
-                        </NavItem>
+                    <div className={SemanticStyles.mainNavigation}>
+                        <li>
+                            <NavItem
+                                to='/404'
+                            >
+                                Dashboard
+                            </NavItem>
+                        </li>
+                    </div>
+
+                    <li className={SemanticStyles.profile}>
+                        &#x1F464;
+                        {/* this list item will become a component */}
                     </li>
                 </ul>
             </nav>

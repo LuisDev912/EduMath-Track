@@ -3,17 +3,47 @@
 .nav{
     display: grid;
     background-color: #1c3a6d;
-    border-bottom: 1px solid var(--button-hover);
 }
 
 .nav ul{
     list-style: none;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100x, 1fr));
+    grid-template-areas: "home profile";
 }
 
 .homeLi{
-    margin-right: auto;
+    grid-area: home;
 }
+
+.profile{
+    border-radius: var(--radius-full);
+    background-color: var(--accent);
+    grid-area: profile;
+    margin: auto;
+    padding: var(--space-md)
+}
+
+.mainNavigation{
+    display: none;
+    grid-area: main-navigation;
+}
+
+@media screen and (min-width: 768px) {
+    .nav ul{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "home main-navigation profile"
+            /* [MathTrack] [dashboard, game, ...] [user profile] */
+        ;
+    }
+    
+    .mainNavigation{
+        display: block;
+    }
+}
+
+
 
 /* === Footer === */
 
