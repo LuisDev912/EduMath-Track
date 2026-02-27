@@ -32,6 +32,8 @@ export function Header() {
                 <ul>
                     <li className={SemanticStyles.homeLi}>
                         <h2
+                            role='link'
+                            aria-label='Go to the home page'
                             onClick={() => navigate('/')}
                             className='heading-primary pointer'
                         >
@@ -40,7 +42,7 @@ export function Header() {
                     </li>
 
                     <div className={SemanticStyles.mainNavigation}>
-                        <li>
+                        <li aria-label='Go to the dashboard page'>
                             <NavItem
                                 to='/404'
                             >
@@ -48,7 +50,7 @@ export function Header() {
                             </NavItem>
                         </li>
 
-                        <li>
+                        <li aria-label='Go to the practice page'>
                             <NavItem
                                 to='/404'
                             >
@@ -56,7 +58,7 @@ export function Header() {
                             </NavItem>
                         </li>
 
-                        <li>
+                        <li aria-label='Go to the statistics page'>
                             <NavItem
                                 to='/404'
                             >
@@ -65,7 +67,7 @@ export function Header() {
                         </li>
                     </div>
 
-                    <li className={SemanticStyles.profile}>
+                    <li className={SemanticStyles.profile} aria-label='Go to your profile'>
                         &#x1F464;
                         {/* this list item will become a component */}
                     </li>
