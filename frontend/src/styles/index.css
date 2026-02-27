@@ -58,6 +58,12 @@ section {
     letter-spacing: 0.02em;
 }
 
+@media screen and (min-width: 480px) {
+    .heading-primary{
+        font-size: var(--font-size-xxl);
+    }
+}
+
 .heading-secondary {
     font-family: var(--font-family-title);
     font-size: var(--font-size-lg);
