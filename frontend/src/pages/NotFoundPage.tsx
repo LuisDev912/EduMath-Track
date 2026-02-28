@@ -9,12 +9,14 @@ export default function NotFoundPage() {
 
     return (
         <section>
-            <h1>Oops!</h1>
-            <p>It seems like the page you were searching for does not exist</p>
+            <h1 className="heading-primary text-center">Oops!</h1>
+            <p className="text-center">It seems like the page you were searching for does not exist</p>
 
-            <button onClick={handleNavigate}>
-                Go to the home page
-            </button>
+            <div className="buttons">
+                <button onClick={handleNavigate}>
+                    Go to the home page
+                </button>
+            </div>
         </section>
     )
 };
