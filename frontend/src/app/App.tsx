@@ -13,13 +13,11 @@ const NotFoundPage = lazy(() => import('../pages/NotFoundPage.tsx'));
 
 function App() {
   return (
-    <Suspense fallback={<div style={{
-      maxWidth: '1280px',
-      margin: '0 auto',
-      padding: '15%',
-      fontSize: 'var(--font-size-lg)',
-      fontWeight: '600'
-    }}> wait until the content loads </div>} >
+    <Suspense fallback={
+      <div className='suspense'>
+        Wait until the content loads...
+      </div>
+    }>
 
       <Routes>
         {/* public layout */}

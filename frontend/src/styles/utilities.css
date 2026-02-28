@@ -3,22 +3,18 @@
 .text-center{ text-align: center;}
 
 /* === flex utilities === */
-.flex {
-    display: flex;
-}
+.flex { display: flex; }
 
 /* --- justify-content */
 
-.justify-center {
-    justify-content: center;
-}
+.justify-center { justify-content: center; }
 
-.justify-evenly {
-    justify-content: space-evenly;
-}
+.justify-evenly { justify-content: space-evenly; }
+
+/* --- align-items */
+
+.align-center{ align-items: center; }
 
 /* --- flex-direction */
 
-.flex-column {
-    flex-direction: column;
-}
+.flex-column { flex-direction: column; }

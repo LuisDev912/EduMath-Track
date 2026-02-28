@@ -48,6 +48,13 @@ section {
     padding-block: 4rem;
 }
 
+.suspense{
+    text-align: center;
+    margin-top: var(--space-xxl);
+    font-size: var(--font-size-lg);
+    font-weight: var(--weight-medium);
+}
+
 /* --- text --- */
 
 .heading-primary {
