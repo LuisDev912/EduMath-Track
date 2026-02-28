@@ -7,7 +7,7 @@ function PublicLayout() {
     return (
         <>
             <main
-                id="main-content"
+                id="private-content"
                 tabIndex={-1}
             >
                 <Outlet />

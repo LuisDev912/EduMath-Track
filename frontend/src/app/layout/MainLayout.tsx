@@ -24,7 +24,7 @@ function MainLayout() {
             </button>
 
             <main
-                id="main-content"
+                id="public-content"
                 tabIndex={-1}
                 ref={mainRef}
             >
