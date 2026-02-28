@@ -1,16 +1,23 @@
+import { useNavigate } from "react-router";
 import Card from "../shared/components/Cards/Card";
 
 export default function LandingPage() {
+    const navigate = useNavigate();
+
+    const handleNavigate = (path: string): void => {
+        navigate(path);
+    };
+
     return (
         <section>
             <h1 className="heading-primary">Landing Page</h1>
-            <p className="prose">Improve your math skills with real-time feedback and tracking</p>
+            <p>Improve your math skills with real-time feedback and tracking</p>
             <div className="buttons">
-                <button>
+                <button onClick={() => handleNavigate('/register')}>
                     Get Started
                 </button>
 
-                <button>
+                <button onClick={() => handleNavigate('/login')}>
                     Login
                 </button>
             </div>
