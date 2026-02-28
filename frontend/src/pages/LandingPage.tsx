@@ -15,7 +15,7 @@ export default function LandingPage() {
                 </button>
             </div>
 
-            <section className="buttons-container">
+            <section className="cards-container">
                 <Card
                     title="Real-time practice"
                     subtitle="Generate random numbers considering the difficult and mode"

@@ -40,7 +40,7 @@ a:active {
 main {
     padding-inline: 1.25rem;
     padding-block: 4rem;
-    margin: auto;
+    margin: 0 auto;
     max-width: 1270px;
 }
 
@@ -93,10 +93,6 @@ p {
 .italic {
     font-style: italic;
     color: var(--text-secondary);
-}
-
-.focus-text {
-    color: var(--color-accent);
 }
 
 /* micro typography */
@@ -175,7 +171,7 @@ button:active {
     align-items: center;
 }
 
-.buttons-container{
+.cards-container{
     display: grid;
     gap: var(--space-sm);
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
