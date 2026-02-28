@@ -1,9 +1,13 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-const MainLayout = lazy(() => import('./MainLayout.tsx'));
+// layouts
+const MainLayout = lazy(() => import('./layout/MainLayout.tsx'));
+const PublicLayout = lazy(() => import('./layout/PublicLayout.tsx'));
+
+// pages
 const LandingPage = lazy(() => import('../pages/LandingPage.tsx'));
-const NotFoundPage = lazy(() => import('../pages/NotFoundPage.tsx'))
+const NotFoundPage = lazy(() => import('../pages/NotFoundPage.tsx'));
 
 function App() {
   return (
@@ -16,16 +20,21 @@ function App() {
     }}> wait until the content loads </div>} >
 
       <Routes>
+
+        {/* public layout */}
+        <Route element={<PublicLayout />}>
+          <Route path="/" element={<LandingPage />} />
+        </Route>
+
+        {/* main layout */}
         <Route element={<MainLayout />}>
 
-          <Route path="/" element={<LandingPage />} />
           <Route path='*' element={<NotFoundPage />} />
-
         </Route>
       </Routes>
 
     </Suspense>
-  )
-}
+  );
+};
 
-export default App
+export default App;
