@@ -1,7 +1,9 @@
-export default function Register() {
+import AuthLayout from "../components/AutLayout"
+
+export default function Login() {
     return (
-        <section id="register">
-            
-        </section>
+        <AuthLayout id="register">
+            <h2></h2>
+        </AuthLayout>
     )
 };

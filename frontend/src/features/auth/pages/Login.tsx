@@ -1,7 +1,9 @@
+import AuthLayout from "../components/AutLayout"
+
 export default function Login() {
     return (
-        <section id="register">
-            
-        </section>
+        <AuthLayout id="login">
+            <h2></h2>
+        </AuthLayout>
     )
 };
