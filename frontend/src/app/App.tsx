@@ -7,8 +7,8 @@ const PublicLayout = lazy(() => import('./layout/PublicLayout.tsx'));
 
 // pages
 const LandingPage = lazy(() => import('../pages/LandingPage.tsx'));
-const RegisterPage = lazy(() => import('../pages/Register.tsx'));
-const LoginPage = lazy(() => import('../pages/Login.tsx'));
+const RegisterPage = lazy(() => import('../features/auth/pages/Register.tsx'));
+const LoginPage = lazy(() => import('../features/auth/pages/Login.tsx'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage.tsx'));
 
 function App() {
