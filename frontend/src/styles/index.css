@@ -55,6 +55,17 @@ section {
     font-weight: var(--weight-medium);
 }
 
+.transparent-border {
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: border-color var(--transition-fast);
+}
+
+.transparent-border:hover {
+    border-color: var(--color-accent);
+}
+
 /* --- text --- */
 
 .heading-primary {
