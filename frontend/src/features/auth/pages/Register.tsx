@@ -4,11 +4,20 @@ import AuthLayout from "../components/AuthLayout.tsx";
 export default function Register() {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [email, setEmail] = useState('');
 
     const handleRegister = (e: React.FormEvent<HTMLFormElement>) => {
+        if (password !== confirmPassword) {
+            alert("Passwords do not match");
+            return
+        };
+
         e.preventDefault();
         setUserName('');
         setPassword('');
+        setEmail('');
+        setConfirmPassword('');
     };
 
     return (
@@ -17,38 +26,66 @@ export default function Register() {
 
             <form id="register-form" method="POST" onSubmit={handleRegister}>
 
-                <label htmlFor="user-name" className="sr-only">Enter your username here:</label>
+                <label
+                    htmlFor="user-name"
+                    className="sr-only"
+                >
+                    Enter your username here:
+                </label>
                 <input
                     id="user-name"
                     type="text"
                     placeholder="Username"
+                    value={userName}
+                    onChange={(e) => setUserName(e.target.value)}
                     required
                     aria-required
                 />
 
-                <label htmlFor="user-email" className="sr-only">Enter your email here:</label>
+                <label
+                    htmlFor="user-email"
+                    className="sr-only"
+                >
+                    Enter your email here:
+                </label>
                 <input
                     id="user-email"
                     type="email"
                     placeholder="E-mail"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     required
                     aria-required
                 />
 
-                <label htmlFor="user-password" className="sr-only">Enter your password here:</label>
+                <label
+                    htmlFor="user-password"
+                    className="sr-only"
+                >
+                    Enter your password here:
+                </label>
                 <input
                     id="user-password"
                     type="password"
                     placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     required
                     aria-required
                 />
 
-                <label htmlFor="confirm-password" className="sr-only">Confirm your password here:</label>
+                <label
+                    htmlFor="confirm-password"
+                    className="sr-only"
+                >
+                    Confirm your password here:
+                </label>
                 <input
                     id="confirm-password"
                     type="password"
                     placeholder="Confirm password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                     required
                     aria-required
                 />

@@ -9,7 +9,7 @@ export default function Login() {
         e.preventDefault();
         setUserName('');
         setPassword('');
-    }
+    };
 
     return (
         <AuthLayout id="login">
@@ -17,20 +17,34 @@ export default function Login() {
 
             <form id="login-form" method="POST" onSubmit={handleLogin}>
 
-                <label htmlFor="user-name" className="sr-only">Enter your username here:</label>
+                <label
+                    htmlFor="user-name"
+                    className="sr-only"
+                >
+                    Enter your username here:
+                </label>
                 <input
                     id="user-name"
                     type="text"
                     placeholder="Username"
+                    value={userName}
+                    onChange={(e) => setUserName(e.target.value)}
                     required
                     aria-required
                 />
 
-                <label htmlFor="user-password" className="sr-only">Enter your password here:</label>
+                <label
+                    htmlFor="user-password"
+                    className="sr-only"
+                >
+                    Enter your password here:
+                </label>
                 <input
                     id="user-password"
                     type="password"
                     placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     required
                     aria-required
                 />
