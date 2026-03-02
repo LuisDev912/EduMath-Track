@@ -7,7 +7,7 @@
     /* dark blue */
     --accent: #3b82f6;
     --background: #1c1f39;
-    --input-bg: #1e293b;
+    --input-background: #2A3847;
 
     /* bright blue */
     --neutral: #f5f5f5;
@@ -20,6 +20,7 @@
     --text-dark: #1f2937;
 
     --color-accent: #BFA76A;
+    --accent-dark: #978455;
     /* Softer gold */
     --color-text: #F5F5F5;
     --color-text-secondary: #CCCCCC;
@@ -70,6 +71,7 @@
     /* ----- Shadows ----- */
     --shadow-soft: 0 1px 4px rgba(0, 0, 0, 0.1);
     --shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.623);
+    --shadow-strong: 0 4px 12px rgb(0, 0, 0);
 
     /* ----- Transition ----- */
     --transition-fast: 150ms ease;
