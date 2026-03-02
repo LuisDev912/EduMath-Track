@@ -9,6 +9,12 @@ export default function Register() {
         confirmPassword: ''
     });
 
+    const isFormValid =
+        form.userName.trim() !== '' &&
+        form.email.includes('@') &&
+        form.password.length >= 6 &&
+        form.password === form.confirmPassword;
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
 
@@ -105,6 +111,8 @@ export default function Register() {
                     type="submit"
                     value="Create Account"
                     id="register-submit"
+                    disabled={!isFormValid}
+                    aria-disabled={!isFormValid}
                 />
             </form>
         </AuthLayout>

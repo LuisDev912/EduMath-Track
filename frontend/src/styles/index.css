@@ -242,3 +242,12 @@ input[type="submit"]:hover {
 input[type="submit"]:active {
     box-shadow: var(--shadow-strong);
 }
+
+input[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+input[type="submit"]:disabled:hover {
+    box-shadow: none;
+}

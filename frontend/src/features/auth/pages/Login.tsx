@@ -7,6 +7,10 @@ export default function Login() {
         password: ''
     });
 
+    const isFormValid =
+        form.userName.trim() !== '' &&
+        form.password.length >= 6;
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
 
@@ -64,6 +68,8 @@ export default function Login() {
                     type="submit"
                     value="Login"
                     id="login-submit"
+                    disabled={!isFormValid}
+                    aria-disabled={!isFormValid}
                 />
             </form>
         </AuthLayout>
