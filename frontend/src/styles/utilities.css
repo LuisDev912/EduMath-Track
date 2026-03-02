@@ -2,6 +2,10 @@
 
 .text-center{ text-align: center; }
 
+.max-w-700px{ max-width: 700px;}
+
+.m-auto{ margin: auto; }
+
 /* === flex utilities === */
 .flex { display: flex; }
 
