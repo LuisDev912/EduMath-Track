@@ -2,22 +2,29 @@ import { useState } from "react";
 import AuthLayout from "../components/AuthLayout.tsx";
 
 export default function Register() {
-    const [userName, setUserName] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [email, setEmail] = useState('');
+    const [form, setForm] = useState({
+        userName: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+
+        setForm(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
 
     const handleRegister = (e: React.FormEvent<HTMLFormElement>) => {
-        if (password !== confirmPassword) {
-            alert("Passwords do not match");
-            return
-        };
-
         e.preventDefault();
-        setUserName('');
-        setPassword('');
-        setEmail('');
-        setConfirmPassword('');
+
+        if (form.password !== form.confirmPassword) {
+            alert("Passwords do not match");
+            return;
+        };
     };
 
     return (
@@ -36,8 +43,9 @@ export default function Register() {
                     id="user-name"
                     type="text"
                     placeholder="Username"
-                    value={userName}
-                    onChange={(e) => setUserName(e.target.value)}
+                    name="userName"
+                    value={form.userName}
+                    onChange={handleChange}
                     required
                     aria-required
                 />
@@ -52,8 +60,9 @@ export default function Register() {
                     id="user-email"
                     type="email"
                     placeholder="E-mail"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
                     required
                     aria-required
                 />
@@ -68,8 +77,9 @@ export default function Register() {
                     id="user-password"
                     type="password"
                     placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    name="password"
+                    value={form.password}
+                    onChange={handleChange}
                     required
                     aria-required
                 />
@@ -84,8 +94,9 @@ export default function Register() {
                     id="confirm-password"
                     type="password"
                     placeholder="Confirm password"
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    name="confirmPassword"
+                    value={form.confirmPassword}
+                    onChange={handleChange}
                     required
                     aria-required
                 />

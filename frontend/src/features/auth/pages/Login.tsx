@@ -2,13 +2,22 @@ import { useState } from "react";
 import AuthLayout from "../components/AuthLayout.tsx";
 
 export default function Login() {
-    const [userName, setUserName] = useState('');
-    const [password, setPassword] = useState('');
+    const [form, setForm] = useState({
+        userName: '',
+        password: ''
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+
+        setForm(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    }
 
     const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setUserName('');
-        setPassword('');
     };
 
     return (
@@ -27,8 +36,9 @@ export default function Login() {
                     id="user-name"
                     type="text"
                     placeholder="Username"
-                    value={userName}
-                    onChange={(e) => setUserName(e.target.value)}
+                    name="userName"
+                    value={form.userName}
+                    onChange={handleChange}
                     required
                     aria-required
                 />
@@ -43,8 +53,9 @@ export default function Login() {
                     id="user-password"
                     type="password"
                     placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    name="password"
+                    value={form.password}
+                    onChange={handleChange}
                     required
                     aria-required
                 />
