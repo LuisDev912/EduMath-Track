@@ -13,7 +13,7 @@ export default function Register() {
 
     return (
         <AuthLayout id="register">
-            <h1 className="heading-primary">REGISTER</h1>
+            <h1 className="heading-primary text-center">REGISTER</h1>
 
             <form id="register-form" method="POST" onSubmit={handleRegister}>
 

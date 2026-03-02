@@ -13,7 +13,7 @@ export default function Login() {
 
     return (
         <AuthLayout id="login">
-            <h1 className="heading-primary">LOGIN</h1>
+            <h1 className="heading-primary text-center">LOGIN</h1>
 
             <form id="login-form" method="POST" onSubmit={handleLogin}>
 
