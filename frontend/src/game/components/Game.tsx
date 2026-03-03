@@ -1,6 +1,11 @@
 import { Activity, useState } from "react";
 import type { GameConfig } from "../../shared/types/GameConfig";
 
+// child components
+import AnswerForm from "./AnswerForm";
+import OperationDisplay from "./OperationDisplay";
+import GenerateOperation from "./GenerateOperation";
+
 function Game() {
     const [result, setResult] = useState<null | boolean>(null);
     const [gameConfig, setGameConfig] = useState<GameConfig>({
@@ -8,10 +13,12 @@ function Game() {
         secondNumber: 0
     });
 
-    const generateNumbers = () => {
+    const generateNumbers = (): void => {
         const a = Math.floor(Math.random() * 50) + 1;
         const b = Math.floor(Math.random() * 50) + 1;
+        console.log(a)
 
+        setResult(null);
         setGameConfig({
             firstNumber: a,
             secondNumber: b
@@ -24,6 +31,7 @@ function Game() {
 
     return (
         <section className="box">
+            <GenerateOperation onGenerate={generateNumbers} />
 
             <Activity mode={result ? "visible" : "hidden"}>
                 <p>
