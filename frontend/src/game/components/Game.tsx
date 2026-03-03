@@ -32,6 +32,7 @@ function Game() {
     return (
         <section className="box">
             <GenerateOperation onGenerate={generateNumbers} />
+            <OperationDisplay firstNum={gameConfig.firstNumber} secondNum={gameConfig.secondNumber} />
 
             <Activity mode={result ? "visible" : "hidden"}>
                 <p>

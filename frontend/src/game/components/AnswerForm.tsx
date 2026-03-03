@@ -1,4 +1,4 @@
-function AnswerForm() {
+function AnswerForm({}) {
 
 };
 
