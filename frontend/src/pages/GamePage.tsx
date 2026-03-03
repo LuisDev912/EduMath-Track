@@ -1,3 +1,10 @@
+// import Game.tsx
 export default function GamePage() {
-    return <p>game page</p>
+    return (
+        <section>
+            <h1 className="heading-primary text-center">Game</h1>
+
+            {/* <Game /> */}
+        </section>
+    )
 };
