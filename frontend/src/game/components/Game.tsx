@@ -33,6 +33,7 @@ function Game() {
         <section className="box">
             <GenerateOperation onGenerate={generateNumbers} />
             <OperationDisplay firstNum={gameConfig.firstNumber} secondNum={gameConfig.secondNumber} />
+            <AnswerForm onValidate={handleValidation} />
 
             <Activity mode={result ? "visible" : "hidden"}>
                 <p>
