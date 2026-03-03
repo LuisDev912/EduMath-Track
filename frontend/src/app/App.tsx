@@ -9,6 +9,7 @@ const PublicLayout = lazy(() => import('./layout/PublicLayout.tsx'));
 const LandingPage = lazy(() => import('../pages/LandingPage.tsx'));
 const RegisterPage = lazy(() => import('../features/auth/pages/Register.tsx'));
 const LoginPage = lazy(() => import('../features/auth/pages/Login.tsx'));
+const GamePage = lazy(() => import('../pages/GamePage.tsx'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage.tsx'));
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
 
         {/* main layout */}
         <Route element={<MainLayout />}>
+          <Route path="/game" element={<GamePage/>} />
           <Route path='*' element={<NotFoundPage />} />
         </Route>
       </Routes>
