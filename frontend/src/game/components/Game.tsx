@@ -30,13 +30,19 @@ function Game() {
 
     return (
         <section className="box">
-            <GenerateOperation onGenerate={generateNumbers} />
             <OperationDisplay firstNum={gameConfig.firstNumber} secondNum={gameConfig.secondNumber} />
+            <GenerateOperation onGenerate={generateNumbers} />
             <AnswerForm onValidate={handleValidation} />
 
             <Activity mode={result ? "visible" : "hidden"}>
+                <p className="correct-text">
+                    That is correct!
+                </p>
+            </Activity>
+
+            <Activity mode={result === false ? "visible" : "hidden"}>
                 <p>
-                    example
+                    This is not correct. The answer is: {gameConfig.firstNumber + gameConfig.secondNumber}
                 </p>
             </Activity>
         </section>

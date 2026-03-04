@@ -2,9 +2,11 @@
 
 .text-center{ text-align: center; }
 
-.max-w-600px{ max-width: 600px;}
+.max-w-600px{ max-width: 600px; }
 
 .m-auto{ margin: auto; }
+
+.correct-text{ color: #1cdd66; }
 
 /* === flex utilities === */
 .flex { display: flex; }
