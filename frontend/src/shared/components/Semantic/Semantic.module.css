@@ -14,6 +14,7 @@
 
 .homeLi{
     grid-area: home;
+    max-width: max-content;
 }
 
 .profile{
@@ -21,7 +22,7 @@
     background-color: var(--accent);
     grid-area: profile;
     margin: auto;
-    padding: var(--space-md)
+    padding: var(--space-md);
 }
 
 .mainNavigation{
