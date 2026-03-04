@@ -16,7 +16,6 @@ function Game() {
     const generateNumbers = (): void => {
         const a = Math.floor(Math.random() * 50) + 1;
         const b = Math.floor(Math.random() * 50) + 1;
-        console.log(a)
 
         setResult(null);
         setGameConfig({

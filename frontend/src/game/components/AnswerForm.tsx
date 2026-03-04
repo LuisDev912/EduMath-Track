@@ -1,9 +1,23 @@
 import { useRef } from "react";
-function AnswerForm({ onValidate }: { onValidate: () => void }) {
-    const answerRef = useRef(null);
+
+function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
+    const answerRef = useRef<HTMLInputElement | null>(null);
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        if (!answerRef.current) return;
+
+        const value = Number(answerRef.current.value);
+        onValidate(value);
+        answerRef.current.value = "";
+    };
+
     return (
         <form
             id="answer-form"
+            onSubmit={handleSubmit}
+            aria-label="Answer submission form"
         >
             <label
                 htmlFor="answer-input"
@@ -15,10 +29,11 @@ function AnswerForm({ onValidate }: { onValidate: () => void }) {
                 name="answer-input"
                 id="answer-input"
                 type="number"
-                placeholder="type the result"
-                min={0}
-                required
+                placeholder="Type the result"
+                min="0"
                 ref={answerRef}
+                required
+                aria-required
                 aria-describedby="answer-help"
             />
 
