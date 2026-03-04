@@ -1,8 +1,8 @@
 import Game from "../game/components/Game"
 export default function GamePage() {
     return (
-        <section>
-            <h1 className="heading-primary text-center">Game</h1>
+        <section className="flex flex-column align-center">
+            <h1 className="heading-primary">Game</h1>
 
             <Game />
         </section>
