@@ -20,6 +20,10 @@ export default function LandingPage() {
                 <button onClick={() => handleNavigate('/login')}>
                     Login
                 </button>
+
+                <button onClick={() => handleNavigate('/game')}>
+                    Demo
+                </button>
             </div>
 
             <section className="cards-container">
