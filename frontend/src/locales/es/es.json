@@ -1,0 +1,87 @@
+{
+  "app": {
+    "loading": "Espera mientras se carga el contenido..."
+  },
+  "layout": {
+    "skipToContent": "saltar al contenido"
+  },
+  "nav": {
+    "mainAriaLabel": "Navegación principal",
+    "primaryAriaLabel": "Principal",
+    "brand": "MathTrack",
+    "dashboard": "Panel",
+    "practice": "Práctica",
+    "stats": "Estadísticas",
+    "profileAriaLabel": "Perfil de usuario"
+  },
+  "landing": {
+    "title": "Página de inicio",
+    "subtitle": "Mejora tus habilidades matemáticas con retroalimentación y seguimiento en tiempo real",
+    "actions": {
+      "getStarted": "Comenzar",
+      "login": "Iniciar sesión",
+      "demo": "Demostración"
+    },
+    "cards": {
+      "realTimePractice": {
+        "title": "Práctica en tiempo real",
+        "subtitle": "Genera números aleatorios considerando la dificultad y el modo"
+      },
+      "trackProgress": {
+        "title": "Sigue tu progreso",
+        "subtitle": "Te ayuda durante tus prácticas registrando tus mejoras"
+      },
+      "multipleLevels": {
+        "title": "Múltiples niveles y modos",
+        "subtitle": "Elige tu nivel de dificultad y el tipo de operación que quieres practicar"
+      }
+    }
+  },
+  "notFound": {
+    "title": "¡Ups!",
+    "message": "Parece que la página que buscabas no existe",
+    "goHome": "Ir a la página principal"
+  },
+  "game": {
+    "title": "Juego",
+    "generate": "Generar",
+    "operation": "{{firstNum}} + {{secondNum}} = ?",
+    "answerForm": {
+      "ariaLabel": "Formulario de envío de respuestas",
+      "answerLabel": "Tu respuesta:",
+      "placeholder": "Escribe el resultado",
+      "helpText": "Ingresa la suma de ambos números y envía tu respuesta.",
+      "submit": "Enviar"
+    },
+    "feedback": {
+      "correct": "¡Eso es correcto!",
+      "incorrect": "Eso no es correcto. La respuesta es: {{answer}}"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "INICIAR SESIÓN",
+      "userLabel": "Ingresa tu nombre de usuario aquí:",
+      "passwordLabel": "Ingresa tu contraseña aquí:",
+      "userPlaceholder": "Nombre de usuario",
+      "passwordPlaceholder": "Contraseña",
+      "submit": "Iniciar sesión"
+    },
+    "register": {
+      "title": "REGISTRARSE",
+      "userLabel": "Ingresa tu nombre de usuario aquí:",
+      "emailLabel": "Ingresa tu correo electrónico aquí:",
+      "passwordLabel": "Ingresa tu contraseña aquí:",
+      "confirmPasswordLabel": "Confirma tu contraseña aquí:",
+      "userPlaceholder": "Nombre de usuario",
+      "emailPlaceholder": "Correo electrónico",
+      "passwordPlaceholder": "Contraseña",
+      "confirmPasswordPlaceholder": "Confirmar contraseña",
+      "submit": "Crear cuenta",
+      "passwordMismatch": "Las contraseñas no coinciden"
+    }
+  },
+  "footer": {
+    "version": "v{{version}}"
+  }
+}
