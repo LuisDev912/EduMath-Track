@@ -30,6 +30,15 @@
     grid-area: main-navigation;
 }
 
+.mainNavigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
 @media screen and (min-width: 768px) {
     .nav ul{
         grid-template-columns: repeat(3, 1fr);
@@ -40,9 +49,7 @@
     }
     
     .mainNavigation{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        display: block;
     }
 }
 

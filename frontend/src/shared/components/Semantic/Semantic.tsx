@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import NavItem from '../NavItem/NavItem';
 import SemanticStyles from './Semantic.module.css';
 
@@ -24,51 +24,48 @@ export function Footer() {
 }
 
 export function Header() {
-    const navigate = useNavigate();
-
     return (
         <header>
             <nav className={SemanticStyles.nav} aria-label='Main navigation'>
                 <ul>
                     <li className={SemanticStyles.homeLi}>
-                        <h2
-                            role='link'
-                            aria-label='Go to the home page'
-                            onClick={() => navigate('/')}
-                            className='heading-primary pointer'
-                        >
+                        <NavLink to='/' className='heading-primary'>
                             MathTrack
-                        </h2>
+                        </NavLink>
                     </li>
 
-                    <div className={SemanticStyles.mainNavigation}>
-                        <li aria-label='Go to the dashboard page'>
-                            <NavItem
-                                to='/404'
-                            >
-                                Dashboard
-                            </NavItem>
-                        </li>
+                    <li className={SemanticStyles.mainNavigation}>
+                        <ul aria-label='Primary'>
+                            <li>
+                                <NavItem
+                                    to='/404'
+                                >
+                                    Dashboard
+                                </NavItem>
+                            </li>
 
-                        <li aria-label='Go to the practice page'>
-                            <NavItem
-                                to='/404'
-                            >
-                                Practice
-                            </NavItem>
-                        </li>
+                            <li>
+                                <NavItem
+                                    to='/404'
+                                >
+                                    Practice
+                                </NavItem>
+                            </li>
 
-                        <li aria-label='Go to the statistics page'>
-                            <NavItem
-                                to='/404'
-                            >
-                                Stats
-                            </NavItem>
-                        </li>
-                    </div>
+                            <li>
+                                <NavItem
+                                    to='/404'
+                                >
+                                    Stats
+                                </NavItem>
+                            </li>
+                        </ul>
+                    </li>
 
-                    <li className={SemanticStyles.profile} aria-label='Go to your profile'>
-                        &#x1F464;
+                    <li className={SemanticStyles.profile}>
+                        <span role='img' aria-label='User profile'>
+                            &#x1F464;
+                        </span>
                         {/* this list item will become a component */}
                     </li>
                 </ul>
