@@ -1,0 +1,87 @@
+{
+  "app": {
+    "loading": "Wait until the content loads..."
+  },
+  "layout": {
+    "skipToContent": "skip to content"
+  },
+  "nav": {
+    "mainAriaLabel": "Main navigation",
+    "primaryAriaLabel": "Primary",
+    "brand": "MathTrack",
+    "dashboard": "Dashboard",
+    "practice": "Practice",
+    "stats": "Stats",
+    "profileAriaLabel": "User profile"
+  },
+  "landing": {
+    "title": "Landing Page",
+    "subtitle": "Improve your math skills with real-time feedback and tracking",
+    "actions": {
+      "getStarted": "Get Started",
+      "login": "Login",
+      "demo": "Demo"
+    },
+    "cards": {
+      "realTimePractice": {
+        "title": "Real-time practice",
+        "subtitle": "Generate random numbers considering the difficult and mode"
+      },
+      "trackProgress": {
+        "title": "Track your progress",
+        "subtitle": "Help you through your practices tracking improvements"
+      },
+      "multipleLevels": {
+        "title": "Multiple levels and modes",
+        "subtitle": "Choose your difficult level and the type of operation you want to practice"
+      }
+    }
+  },
+  "notFound": {
+    "title": "Oops!",
+    "message": "It seems like the page you were searching for does not exist",
+    "goHome": "Go to the home page"
+  },
+  "game": {
+    "title": "Game",
+    "generate": "Generate",
+    "operation": "{{firstNum}} + {{secondNum}} = ?",
+    "answerForm": {
+      "ariaLabel": "Answer submission form",
+      "answerLabel": "Your answer:",
+      "placeholder": "Type the result",
+      "helpText": "Enter the sum of both numbers and submit your answer.",
+      "submit": "Send"
+    },
+    "feedback": {
+      "correct": "That is correct!",
+      "incorrect": "This is not correct. The answer is: {{answer}}"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "LOGIN",
+      "userLabel": "Enter your username here:",
+      "passwordLabel": "Enter your password here:",
+      "userPlaceholder": "Username",
+      "passwordPlaceholder": "Password",
+      "submit": "Login"
+    },
+    "register": {
+      "title": "REGISTER",
+      "userLabel": "Enter your username here:",
+      "emailLabel": "Enter your email here:",
+      "passwordLabel": "Enter your password here:",
+      "confirmPasswordLabel": "Confirm your password here:",
+      "userPlaceholder": "Username",
+      "emailPlaceholder": "E-mail",
+      "passwordPlaceholder": "Password",
+      "confirmPasswordPlaceholder": "Confirm password",
+      "submit": "Create Account",
+      "passwordMismatch": "Passwords do not match"
+    }
+  },
+  "footer": {
+    "version": "v{{version}}"
+  }
+}
