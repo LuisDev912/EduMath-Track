@@ -31,11 +31,14 @@ function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
                 type="number"
                 placeholder="Type the result"
                 min="0"
+                inputMode="numeric"
                 ref={answerRef}
                 required
-                aria-required
                 aria-describedby="answer-help"
             />
+            <p id="answer-help" className="sr-only">
+                Enter the sum of both numbers and submit your answer.
+            </p>
 
             <button
                 id="answer-submit"
