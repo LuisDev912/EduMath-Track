@@ -1,5 +1,5 @@
 function GenerateOperation({ onGenerate }: { onGenerate: () => void }) {
-    return <button onClick={onGenerate}>Generate</button>
+    return <button type="button" onClick={onGenerate}>Generate</button>
 };
 
 export default GenerateOperation;

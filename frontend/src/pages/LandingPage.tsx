@@ -13,15 +13,15 @@ export default function LandingPage() {
             <h1 className="heading-primary">Landing Page</h1>
             <p>Improve your math skills with real-time feedback and tracking</p>
             <div className="buttons">
-                <button onClick={() => handleNavigate('/register')}>
+                <button type="button" onClick={() => handleNavigate('/register')}>
                     Get Started
                 </button>
 
-                <button onClick={() => handleNavigate('/login')}>
+                <button type="button" onClick={() => handleNavigate('/login')}>
                     Login
                 </button>
 
-                <button onClick={() => handleNavigate('/game')}>
+                <button type="button" onClick={() => handleNavigate('/game')}>
                     Demo
                 </button>
             </div>

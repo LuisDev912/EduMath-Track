@@ -13,7 +13,7 @@ export default function NotFoundPage() {
             <p className="text-center">It seems like the page you were searching for does not exist</p>
 
             <div className="buttons">
-                <button onClick={handleNavigate}>
+                <button type="button" onClick={handleNavigate}>
                     Go to the home page
                 </button>
             </div>
