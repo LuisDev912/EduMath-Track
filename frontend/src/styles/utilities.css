@@ -8,6 +8,8 @@
 
 .correct-text{ color: #1cdd66; }
 
+.text-lg{ font-size: var(--font-size-lg); }
+
 /* === flex utilities === */
 .flex { display: flex; }
 

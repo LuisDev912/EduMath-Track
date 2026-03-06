@@ -4,7 +4,7 @@ type Numbers = {
 }
 
 function OperationDisplay({ firstNum, secondNum }: Numbers) {
-    return <h3>{firstNum} + {secondNum} = ?</h3>
+    return <p className="text-lg">{firstNum} + {secondNum} = ?</p>
 };
 
 export default OperationDisplay;
