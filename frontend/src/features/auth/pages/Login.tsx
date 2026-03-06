@@ -43,8 +43,8 @@ export default function Login() {
                     name="userName"
                     value={form.userName}
                     onChange={handleChange}
+                    autoComplete="username"
                     required
-                    aria-required
                 />
 
                 <label
@@ -60,8 +60,8 @@ export default function Login() {
                     name="password"
                     value={form.password}
                     onChange={handleChange}
+                    autoComplete="current-password"
                     required
-                    aria-required
                 />
 
                 <input
@@ -69,7 +69,6 @@ export default function Login() {
                     value="Login"
                     id="login-submit"
                     disabled={!isFormValid}
-                    aria-disabled={!isFormValid}
                 />
             </form>
         </AuthLayout>

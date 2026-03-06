@@ -52,8 +52,8 @@ export default function Register() {
                     name="userName"
                     value={form.userName}
                     onChange={handleChange}
+                    autoComplete="username"
                     required
-                    aria-required
                 />
 
                 <label
@@ -69,8 +69,8 @@ export default function Register() {
                     name="email"
                     value={form.email}
                     onChange={handleChange}
+                    autoComplete="email"
                     required
-                    aria-required
                 />
 
                 <label
@@ -86,8 +86,8 @@ export default function Register() {
                     name="password"
                     value={form.password}
                     onChange={handleChange}
+                    autoComplete="new-password"
                     required
-                    aria-required
                 />
 
                 <label
@@ -103,8 +103,8 @@ export default function Register() {
                     name="confirmPassword"
                     value={form.confirmPassword}
                     onChange={handleChange}
+                    autoComplete="new-password"
                     required
-                    aria-required
                 />
 
                 <input
@@ -112,7 +112,6 @@ export default function Register() {
                     value="Create Account"
                     id="register-submit"
                     disabled={!isFormValid}
-                    aria-disabled={!isFormValid}
                 />
             </form>
         </AuthLayout>
