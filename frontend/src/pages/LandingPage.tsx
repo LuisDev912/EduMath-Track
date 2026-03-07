@@ -1,10 +1,13 @@
 import { useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
 import Card from "../shared/components/Cards/Card";
+import type { cardsTranslation } from "../shared/types/cardProps";
 
 export default function LandingPage() {
     const { t } = useTranslation();
     const navigate = useNavigate();
+
+    const cardsInformation = t("landing.cards", { returnObjects: true }) as cardsTranslation;
 
     const handleNavigate = (path: string): void => {
         navigate(path);
@@ -29,20 +32,13 @@ export default function LandingPage() {
             </div>
 
             <section className="cards-container">
-                <Card
-                    title={t("landing.cards.realTimePractice.title")}
-                    subtitle={t("landing.cards.realTimePractice.subtitle")}
-                />
-
-                <Card
-                    title={t("landing.cards.trackProgress.title")}
-                    subtitle={t("landing.cards.trackProgress.subtitle")}
-                />
-
-                <Card
-                    title={t("landing.cards.multipleLevels.title")}
-                    subtitle={t("landing.cards.multipleLevels.subtitle")}
-                />
+                {Object.entries(cardsInformation).map(([key, card]) => (
+                    <Card
+                        key={key}
+                        title={card.title}
+                        subtitle={card.subtitle}
+                    />
+                ))}
             </section>
         </section>
     );
