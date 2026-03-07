@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router";
+import { useTranslation } from "react-i18next";
 import Card from "../shared/components/Cards/Card";
 
 export default function LandingPage() {
+    const { t } = useTranslation();
     const navigate = useNavigate();
 
     const handleNavigate = (path: string): void => {
@@ -10,36 +12,36 @@ export default function LandingPage() {
 
     return (
         <section>
-            <h1 className="heading-primary">Landing Page</h1>
-            <p>Improve your math skills with real-time feedback and tracking</p>
+            <h1 className="heading-primary">{t("landing.title")}</h1>
+            <p>{t("landing.subtitle")}</p>
             <div className="buttons">
                 <button type="button" onClick={() => handleNavigate('/register')}>
-                    Get Started
+                    {t("landing.actions.getStarted")}
                 </button>
 
                 <button type="button" onClick={() => handleNavigate('/login')}>
-                    Login
+                    {t("landing.actions.login")}
                 </button>
 
                 <button type="button" onClick={() => handleNavigate('/game')}>
-                    Demo
+                    {t("landing.actions.demo")}
                 </button>
             </div>
 
             <section className="cards-container">
                 <Card
-                    title="Real-time practice"
-                    subtitle="Generate random numbers considering the difficult and mode"
+                    title={t("landing.cards.realTimePractice.title")}
+                    subtitle={t("landing.cards.realTimePractice.subtitle")}
                 />
 
                 <Card
-                    title="Track your progress"
-                    subtitle="Help you through your practices tracking improvements"
+                    title={t("landing.cards.trackProgress.title")}
+                    subtitle={t("landing.cards.trackProgress.subtitle")}
                 />
 
                 <Card
-                    title="Multiple levels and modes"
-                    subtitle="Choose your difficult level and the type of operation you want to practice"
+                    title={t("landing.cards.multipleLevels.title")}
+                    subtitle={t("landing.cards.multipleLevels.subtitle")}
                 />
             </section>
         </section>

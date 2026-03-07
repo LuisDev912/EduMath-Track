@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 // layouts
 const MainLayout = lazy(() => import('./layout/MainLayout.tsx'));
@@ -13,10 +14,12 @@ const GamePage = lazy(() => import('../pages/GamePage.tsx'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage.tsx'));
 
 function App() {
+  const { t } = useTranslation();
+
   return (
     <Suspense fallback={
       <div className='suspense'>
-        Wait until the content loads...
+        {t('app.loading')}
       </div>
     }>
 

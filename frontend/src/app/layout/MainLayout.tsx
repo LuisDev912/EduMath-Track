@@ -1,8 +1,10 @@
 import { Outlet, useLocation } from "react-router";
 import { useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Footer, Header } from "../../shared/components/Semantic/Semantic";
 
 function MainLayout() {
+    const { t } = useTranslation();
     const mainRef = useRef<HTMLElement>(null);
     const location = useLocation();
 
@@ -20,7 +22,7 @@ function MainLayout() {
                     mainRef.current?.focus()
                 }}
             >
-                skip to content
+                {t("layout.skipToContent")}
             </button>
 
             <main

@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import AuthLayout from "../components/AuthLayout.tsx";
 
 export default function Login() {
+    const { t } = useTranslation();
     const [form, setForm] = useState({
         userName: '',
         password: ''
@@ -26,7 +28,7 @@ export default function Login() {
 
     return (
         <AuthLayout id="login">
-            <h1 className="heading-primary text-center">LOGIN</h1>
+            <h1 className="heading-primary text-center">{t("auth.login.title")}</h1>
 
             <form id="login-form" method="POST" onSubmit={handleLogin}>
 
@@ -34,12 +36,12 @@ export default function Login() {
                     htmlFor="user-name"
                     className="sr-only"
                 >
-                    Enter your username here:
+                    {t("auth.login.userLabel")}
                 </label>
                 <input
                     id="user-name"
                     type="text"
-                    placeholder="Username"
+                    placeholder={t("auth.login.userPlaceholder")}
                     name="userName"
                     value={form.userName}
                     onChange={handleChange}
@@ -51,12 +53,12 @@ export default function Login() {
                     htmlFor="user-password"
                     className="sr-only"
                 >
-                    Enter your password here:
+                    {t("auth.login.passwordLabel")}
                 </label>
                 <input
                     id="user-password"
                     type="password"
-                    placeholder="Password"
+                    placeholder={t("auth.login.passwordPlaceholder")}
                     name="password"
                     value={form.password}
                     onChange={handleChange}
@@ -66,7 +68,7 @@ export default function Login() {
 
                 <input
                     type="submit"
-                    value="Login"
+                    value={t("auth.login.submit")}
                     id="login-submit"
                     disabled={!isFormValid}
                 />

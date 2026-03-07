@@ -1,10 +1,18 @@
+import { useTranslation } from "react-i18next";
+
 type Numbers = {
     firstNum: number;
     secondNum: number;
 }
 
 function OperationDisplay({ firstNum, secondNum }: Numbers) {
-    return <p className="text-lg">{firstNum} + {secondNum} = ?</p>
+    const { t } = useTranslation();
+
+    return (
+        <p className="text-lg">
+            {t("game.operation", { firstNum, secondNum })}
+        </p>
+    );
 };
 
 export default OperationDisplay;

@@ -25,13 +25,13 @@ function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
                 htmlFor="answer-input"
                 className="sr-only"
             >
-                Your answer:
+                {t("game.answerForm.answerLabel")}
             </label>
             <input
                 name="answer-input"
                 id="answer-input"
                 type="number"
-                placeholder="Type the result"
+                placeholder={t("game.answerForm.placeholder")}
                 min="0"
                 inputMode="numeric"
                 ref={answerRef}
@@ -39,14 +39,13 @@ function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
                 aria-describedby="answer-help"
             />
             <p id="answer-help" className="sr-only">
-                Enter the sum of both numbers and submit your answer.
+                {t("game.answerForm.helpText")}
             </p>
-            {t("game.answerForm.ariaLabel")}
             <button
                 id="answer-submit"
                 type="submit"
             >
-                Send
+                {t("game.answerForm.submit")}
             </button>
         </form>
     )

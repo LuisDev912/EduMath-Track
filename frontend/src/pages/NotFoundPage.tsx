@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router";
+import { useTranslation } from "react-i18next";
 
 export default function NotFoundPage() {
+    const { t } = useTranslation();
     const navigate = useNavigate();
 
     const handleNavigate = (): void => {
@@ -9,12 +11,12 @@ export default function NotFoundPage() {
 
     return (
         <section>
-            <h1 className="heading-primary text-center">Oops!</h1>
-            <p className="text-center">It seems like the page you were searching for does not exist</p>
+            <h1 className="heading-primary text-center">{t("notFound.title")}</h1>
+            <p className="text-center">{t("notFound.message")}</p>
 
             <div className="buttons">
                 <button type="button" onClick={handleNavigate}>
-                    Go to the home page
+                    {t("notFound.goHome")}
                 </button>
             </div>
         </section>

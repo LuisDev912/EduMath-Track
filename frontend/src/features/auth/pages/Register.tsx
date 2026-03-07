@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import AuthLayout from "../components/AuthLayout.tsx";
 
 export default function Register() {
+    const { t } = useTranslation();
     const [form, setForm] = useState({
         userName: '',
         email: '',
@@ -28,14 +30,14 @@ export default function Register() {
         e.preventDefault();
 
         if (form.password !== form.confirmPassword) {
-            alert("Passwords do not match");
+            alert(t("auth.register.passwordMismatch"));
             return;
         };
     };
 
     return (
         <AuthLayout id="register">
-            <h1 className="heading-primary text-center">REGISTER</h1>
+            <h1 className="heading-primary text-center">{t("auth.register.title")}</h1>
 
             <form id="register-form" method="POST" onSubmit={handleRegister}>
 
@@ -43,12 +45,12 @@ export default function Register() {
                     htmlFor="user-name"
                     className="sr-only"
                 >
-                    Enter your username here:
+                    {t("auth.register.userLabel")}
                 </label>
                 <input
                     id="user-name"
                     type="text"
-                    placeholder="Username"
+                    placeholder={t("auth.register.userPlaceholder")}
                     name="userName"
                     value={form.userName}
                     onChange={handleChange}
@@ -60,12 +62,12 @@ export default function Register() {
                     htmlFor="user-email"
                     className="sr-only"
                 >
-                    Enter your email here:
+                    {t("auth.register.emailLabel")}
                 </label>
                 <input
                     id="user-email"
                     type="email"
-                    placeholder="E-mail"
+                    placeholder={t("auth.register.emailPlaceholder")}
                     name="email"
                     value={form.email}
                     onChange={handleChange}
@@ -77,12 +79,12 @@ export default function Register() {
                     htmlFor="user-password"
                     className="sr-only"
                 >
-                    Enter your password here:
+                    {t("auth.register.passwordLabel")}
                 </label>
                 <input
                     id="user-password"
                     type="password"
-                    placeholder="Password"
+                    placeholder={t("auth.register.passwordPlaceholder")}
                     name="password"
                     value={form.password}
                     onChange={handleChange}
@@ -94,12 +96,12 @@ export default function Register() {
                     htmlFor="confirm-password"
                     className="sr-only"
                 >
-                    Confirm your password here:
+                    {t("auth.register.confirmPasswordLabel")}
                 </label>
                 <input
                     id="confirm-password"
                     type="password"
-                    placeholder="Confirm password"
+                    placeholder={t("auth.register.confirmPasswordPlaceholder")}
                     name="confirmPassword"
                     value={form.confirmPassword}
                     onChange={handleChange}
@@ -109,7 +111,7 @@ export default function Register() {
 
                 <input
                     type="submit"
-                    value="Create Account"
+                    value={t("auth.register.submit")}
                     id="register-submit"
                     disabled={!isFormValid}
                 />

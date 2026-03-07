@@ -1,4 +1,5 @@
 import { Activity, useState } from "react";
+import { useTranslation } from "react-i18next";
 import type { GameConfig } from "../../shared/types/GameConfig";
 
 // child components
@@ -7,6 +8,7 @@ import OperationDisplay from "./OperationDisplay";
 import GenerateOperation from "./GenerateOperation";
 
 function Game() {
+    const { t } = useTranslation();
     const [result, setResult] = useState<null | boolean>(null);
     const [gameConfig, setGameConfig] = useState<GameConfig>({
         firstNumber: 0,
@@ -36,13 +38,15 @@ function Game() {
 
             <Activity mode={result ? "visible" : "hidden"}>
                 <p className="correct-text">
-                    That is correct!
+                    {t("game.feedback.correct")}
                 </p>
             </Activity>
 
             <Activity mode={result === false ? "visible" : "hidden"}>
                 <p>
-                    This is not correct. The answer is: {gameConfig.firstNumber + gameConfig.secondNumber}
+                    {t("game.feedback.incorrect", {
+                        answer: gameConfig.firstNumber + gameConfig.secondNumber
+                    })}
                 </p>
             </Activity>
         </section>
