@@ -1,6 +1,8 @@
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
+    const { t } = useTranslation();
     const answerRef = useRef<HTMLInputElement | null>(null);
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -17,7 +19,7 @@ function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
         <form
             id="answer-form"
             onSubmit={handleSubmit}
-            aria-label="Answer submission form"
+            aria-label={t("game.answerForm.ariaLabel")}
         >
             <label
                 htmlFor="answer-input"
@@ -39,7 +41,7 @@ function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
             <p id="answer-help" className="sr-only">
                 Enter the sum of both numbers and submit your answer.
             </p>
-
+            {t("game.answerForm.ariaLabel")}
             <button
                 id="answer-submit"
                 type="submit"
