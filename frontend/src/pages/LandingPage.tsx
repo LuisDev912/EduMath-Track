@@ -1,34 +1,44 @@
 import { useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
-import Card from "../shared/components/Cards/Card";
 import type { cardsTranslation } from "../shared/types/cardProps";
+import Card from "../shared/components/Cards/Card";
 
 export default function LandingPage() {
+    // variables
     const { t } = useTranslation();
     const navigate = useNavigate();
 
-    const cardsInformation = t("landing.cards", { returnObjects: true }) as cardsTranslation;
+    const cardsInformation: object = t("landing.cards", { returnObjects: true }) as cardsTranslation;
+    
+    const navigationButtons: object = t("landing.actions", { returnObjects: true });
 
+    const routes: Record<string, string> = {
+        getStarted: "/register",
+        login: "/login",
+        demo: "/game"
+    };
+
+    // functions
     const handleNavigate = (path: string): void => {
         navigate(path);
     };
 
+    // HTML
     return (
         <section>
             <h1 className="heading-primary">{t("landing.title")}</h1>
             <p>{t("landing.subtitle")}</p>
+
             <div className="buttons">
-                <button type="button" onClick={() => handleNavigate('/register')}>
-                    {t("landing.actions.getStarted")}
-                </button>
-
-                <button type="button" onClick={() => handleNavigate('/login')}>
-                    {t("landing.actions.login")}
-                </button>
-
-                <button type="button" onClick={() => handleNavigate('/game')}>
-                    {t("landing.actions.demo")}
-                </button>
+                {Object.entries(navigationButtons).map(([key, label]) => (
+                    <button
+                        type="button"
+                        onClick={() => handleNavigate(routes[key])}
+                        key={key}
+                    >
+                        {label}
+                    </button>
+                ))}
             </div>
 
             <section className="cards-container">
