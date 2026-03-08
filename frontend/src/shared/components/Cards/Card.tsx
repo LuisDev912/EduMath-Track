@@ -1,7 +1,7 @@
-import type { cardProps } from "../../types/cardProps";
+import type { cardProps } from "../../types/CardProps";
 import Style from './Card.module.css';
 
-function Card({ title, subtitle}: cardProps) {
+function Card({ title, subtitle }: cardProps) {
     return (
         <article className={Style.card}>
             <h3 className={`heading-tertiary ${Style.cardTitle}`}>{title}</h3>

@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import UserMenu from '../UserMenu/UserMenu';
 import NavItem from '../NavItem/NavItem';
 import SemanticStyles from './Semantic.module.css';
 
@@ -68,10 +69,7 @@ export function Header() {
                     </li>
 
                     <li className={SemanticStyles.profile}>
-                        <span role='img' aria-label={t('nav.profileAriaLabel')}>
-                            &#x1F464;
-                        </span>
-                        {/* this list item will become a component */}
+                        <UserMenu />
                     </li>
                 </ul>
             </nav>

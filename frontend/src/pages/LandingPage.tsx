@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
-import type { cardsTranslation } from "../shared/types/cardProps";
+import type { cardsTranslation } from "../shared/types/CardProps";
 import Card from "../shared/components/Cards/Card";
 
 export default function LandingPage() {
@@ -9,7 +9,7 @@ export default function LandingPage() {
     const navigate = useNavigate();
 
     const cardsInformation: object = t("landing.cards", { returnObjects: true }) as cardsTranslation;
-    
+
     const navigationButtons: object = t("landing.actions", { returnObjects: true });
 
     const routes: Record<string, string> = {
