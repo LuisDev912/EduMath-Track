@@ -1,0 +1,5 @@
+.profileIcon{
+    border-radius: var(--radius-full);
+    background-color: var(--accent);
+    padding: var(--space-md);
+}

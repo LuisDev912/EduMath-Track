@@ -18,11 +18,8 @@
 }
 
 .profile{
-    border-radius: var(--radius-full);
-    background-color: var(--accent);
     grid-area: profile;
     margin: auto;
-    padding: var(--space-md);
 }
 
 .mainNavigation{
