@@ -14,6 +14,13 @@
     "stats": "Stats",
     "profileAriaLabel": "User profile"
   },
+  "userMenu": {
+    "profile": "Profile",
+    "logout": "Logout",
+    "guest": "Guest",
+    "openMenu": "Open user menu",
+    "closeMenu": "Close user menu"
+  },
   "landing": {
     "title": "Landing Page",
     "subtitle": "Improve your math skills with real-time feedback and tracking",

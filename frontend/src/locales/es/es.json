@@ -14,6 +14,13 @@
     "stats": "Estadísticas",
     "profileAriaLabel": "Perfil de usuario"
   },
+  "userMenu": {
+    "profile": "Perfil",
+    "logout": "Cerrar sesión",
+    "guest": "Invitado",
+    "openMenu": "Abrir menú de usuario",
+    "closeMenu": "Cerrar menú de usuario"
+  },
   "landing": {
     "title": "Página de inicio",
     "subtitle": "Mejora tus habilidades matemáticas con retroalimentación y seguimiento en tiempo real",
