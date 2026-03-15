@@ -69,7 +69,9 @@ export function Header() {
                     </li>
 
                     <li className={SemanticStyles.profile}>
-                        <UserMenu />
+                        
+                        {/* temporary hardcoded username */}
+                        <UserMenu userName="Mikaela" />
                     </li>
                 </ul>
             </nav>
