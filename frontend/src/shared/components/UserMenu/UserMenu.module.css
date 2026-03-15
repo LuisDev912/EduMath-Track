@@ -1,5 +1,77 @@
-.profileIcon{
+.profileIcon {
+    position: relative;
+    /* needed for absolute dropdown */
     border-radius: var(--radius-full);
     background-color: var(--accent);
     padding: var(--space-md);
+}
+
+.userMenuButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-xxs);
+}
+
+/* --- dropdown --- */
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: calc(100% + var(--space-xs));
+    background-color: var(--background);
+    border: 1px solid var(--accent-dark);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-medium);
+    min-width: 160px;
+    z-index: 1000;
+}
+
+.userInfo {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--accent-dark);
+}
+
+.userName {
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
+}
+
+.menuList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.itemButton,
+.itemLink {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    text-align: left;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: var(--font-size-md);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* --- small avatar circle inside button --- */
+.avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: var(--radius-full);
+    background-color: var(--neutral);
+    color: var(--text-dark);
+    font-weight: var(--weight-semibold);
+    font-size: var(--font-size-sm);
+}
+
+.itemButton:hover,
+.itemLink:hover,
+.itemButton:focus,
+.itemLink:focus {
+    background-color: var(--accent-dark);
 }
