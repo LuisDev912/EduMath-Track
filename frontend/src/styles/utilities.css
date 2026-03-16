@@ -10,6 +10,8 @@
 
 .text-lg{ font-size: var(--font-size-lg); }
 
+.home-link { color: var(--text-light); }
+
 /* === flex utilities === */
 .flex { display: flex; }
 

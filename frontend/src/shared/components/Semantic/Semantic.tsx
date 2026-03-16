@@ -35,7 +35,7 @@ export function Header() {
             <nav className={SemanticStyles.nav} aria-label={t('nav.mainAriaLabel')}>
                 <ul>
                     <li className={SemanticStyles.homeLi}>
-                        <NavLink to='/' className='heading-primary'>
+                        <NavLink to='/' className='heading-primary home-link'>
                             {t('nav.brand')}
                         </NavLink>
                     </li>

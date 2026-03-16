@@ -80,16 +80,10 @@ section {
 
 .heading-primary {
     font-family: var(--font-family-title);
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-xxl);
     font-weight: var(--weight-bold);
     text-align: start;
     letter-spacing: 0.02em;
-}
-
-@media screen and (min-width: 480px) {
-    .heading-primary{
-        font-size: var(--font-size-xxl);
-    }
 }
 
 .heading-secondary {
