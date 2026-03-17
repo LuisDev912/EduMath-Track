@@ -1,4 +1,4 @@
-import type { UserMenuItemProps } from './UserMenuItemProps';
+import type { UserMenuItemProps } from './UserMenuItem.types';
 import { NavLink } from 'react-router';
 import Styles from '../UserMenu.module.css';
 

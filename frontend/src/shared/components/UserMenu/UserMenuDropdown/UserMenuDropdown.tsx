@@ -1,4 +1,4 @@
-import type { UserMenuDropdownProps } from './UserMenuDropdownProps';
+import type { UserMenuDropdownProps } from './UserMenuDropdown.types';
 import { useTranslation } from 'react-i18next';
 import UserMenuItem from '../UserMenuItem/UserMenuItem';
 import Styles from '../UserMenu.module.css';
@@ -19,7 +19,7 @@ function UserMenuDropdown({ userName, onClose }: UserMenuDropdownProps) {
         >
             <div className={Styles.userInfo}>
                 <span className={Styles.userName}>
-                    {userName ||  t('userMenu.guest')}
+                    {userName || t('userMenu.guest')}
                 </span>
             </div>
             <ul className={`${Styles.menuList}`}>

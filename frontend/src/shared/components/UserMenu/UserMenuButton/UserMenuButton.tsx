@@ -1,5 +1,5 @@
 import Avatar from "../Avatar/Avatar";
-import type { UserMenuButtonProps } from "./UserMenuButtonProps";
+import type { UserMenuButtonProps } from "./UserMenuButton.types";
 import Styles from '../UserMenu.module.css';
 
 import { useTranslation } from 'react-i18next';
