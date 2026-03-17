@@ -44,6 +44,7 @@
 
 .itemButton,
 .itemLink {
+    display: block;
     width: 100%;
     padding: var(--space-sm) var(--space-md);
     text-align: left;

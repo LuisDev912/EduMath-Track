@@ -22,7 +22,7 @@ function UserMenuDropdown({ userName, onClose }: UserMenuDropdownProps) {
                     {userName ||  t('userMenu.guest')}
                 </span>
             </div>
-            <ul className={Styles.menuList}>
+            <ul className={`${Styles.menuList}`}>
                 <UserMenuItem to="/profile" onClick={onClose}>
                     {t('userMenu.profile')}
                 </UserMenuItem>
