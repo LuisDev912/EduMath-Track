@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
-import type { cardsTranslation } from "../shared/types/CardProps";
+import type { cardsTranslation } from "../shared/types/Card.types";
 import Card from "../shared/components/Cards/Card";
 
 export default function LandingPage() {

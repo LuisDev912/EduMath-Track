@@ -1,4 +1,4 @@
-import type { cardProps } from "../../types/CardProps";
+import type { cardProps } from "../../types/Card.types";
 import Style from './Card.module.css';
 
 function Card({ title, subtitle }: cardProps) {

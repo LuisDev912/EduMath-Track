@@ -1,4 +1,4 @@
-import type { AuthLayoutProps } from "../../../shared/types/AuthProps";
+import type { AuthLayoutProps } from "../../../shared/types/Auth.types";
 
 function AuthLayout({ children, id }: AuthLayoutProps) {
     return (
