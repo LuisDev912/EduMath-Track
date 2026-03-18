@@ -1,11 +1,11 @@
 import { Activity, useState } from "react";
 import { useTranslation } from "react-i18next";
-import type { GameConfig } from "../../shared/types/Game.types";
+import type { GameConfig } from "./Game.types";
 
 // child components
-import AnswerForm from "./AnswerForm";
-import OperationDisplay from "./OperationDisplay";
-import GenerateOperation from "./GenerateOperation";
+import AnswerForm from "../AnswerForm";
+import OperationDisplay from "../OperationDisplay";
+import GenerateOperation from "../GenerateOperation";
 
 function Game() {
     const { t } = useTranslation();

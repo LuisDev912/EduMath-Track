@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import Game from "../game/components/Game"
+import Game from "../game/components/GameComponent/Game"
 export default function GamePage() {
     const { t } = useTranslation();
 
