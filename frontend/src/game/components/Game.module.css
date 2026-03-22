@@ -1,3 +1,5 @@
+/* --- box container --- */
+
 .box {
     padding: var(--space-xl);
     text-align: center;
@@ -7,9 +9,11 @@
     max-width: 420px;
 }
 
+/* --- game form --- */
+
 @media screen and (min-width: 500px) {
-    .box {
-        /* temporal style for testing */
-        background-color: blue;
+    .answerForm{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
     }
 }

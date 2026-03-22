@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
+import Styles from './Game.module.css';
 
 function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
     const { t } = useTranslation();
@@ -20,6 +21,7 @@ function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
             id="answer-form"
             onSubmit={handleSubmit}
             aria-label={t("game.answerForm.ariaLabel")}
+            className={Styles.answerForm}
         >
             <label
                 htmlFor="answer-input"
@@ -38,7 +40,10 @@ function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
                 required
                 aria-describedby="answer-help"
             />
-            <p id="answer-help" className="sr-only">
+            <p
+                id="answer-help"
+                className="sr-only"
+            >
                 {t("game.answerForm.helpText")}
             </p>
             <button
