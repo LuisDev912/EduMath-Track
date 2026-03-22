@@ -12,6 +12,8 @@
 
 .home-link { color: var(--text-light); }
 
+.full-width { max-width: 100%; }
+
 /* === flex utilities === */
 .flex { display: flex; }
 
