@@ -67,22 +67,6 @@ section {
     border-color: var(--color-accent);
 }
 
-.box {
-    padding: var(--space-xl);
-    text-align: center;
-    background-color: var(--background);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-medium);
-    max-width: 420px;
-}
-
-@media screen and (min-width: 500px) {
-    .box{
-        /* temporal style for testing */
-        background-color: blue;
-    }
-}
-
 /* --- text --- */
 
 .heading-primary {

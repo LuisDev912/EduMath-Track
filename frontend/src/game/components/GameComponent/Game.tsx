@@ -1,6 +1,7 @@
 import { Activity, useState } from "react";
 import { useTranslation } from "react-i18next";
 import type { GameConfig } from "./Game.types";
+import Styles from '../Game.module.css';
 
 // child components
 import AnswerForm from "../AnswerForm";
@@ -10,6 +11,7 @@ import GenerateOperation from "../GenerateOperation";
 function Game() {
     const { t } = useTranslation();
     const [result, setResult] = useState<null | boolean>(null);
+    // TO-DO: create a state for the points and update it based on the result of the answer validation
     const [gameConfig, setGameConfig] = useState<GameConfig>({
         firstNumber: 0,
         secondNumber: 0
@@ -31,7 +33,7 @@ function Game() {
     };
 
     return (
-        <section className="box">
+        <section className={Styles.box}>
             <OperationDisplay firstNum={gameConfig.firstNumber} secondNum={gameConfig.secondNumber} />
             <GenerateOperation onGenerate={generateNumbers} />
             <AnswerForm onValidate={handleValidation} />
@@ -50,7 +52,7 @@ function Game() {
                 </p>
             </Activity>
         </section>
-    )
+    );
 };
 
 export default Game;
