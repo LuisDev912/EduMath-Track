@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import Styles from './Game.module.css';
+import { SendButton } from "../../shared/icons/SendButton";
 
 function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
     const { t } = useTranslation();
@@ -49,8 +50,9 @@ function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
             <button
                 id="answer-submit"
                 type="submit"
+                aria-label={t("game.answerForm.submitAriaLabel")}
             >
-                {t("game.answerForm.submit")}
+                <SendButton />
             </button>
         </form>
     )

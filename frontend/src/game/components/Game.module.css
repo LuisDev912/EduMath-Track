@@ -11,6 +11,13 @@
 
 /* --- game form --- */
 
+.answerForm > button{
+    max-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media screen and (min-width: 500px) {
     .answerForm{
         display: grid;
