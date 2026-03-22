@@ -11,7 +11,7 @@ import GenerateOperation from "../GenerateOperation";
 function Game() {
     const { t } = useTranslation();
     const [result, setResult] = useState<null | boolean>(null);
-    // TO-DO: create a state for the points and update it based on the result of the answer validation
+    const [points, setPoints] = useState<number>(0);
     const [gameConfig, setGameConfig] = useState<GameConfig>({
         firstNumber: 0,
         secondNumber: 0
@@ -29,7 +29,12 @@ function Game() {
     };
 
     const handleValidation = (answer: number): void => {
-        setResult(answer === gameConfig.firstNumber + gameConfig.secondNumber);
+        const answerIsCorrect: boolean = answer === gameConfig.firstNumber + gameConfig.secondNumber;
+        setResult(answerIsCorrect);
+        
+        answerIsCorrect
+            ? setPoints(points + 1)
+            : setPoints(0);
     };
 
     return (
@@ -43,6 +48,8 @@ function Game() {
                     {t("game.feedback.correct")}
                 </p>
             </Activity>
+
+            <p>points: {points}</p>
 
             <Activity mode={result === false ? "visible" : "hidden"}>
                 <p>
