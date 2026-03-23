@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Input } from "../../../shared/components/ui/Input/Input.tsx";
 import AuthLayout from "../components/AuthLayout.tsx";
 
 export default function Register() {
@@ -41,13 +42,8 @@ export default function Register() {
 
             <form id="register-form" method="POST" onSubmit={handleRegister}>
 
-                <label
-                    htmlFor="user-name"
-                    className="sr-only"
-                >
-                    {t("auth.register.userLabel")}
-                </label>
-                <input
+                <Input
+                    label={t("auth.register.userLabel")}
                     id="user-name"
                     type="text"
                     placeholder={t("auth.register.userPlaceholder")}
@@ -58,13 +54,8 @@ export default function Register() {
                     required
                 />
 
-                <label
-                    htmlFor="user-email"
-                    className="sr-only"
-                >
-                    {t("auth.register.emailLabel")}
-                </label>
-                <input
+                <Input
+                    label={t("auth.register.emailLabel")}
                     id="user-email"
                     type="email"
                     placeholder={t("auth.register.emailPlaceholder")}
@@ -75,13 +66,8 @@ export default function Register() {
                     required
                 />
 
-                <label
-                    htmlFor="user-password"
-                    className="sr-only"
-                >
-                    {t("auth.register.passwordLabel")}
-                </label>
-                <input
+                <Input
+                    label={t("auth.register.passwordLabel")}
                     id="user-password"
                     type="password"
                     placeholder={t("auth.register.passwordPlaceholder")}
@@ -92,13 +78,8 @@ export default function Register() {
                     required
                 />
 
-                <label
-                    htmlFor="confirm-password"
-                    className="sr-only"
-                >
-                    {t("auth.register.confirmPasswordLabel")}
-                </label>
-                <input
+                <Input
+                    label={t("auth.register.confirmPasswordLabel")}
                     id="confirm-password"
                     type="password"
                     placeholder={t("auth.register.confirmPasswordPlaceholder")}
@@ -109,7 +90,7 @@ export default function Register() {
                     required
                 />
 
-                <input
+                <Input
                     type="submit"
                     value={t("auth.register.submit")}
                     id="register-submit"

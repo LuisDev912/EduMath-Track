@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { SendButton } from "../../shared/icons/SendButton";
 import { Button } from "../../shared/components/ui/Button/Button";
+import { Input } from "../../shared/components/ui/Input/Input";
 import Styles from './Game.module.css';
 
 function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
@@ -25,13 +26,8 @@ function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
             aria-label={t("game.answerForm.ariaLabel")}
             className={Styles.answerForm}
         >
-            <label
-                htmlFor="answer-input"
-                className="sr-only"
-            >
-                {t("game.answerForm.answerLabel")}
-            </label>
-            <input
+            <Input
+                label={t("game.answerForm.answerLabel")}
                 name="answer-input"
                 id="answer-input"
                 type="number"

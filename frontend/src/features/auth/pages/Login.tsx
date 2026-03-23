@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Input } from "../../../shared/components/ui/Input/Input.tsx";
 import AuthLayout from "../components/AuthLayout.tsx";
 
 export default function Login() {
@@ -32,13 +33,8 @@ export default function Login() {
 
             <form id="login-form" method="POST" onSubmit={handleLogin}>
 
-                <label
-                    htmlFor="user-name"
-                    className="sr-only"
-                >
-                    {t("auth.login.userLabel")}
-                </label>
-                <input
+                <Input
+                    label={t("auth.login.userLabel")}
                     id="user-name"
                     type="text"
                     placeholder={t("auth.login.userPlaceholder")}
@@ -49,13 +45,8 @@ export default function Login() {
                     required
                 />
 
-                <label
-                    htmlFor="user-password"
-                    className="sr-only"
-                >
-                    {t("auth.login.passwordLabel")}
-                </label>
-                <input
+                <Input
+                    label={t("auth.login.passwordLabel")}
                     id="user-password"
                     type="password"
                     placeholder={t("auth.login.passwordPlaceholder")}
@@ -66,7 +57,7 @@ export default function Login() {
                     required
                 />
 
-                <input
+                <Input
                     type="submit"
                     value={t("auth.login.submit")}
                     id="login-submit"
