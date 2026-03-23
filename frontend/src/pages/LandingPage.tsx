@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
+import { Button } from "../shared/components/ui/Button/Button";
 import type { cardsTranslation } from "../shared/types/Card.types";
 import Card from "../shared/components/Cards/Card";
 
@@ -31,13 +32,15 @@ export default function LandingPage() {
 
             <div className="buttons">
                 {Object.entries(navigationButtons).map(([key, label]) => (
-                    <button
-                        type="button"
+                    <Button
+                        variant="primary"
+                        size="md"
+                        fullWidth={false}
                         onClick={() => handleNavigate(routes[key])}
                         key={key}
                     >
                         {label}
-                    </button>
+                    </Button>
                 ))}
             </div>
 
