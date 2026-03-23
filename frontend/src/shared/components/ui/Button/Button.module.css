@@ -34,19 +34,18 @@
     color: white;
 }
 
-/* sizes */
-.sm {
-    padding: 6px 10px;
-}
+/* --- sizes --- */
+.sm { padding: 6px 10px; }
 
-.md {
-    padding: 10px 16px;
-}
+.md { padding: 10px 16px; }
 
-.lg {
-    padding: 14px 20px;
-}
+.lg { padding: 14px 20px; }
 
-.fullWidth {
-    width: 100%;
-}
+.fullWidth { width: 100%; }
+
+/* --- text direction --- */
+.center{ text-align: center; }
+
+.left{ text-align: left; }
+
+.right{ text-align: right; }

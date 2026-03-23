@@ -6,6 +6,7 @@ export function Button({
     variant = "primary",
     size = "md",
     fullWidth = false,
+    textDirection = 'center',
     children,
     ...props
 }: ButtonProps) {
@@ -16,7 +17,8 @@ export function Button({
                 ButtonStyles[variant],
                 // e.g. ButtonStyles.sm, ButtonStyles.md, ButtonStyles.lg
                 ButtonStyles[size],
-                fullWidth ? ButtonStyles.fullWidth : ''
+                fullWidth ? ButtonStyles.fullWidth : '',
+                ButtonStyles[textDirection]
             ].join(' ')}
             {...props}
         >

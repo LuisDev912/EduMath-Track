@@ -2,6 +2,7 @@ export type ButtonProps = {
     children: React.ReactNode;
     variant?: "primary" | "secondary" | "ghost" | "danger";
     size?: "sm" | "md" | "lg";
+    textDirection?: "center" | "left" | "right";
     fullWidth?: boolean
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
