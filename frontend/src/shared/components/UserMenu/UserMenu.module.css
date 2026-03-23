@@ -11,6 +11,12 @@
     border: none;
     cursor: pointer;
     padding: var(--space-xxs);
+    border-radius: var(--radius-md);
+    transition: background-color var(--transition-fast);
+}
+
+.userMenuButton:hover{
+    background-color: #737373;
 }
 
 /* --- dropdown --- */

@@ -1,13 +1,12 @@
 import { useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
+import { Button } from "../shared/components/ui/Button/Button";
 
 export default function NotFoundPage() {
     const { t } = useTranslation();
     const navigate = useNavigate();
 
-    const handleNavigate = (): void => {
-        navigate('/');
-    }
+    const handleNavigate = (): void => { navigate('/'); };
 
     return (
         <section>
@@ -15,9 +14,11 @@ export default function NotFoundPage() {
             <p className="text-center">{t("notFound.message")}</p>
 
             <div className="buttons">
-                <button type="button" onClick={handleNavigate}>
+                <Button
+                    onClick={handleNavigate}
+                >
                     {t("notFound.goHome")}
-                </button>
+                </Button>
             </div>
         </section>
     )

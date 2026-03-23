@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import Styles from './Game.module.css';
 import { SendButton } from "../../shared/icons/SendButton";
+import { Button } from "../../shared/components/ui/Button/Button";
+import Styles from './Game.module.css';
 
 function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
     const { t } = useTranslation();
@@ -47,13 +48,14 @@ function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
             >
                 {t("game.answerForm.helpText")}
             </p>
-            <button
+            <Button
+                fullWidth={true}
                 id="answer-submit"
                 type="submit"
                 aria-label={t("game.answerForm.submitAriaLabel")}
             >
                 <SendButton />
-            </button>
+            </Button>
         </form>
     )
 };

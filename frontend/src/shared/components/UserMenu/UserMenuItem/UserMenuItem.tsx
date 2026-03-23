@@ -1,5 +1,6 @@
 import type { UserMenuItemProps } from './UserMenuItem.types';
 import { NavLink } from 'react-router';
+import { Button } from '../../ui/Button/Button';
 import Styles from '../UserMenu.module.css';
 
 function UserMenuItem({ children, onClick, to }: UserMenuItemProps) {
@@ -20,14 +21,15 @@ function UserMenuItem({ children, onClick, to }: UserMenuItemProps) {
 
     return (
         <li role="none">
-            <button
-                type="button"
-                className={Styles.itemButton}
-                role="menuitem"
+            <Button
+                variant="danger"
+                size="md"
+                textDirection='left'
+                fullWidth={true}
                 onClick={onClick}
             >
                 {children}
-            </button>
+            </Button>
         </li>
     );
 }
