@@ -1,0 +1,20 @@
+/* general */
+
+.button {
+    border: none;
+    transition:
+        background-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+    color: #f0f0f0;
+    width: 300px;
+    border-radius: var(--radius-md);
+}
+
+.button:hover {
+    background-color: var(--button-hover);
+}
+
+.button:active {
+    background-color: var(--button-active);
+    box-shadow: var(--shadow);
+}
