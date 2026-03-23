@@ -5,12 +5,13 @@ import InputStyles from './Input.module.css';
 
 export function Input({ label, error, id, ref, ...props }: InputProps) {
     return (
-        <div className={InputStyles.wrapper}>
-            {label && <label className='sr-only' id={id}>
+        <div>
+            {label && <label className='sr-only' htmlFor={id}>
                 {label}
             </label>}
 
             <input
+                id={id}
                 ref={ref}
                 className={InputStyles.input}
                 {...props}

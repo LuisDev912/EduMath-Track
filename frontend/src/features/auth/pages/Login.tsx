@@ -31,7 +31,7 @@ export default function Login() {
         <AuthLayout id="login">
             <h1 className="heading-primary text-center">{t("auth.login.title")}</h1>
 
-            <form id="login-form" method="POST" onSubmit={handleLogin}>
+            <form id="login-form" method="POST" onSubmit={handleLogin} className="form" aria-label={t("auth.login.ariaLabel")}>
 
                 <Input
                     label={t("auth.login.userLabel")}

@@ -27,6 +27,7 @@ function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
             className={Styles.answerForm}
         >
             <Input
+                label={t("game.answerForm.label")}
                 name="answer-input"
                 id="answer-input"
                 type="number"
