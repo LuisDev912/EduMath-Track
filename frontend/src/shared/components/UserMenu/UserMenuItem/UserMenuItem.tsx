@@ -1,6 +1,6 @@
 import type { UserMenuItemProps } from './UserMenuItem.types';
 import { NavLink } from 'react-router';
-import { Button } from '../../ui/Button/Button';
+import { Button } from "@components/ui/Button/Button.tsx";
 import Styles from '../UserMenu.module.css';
 
 function UserMenuItem({ children, onClick, to }: UserMenuItemProps) {

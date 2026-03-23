@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Input } from "../../../shared/components/ui/Input/Input.tsx";
+import { Input } from "@components/ui/Input/Input.tsx";
 import AuthLayout from "../components/AuthLayout.tsx";
 
 export default function Register() {

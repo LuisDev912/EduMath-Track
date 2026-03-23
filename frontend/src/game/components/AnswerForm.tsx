@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { SendButton } from "../../shared/icons/SendButton";
-import { Button } from "../../shared/components/ui/Button/Button";
-import { Input } from "../../shared/components/ui/Input/Input";
+import { Button } from "@components/ui/Button/Button.tsx";
+import { Input } from "@components/ui/Input/Input.tsx";
 import Styles from './Game.module.css';
 
 function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Button } from "../../shared/components/ui/Button/Button";
+import { Button } from "@components/ui/Button/Button.tsx";
 
 function GenerateOperation({ onGenerate }: { onGenerate: () => void }) {
     const { t } = useTranslation();

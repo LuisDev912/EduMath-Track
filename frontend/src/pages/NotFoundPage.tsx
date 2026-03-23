@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
-import { Button } from "../shared/components/ui/Button/Button";
+import { Button } from "@components/ui/Button/Button.tsx";
 
 export default function NotFoundPage() {
     const { t } = useTranslation();
