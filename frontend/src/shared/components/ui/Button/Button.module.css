@@ -1,4 +1,4 @@
-/* general */
+/* --- general --- */
 
 .button {
     border: none;
@@ -8,6 +8,7 @@
     color: #f0f0f0;
     width: 300px;
     border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
 }
 
 .button:hover {
@@ -18,21 +19,21 @@
     background-color: var(--button-active);
     box-shadow: var(--shadow);
 }
-/* variants */
-.primary {
-    background: #3b82f6;
-    color: white;
-}
+/* --- variants --- */
+.primary { background: var(--accent); }
+
+.secondary { background-color: #295aa8; }
 
 .danger {
-    background: #ef4444;
-    color: white;
+    background: #d93f3f;
+    color: #000;
 }
 
-.ghost {
-    background: transparent;
-    color: white;
-}
+.danger:hover { background-color: #a03131; }
+
+.ghost { background: transparent; }
+
+.ghost:hover { background-color: gray; }
 
 /* --- sizes --- */
 .sm { padding: 6px 10px; }
