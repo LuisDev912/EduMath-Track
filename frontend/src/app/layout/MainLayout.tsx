@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from "react-router";
 import { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Footer, Header } from "../../shared/components/Semantic/Semantic";
+import { Footer, Header } from "@components/Semantic/Semantic.tsx";
 
 function MainLayout() {
     const { t } = useTranslation();
