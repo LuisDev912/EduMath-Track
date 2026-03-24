@@ -19,7 +19,8 @@
     "logout": "Logout",
     "guest": "Guest",
     "openMenu": "Open user menu",
-    "closeMenu": "Close user menu"
+    "closeMenu": "Close user menu",
+    "settings": "Settings"
   },
   "landing": {
     "title": "Landing Page",

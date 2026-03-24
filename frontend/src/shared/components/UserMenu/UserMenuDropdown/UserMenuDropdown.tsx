@@ -23,8 +23,9 @@ function UserMenuDropdown({ userName, onClose }: UserMenuDropdownProps) {
                 </span>
             </div>
             <ul className={`${Styles.menuList}`}>
-                <UserMenuItem to="/profile" onClick={onClose}>
-                    {t('userMenu.profile')}
+                {/* delete /profile route as the /settings route will contain profile settings */}
+                <UserMenuItem to="/settings" onClick={onClose}>
+                    {t('userMenu.settings')}
                 </UserMenuItem>
                 <UserMenuItem onClick={handleLogout}>
                     {t('userMenu.logout')}

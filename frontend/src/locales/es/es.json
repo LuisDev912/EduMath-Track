@@ -19,7 +19,8 @@
     "logout": "Cerrar sesión",
     "guest": "Invitado",
     "openMenu": "Abrir menú de usuario",
-    "closeMenu": "Cerrar menú de usuario"
+    "closeMenu": "Cerrar menú de usuario",
+    "settings": "Configuración"
   },
   "landing": {
     "title": "Página de inicio",
