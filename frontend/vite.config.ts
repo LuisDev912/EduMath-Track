@@ -13,7 +13,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@components": resolve(__dirname, "src/shared/components")
+      "@components": resolve(__dirname, "src/shared/components"),
+      "@shared": resolve(__dirname, "src/shared")
     }
   }
 })

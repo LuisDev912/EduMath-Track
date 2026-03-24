@@ -13,7 +13,7 @@
       "@components/*": [
         "src/shared/components/*"
       ],
-      "@shared": [
+      "@shared/*": [
         "src/shared/*"
       ]
     },
