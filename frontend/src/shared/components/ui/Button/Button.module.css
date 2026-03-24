@@ -19,6 +19,7 @@
     background-color: var(--button-active);
     box-shadow: var(--shadow);
 }
+
 /* --- variants --- */
 .primary { background: var(--accent); }
 

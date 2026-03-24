@@ -12,6 +12,9 @@
     "paths": {
       "@components/*": [
         "src/shared/components/*"
+      ],
+      "@shared": [
+        "src/shared/*"
       ]
     },
 
