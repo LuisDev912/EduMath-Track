@@ -10,7 +10,7 @@ const PublicLayout = lazy(() => import('./layout/PublicLayout.tsx'));
 const LandingPage = lazy(() => import('../pages/LandingPage.tsx'));
 const RegisterPage = lazy(() => import('../features/auth/pages/Register.tsx'));
 const LoginPage = lazy(() => import('../features/auth/pages/Login.tsx'));
-const GamePage = lazy(() => import('../pages/GamePage.tsx'));
+const GamePage = lazy(() => import('../game/page/GamePage.tsx'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage.tsx'));
 
 function App() {
