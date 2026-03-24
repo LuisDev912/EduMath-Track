@@ -30,11 +30,15 @@ function Game() {
 
     const handleValidation = (answer: number): void => {
         const answerIsCorrect: boolean = answer === gameConfig.firstNumber + gameConfig.secondNumber;
-        setResult(answerIsCorrect);
         
-        answerIsCorrect
-            ? setPoints(points + 1)
-            : setPoints(0);
+        if (answerIsCorrect) {
+        // use an if-else statement instead of a ternary operator for better readability and change two things at the same time
+            setResult(answerIsCorrect);
+            setPoints(prev => prev + 1);
+        } else {
+            setResult(answerIsCorrect);
+            setPoints(0); // this might change in the future, for now we reset points to 0 when the answer is incorrect
+        }
     };
 
     return (
