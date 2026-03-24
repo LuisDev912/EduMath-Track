@@ -24,10 +24,7 @@
 
 .secondary { background-color: #295aa8; }
 
-.danger {
-    background: #d93f3f;
-    color: #000;
-}
+.danger { background: #d93f3f; }
 
 .danger:hover { background-color: #a03131; }
 
