@@ -1,3 +1,12 @@
+import SettingsItem from "../components/SettingsItem/SettingsItem";
+
 export default function SettingsPage() {
-    return <h1></h1>
+    return (
+        <SettingsItem
+            title="Example Setting"
+            description="This is an example setting item."
+            actionType="button"
+            action={() => alert("Action triggered!")}
+        />
+    )
 };
