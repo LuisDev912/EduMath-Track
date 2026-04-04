@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from "react-router";
 import { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import SettingsHeader from "../components/SettingsHeader";
+import SettingsHeader from "../components/SettingsHeader/SettingsHeader";
 import Styles from '../components/Settings.module.css';
 
 export default function SettingsLayout() {
