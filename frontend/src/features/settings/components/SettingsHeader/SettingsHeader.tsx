@@ -1,7 +1,11 @@
+import { useTranslation } from "react-i18next";
+
 function SettingsHeader() { 
+    const { t } = useTranslation();
+
     return (
         <header className="settings-header">
-            <h1>Settings / {/* breadcrumb */}</h1>
+            <h1>{t("settings.title")}</h1>
         </header>
     );
 };
