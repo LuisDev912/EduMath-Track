@@ -8,11 +8,6 @@ export const SETTINGS_ROUTES = [
         path: "preferences",
         labelKey: "settings.preferences.title",
         descriptionKey: "settings.preferences.description"
-    },
-    {
-        path: "game",
-        labelKey: "settings.game.title",
-        descriptionKey: "settings.game.description"
     }
 ] as const;
 
