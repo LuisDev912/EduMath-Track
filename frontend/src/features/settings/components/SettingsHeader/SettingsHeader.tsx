@@ -36,6 +36,18 @@ function SettingsHeader() {
             </nav>
 
             <h1>{pageTitle}</h1>
+
+            <nav aria-label={t('nav.mainAriaLabel')}>
+                <ul>
+                    {SETTINGS_ROUTES.map(route => (
+                        <li key={route.path}>
+                            <NavItem to={`/settings/${route.path}`}>
+                                {t(route.labelKey)}
+                            </NavItem>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
         </header>
     );
 };
