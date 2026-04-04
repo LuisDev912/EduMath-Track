@@ -7,9 +7,13 @@ function SettingsHeader() {
     const { t } = useTranslation();
     const { pathname } = useLocation();
 
-    const currentRoute = SETTINGS_ROUTES.find(route => pathname.includes(route.path));
+    const segment = pathname.split("/")[2];
 
-    const title = currentRoute
+    const currentRoute = SETTINGS_ROUTES.find(
+        route => route.path === segment
+    );
+
+    const pageTitle = currentRoute
         ? t(currentRoute.labelKey)
         : t("settings.title");
 
@@ -18,21 +22,20 @@ function SettingsHeader() {
             <nav aria-label="breadcrumb">
                 <ol>
                     <li>
-                        <NavItem
-                            to="/settings"
-                        >
-                            {title}
+                        <NavItem to="/settings">
+                            {t("settings.title")}
                         </NavItem>
-                        {currentRoute && (
-                            <li aria-current="page">
-                                {t(currentRoute.labelKey)}
-                            </li>
-                        )}
                     </li>
+
+                    {currentRoute && (
+                        <li aria-current="page">
+                            {t(currentRoute.labelKey)}
+                        </li>
+                    )}
                 </ol>
             </nav>
 
-            <h1>{title}</h1>
+            <h1>{pageTitle}</h1>
         </header>
     );
 };
