@@ -9,3 +9,14 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.breadcrumbNav{
+    margin-bottom: 1rem;
+}
+
+.breadcrumbNav > ol{
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    align-items: center;
+}
