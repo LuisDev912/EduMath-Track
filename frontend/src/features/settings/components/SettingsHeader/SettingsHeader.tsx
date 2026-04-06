@@ -1,8 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { SETTINGS_ROUTES } from "./Settings.config.ts";
 import { useLocation } from "react-router";
+import { NavBar } from "@components/ui/NavBar/NavBar.tsx";
 import Styles from "../Settings.module.css";
-import NavItem from "@components/NavItem/NavItem";
+import NavItem from "@components/NavItem/NavItem.tsx";
 
 function SettingsHeader() {
     const { t } = useTranslation();
@@ -42,7 +43,7 @@ function SettingsHeader() {
                 </ol>
             </nav>
 
-            <nav aria-label={t('nav.mainAriaLabel')} className={Styles.navBar}>
+            {/* <nav aria-label={t('nav.mainAriaLabel')} className={Styles.navBar}>
                 <ul>
                     {SETTINGS_ROUTES.map(route => (
                         <li key={route.path}>
@@ -52,7 +53,17 @@ function SettingsHeader() {
                         </li>
                     ))}
                 </ul>
-            </nav>
+            </nav> */}
+            <NavBar aria-label="Main navigation" listType="ul">
+                {SETTINGS_ROUTES.map(route => (
+                    <li key={route.path}>
+                        <NavItem to={`/settings/${route.path}`}>
+                            {t(route.labelKey)}
+                        </NavItem>
+                    </li>
+                ))}
+            </NavBar>
+
         </header>
     );
 };
