@@ -1,20 +1,19 @@
 import type { NavProps } from './Nav.types.ts';
 import NavStyles from './NavBar.module.css';
 
-export function NavBar({ children,
-    listType = 'ul',
+export function NavBar({
+    children,
     className = '',
-    ...props}: NavProps) {
-    const ListTag = listType; // capitalize the first letter to use as a component
-
+    ...props
+}: NavProps) {
     return (
         <nav
             className={`${NavStyles.nav} ${className}`}
             {...props}
         >
-            <ListTag className={NavStyles.navList}>
+            <ul className={NavStyles.navList}>
                 {children}
-            </ListTag>
+            </ul>
         </nav>
     );
 };
