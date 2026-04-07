@@ -4,11 +4,12 @@ import NavStyles from './NavBar.module.css';
 export function NavBar({
     children,
     className = '',
+    showOverflow = false,
     ...props
 }: NavProps) {
     return (
         <nav
-            className={`${NavStyles.nav} ${className}`}
+            className={`${NavStyles.nav} ${className} ${showOverflow ? NavStyles.overflow : ''}`}
             {...props}
         >
             <ul className={NavStyles.navList}>
