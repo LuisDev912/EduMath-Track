@@ -91,5 +91,16 @@
   },
   "footer": {
     "version": "v{{version}}"
+  },
+  "settings": {
+    "title": "Configuración",
+    "profile": {
+      "title": "Perfil"
+    },
+    "preferences": {
+      "title": "Preferencias",
+      "language": "Idioma",
+      "theme": "Tema"
+    }
   }
 }
