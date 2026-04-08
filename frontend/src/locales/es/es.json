@@ -95,10 +95,12 @@
   "settings": {
     "title": "Configuración",
     "profile": {
-      "title": "Perfil"
+      "title": "Perfil",
+      "description": "Administra tu información personal y preferencias de cuenta"
     },
     "preferences": {
       "title": "Preferencias",
+      "description": "Personaliza tu experiencia ajustando tus preferencias",
       "language": "Idioma",
       "theme": "Tema"
     }
