@@ -1,4 +1,5 @@
 import type { SettingItemProps } from './SettingsItem.types';
+import { Button } from '@components/ui/Button/Button';
 import Styles from '../Settings.module.css';
 
 function SettingsItem({ title, description, actionType, action }: SettingItemProps) {
@@ -11,7 +12,7 @@ function SettingsItem({ title, description, actionType, action }: SettingItemPro
 
             <div className={Styles.itemAction}>
                 {actionType === 'button' && (
-                    <button onClick={action}>Action</button>
+                    <Button onClick={action}>Go to settings</Button>
                 )}
                 {actionType === 'link' && (
                     <a href="#" onClick={action}>Go to settings</a>
