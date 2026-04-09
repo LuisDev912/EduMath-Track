@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { NavBar } from '@components/ui/NavBar/NavBar';
 import UserMenu from '../UserMenu/UserMenu';
 import NavItem from '../NavItem/NavItem';
 import SemanticStyles from './Semantic.module.css';
@@ -32,16 +33,13 @@ export function Header() {
 
     return (
         <header>
-            <nav className={SemanticStyles.nav} aria-label={t('nav.mainAriaLabel')}>
-                <ul className={SemanticStyles.navList}>
+            <NavBar className={SemanticStyles.nav} aria-label={t('nav.mainAriaLabel')}>
                     <li className={SemanticStyles.homeLi}>
                         <NavLink to='/' className='heading-primary home-link'>
                             {t('nav.brand')}
                         </NavLink>
                     </li>
 
-                    <li className={SemanticStyles.mainNavigation}>
-                        <ul aria-label={t('nav.primaryAriaLabel')}>
                             <li>
                                 <NavItem
                                     to='/404'
@@ -65,16 +63,13 @@ export function Header() {
                                     {t('nav.stats')}
                                 </NavItem>
                             </li>
-                        </ul>
-                    </li>
 
                     <li className={SemanticStyles.profile}>
                         
                         {/* temporary hardcoded username */}
                         <UserMenu userName="Mikaela" />
                     </li>
-                </ul>
-            </nav>
+            </NavBar>
         </header>
     );
 };

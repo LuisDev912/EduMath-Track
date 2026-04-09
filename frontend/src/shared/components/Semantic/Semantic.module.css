@@ -27,7 +27,7 @@
     grid-area: main-navigation;
 }
 
-.mainNavigation ul {
+.mainNavigation > div {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -37,7 +37,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .nav ul{
+    .nav > div{
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas: 
             "home main-navigation profile"
