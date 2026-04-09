@@ -1,5 +1,5 @@
 import type { SettingItemProps } from './SettingsItem.types';
-import { Button } from '@components/ui/Button/Button';
+import { Button } from '@components/ui/Button/Button.tsx';
 import Styles from '../Settings.module.css';
 
 function SettingsItem({ title, description, actionType, action }: SettingItemProps) {
