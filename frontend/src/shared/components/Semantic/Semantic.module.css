@@ -1,4 +1,11 @@
-/* === Nav Bar === */
+/* === HEADER CONTAINER === */
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: #1c3a6d;
+}
+
+/* === NAV WRAPPER === */
 
 .nav{
     display: grid;

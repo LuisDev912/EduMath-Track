@@ -32,43 +32,39 @@ export function Header() {
     const { t } = useTranslation();
 
     return (
-        <header>
-            <NavBar className={SemanticStyles.nav} aria-label={t('nav.mainAriaLabel')}>
-                    <li className={SemanticStyles.homeLi}>
-                        <NavLink to='/' className='heading-primary home-link'>
-                            {t('nav.brand')}
-                        </NavLink>
-                    </li>
+        <header className={SemanticStyles.header}>
+            <NavBar
+                className={SemanticStyles.nav}
+                aria-label={t('nav.mainAriaLabel')}
+            >
+                <li className={SemanticStyles.home}>
+                    <NavLink to='/' className='heading-primary home-link'>
+                        {t('nav.brand')}
+                    </NavLink>
+                </li>
 
-                            <li>
-                                <NavItem
-                                    to='/404'
-                                >
-                                    {t('nav.dashboard')}
-                                </NavItem>
-                            </li>
+                <li className={SemanticStyles.navItem}>
+                    <NavItem to='/404'>
+                        {t('nav.dashboard')}
+                    </NavItem>
+                </li>
 
-                            <li>
-                                <NavItem
-                                    to='/404'
-                                >
-                                    {t('nav.practice')}
-                                </NavItem>
-                            </li>
+                <li className={SemanticStyles.navItem}>
+                    <NavItem to='/404'>
+                        {t('nav.practice')}
+                    </NavItem>
+                </li>
 
-                            <li>
-                                <NavItem
-                                    to='/404'
-                                >
-                                    {t('nav.stats')}
-                                </NavItem>
-                            </li>
+                <li className={SemanticStyles.navItem}>
+                    <NavItem to='/404'>
+                        {t('nav.stats')}
+                    </NavItem>
+                </li>
 
-                    <li className={SemanticStyles.profile}>
-                        
-                        {/* temporary hardcoded username */}
-                        <UserMenu userName="Mikaela" />
-                    </li>
+                <li className={SemanticStyles.profile}>
+                    {/* temporary hardcoded username */}
+                    <UserMenu userName="Mikaela" />
+                </li>
             </NavBar>
         </header>
     );
