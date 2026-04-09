@@ -1,15 +1,30 @@
+/* === LAYOUT === */
 .settingsContent {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
 }
 
+/* === SETTINGS ITEMS === */
 .settingsItem {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* --- information --- */
+.itemInformation{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.itemAction{
+    align-self: flex-end;
+    margin-bottom: var(--space-xs);
+}
+
+/* === NAV === */
 .breadcrumbNav{
     margin-bottom: var(--space-md);
 }

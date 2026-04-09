@@ -6,7 +6,7 @@ function SettingsItem({ title, description, actionType, action }: SettingItemPro
     return (
         <article className={Styles.settingsItem}>
             <div className={Styles.itemInformation}>
-                <p className={Styles.title}>{title}</p>
+                <p className="heading-tertiary">{title}</p>
                 <p className={Styles.description}>{description}</p>
             </div>
 
@@ -19,7 +19,7 @@ function SettingsItem({ title, description, actionType, action }: SettingItemPro
                 )}
             </div>
         </article>
-    )
+    );
 };
 
 export default SettingsItem;
