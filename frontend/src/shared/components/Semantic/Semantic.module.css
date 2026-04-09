@@ -5,61 +5,33 @@
     background-color: #1c3a6d;
 }
 
-/* === NAV WRAPPER === */
-
-.nav{
+/* --- nav list --- */
+.navList {
     display: grid;
-    background-color: #1c3a6d;
-}
-
-.navList{
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-    grid-template-areas: "home profile";
-}
-
-.homeLi{
-    grid-area: home;
-    max-width: max-content;
-}
-
-.profile{
-    grid-area: profile;
-    margin: auto;
-}
-
-.mainNavigation{
-    display: none;
-    grid-area: main-navigation;
-}
-
-.mainNavigation > div {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
-@media screen and (min-width: 768px) {
-    .nav > div{
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 
-            "home main-navigation profile"
-            /* [MathTrack] [dashboard, game, ...] [user profile] */
-        ;
+/* --- items --- */
+.navItem {
+    display: none;
+}
+
+/* --- desktop --- */
+@media (min-width: 768px) {
+    .navItem {
+        display: flex;
     }
-    
-    .mainNavigation{
-        display: block;
+
+    .navList {
+        grid-template-columns: auto 1fr 1fr 1fr auto;
     }
 }
 
-
-
-/* === Footer === */
+/* === FOOTER === */
 
 footer {
     padding: var(--space-lg) var(--space-md);
