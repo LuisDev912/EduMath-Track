@@ -31,6 +31,10 @@
 }
 
 /* === NAV === */
+.navBar{
+    border-bottom: 1.2px solid var(--accent-dark);
+}
+
 .breadcrumbNav{
     margin-bottom: var(--space-md);
 }

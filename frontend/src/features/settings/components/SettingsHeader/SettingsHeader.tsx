@@ -43,7 +43,7 @@ function SettingsHeader() {
                 </ol>
             </nav>
 
-            <NavBar aria-label="Main navigation">
+            <NavBar aria-label="Main navigation" className={Styles.navBar}>
                 {SETTINGS_ROUTES.map(route => (
                     <li key={route.path}>
                         <NavItem to={`/settings/${route.path}`}>
