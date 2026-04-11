@@ -95,13 +95,17 @@
   "settings": {
     "title": "Settings",
     "profile": {
-      "title": "Profile",
-      "description": "Manage your personal information and account preferences"
+      "title": "Profile"
     },
     "preferences": {
       "title": "Preferences",
-      "description": "Customize your experience by adjusting your preferences",
-      "language": "Language",
+      "changeLanguage": {
+        "title": "Language",
+        "options": {
+          "en": "English",
+          "es": "Spanish"
+        }
+      },
       "theme": "Theme"
     }
   }
