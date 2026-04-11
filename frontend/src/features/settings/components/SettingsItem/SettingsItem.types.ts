@@ -7,7 +7,7 @@ export type SettingItemProps = {
     title: string;
     description?: string;
     actionType: 'link' | 'button' | 'select';
-    options?: SelectOption;
+    options?: SelectOption[];
     value?: string;
     action?: (value?: string) => void;
 };
