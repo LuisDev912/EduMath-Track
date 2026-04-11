@@ -22,7 +22,7 @@ i18n
         },
 
         // Starts with English
-        lng: "en",
+        lng: localStorage.getItem('language') || 'en',
 
         // Supports these languages
         supportedLngs: ["en", "es"],

@@ -14,9 +14,12 @@ export default function PreferencesSettings() {
                     { value: "en", label: t("settings.preferences.changeLanguage.options.en") },
                     { value: "es", label: t("settings.preferences.changeLanguage.options.es") }
                 ]}
+
                 action={(value) => {
                     if (!value) return;
+
                     i18n.changeLanguage(value);
+                    localStorage.setItem("language", value);
                 }}
             />
         </div>
