@@ -41,6 +41,7 @@ function SettingsItem({
                         className={Styles.select}
                         value={value}
                         onChange={handleSelectChange}
+                        id="settings-select"
                     >
                         {options.map((opt) => (
                             <option key={opt.value} value={opt.value}>
