@@ -99,13 +99,7 @@
     },
     "preferences": {
       "title": "Preferences",
-      "changeLanguage": {
-        "title": "Language",
-        "options": {
-          "en": "English",
-          "es": "Spanish"
-        }
-      },
+      "changeLanguage": "Change language",
       "theme": "Theme"
     }
   }

@@ -6,13 +6,14 @@ export default function PreferencesSettings() {
     
     return (
         <div>
+            {/* show every option in their own language to improve global accessibility */}
             <SettingsItem
-                title={t("settings.preferences.changeLanguage.title")}
+                title={t("settings.preferences.changeLanguage")}
                 actionType="select"
                 value={i18n.language}
                 options={[
-                    { value: "en", label: t("settings.preferences.changeLanguage.options.en") },
-                    { value: "es", label: t("settings.preferences.changeLanguage.options.es") }
+                    { value: "en", label: t("English") },
+                    { value: "es", label: t("Español") }
                 ]}
 
                 action={(value) => {

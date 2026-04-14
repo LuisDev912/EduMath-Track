@@ -5,6 +5,10 @@ import { initReactI18next } from "react-i18next";
 import en from "./en/en.json";
 import es from "./es/es.json";
 
+// Gets the browser's language and the stored language
+const savedLang = localStorage.getItem('language');
+const browserLang = navigator.language.split('-')[0];
+
 i18n
     .use(initReactI18next)
     .init({
@@ -21,8 +25,7 @@ i18n
             },
         },
 
-        // Starts with English
-        lng: localStorage.getItem('language') || 'en',
+        lng: savedLang || browserLang,
 
         // Supports these languages
         supportedLngs: ["en", "es"],
