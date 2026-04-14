@@ -48,6 +48,33 @@ section {
     padding-block: 4rem;
 }
 
+select {
+    margin-top: var(--space-xs);
+    padding: var(--space-sm);
+    background-color: var(--background);
+    border: 0;
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+    cursor: pointer;
+    transition: background-color var(--transition-fast), outline var(--transition-fast);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--space-xs) center;
+    padding-right: var(--space-xl);
+}
+
+select:focus {
+    outline: 2px solid var(--accent-dark);
+    outline-offset: 2px;
+}
+
+select:hover {
+    background-color: var(--button-hover);
+    color: white;
+}
+
 .suspense{
     text-align: center;
     margin-top: var(--space-xxl);
