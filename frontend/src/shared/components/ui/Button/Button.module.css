@@ -9,6 +9,9 @@
     width: 300px;
     border-radius: var(--radius-md);
     font-size: var(--font-size-sm);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button:hover {
@@ -43,8 +46,8 @@
 .fullWidth { width: 100%; }
 
 /* --- text direction --- */
-.center{ text-align: center; }
+.center{ justify-content: center; }
 
-.left{ text-align: left; }
+.left{ justify-content: flex-start; }
 
-.right{ text-align: right; }
+.right{ justify-content: flex-end; }
