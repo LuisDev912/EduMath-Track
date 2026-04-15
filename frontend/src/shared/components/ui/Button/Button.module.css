@@ -6,7 +6,8 @@
         background-color var(--transition-fast),
         box-shadow var(--transition-fast);
     color: #f0f0f0;
-    width: 300px;
+    width: fit-content;
+    max-width: var(--btn-max-width, 100%);
     border-radius: var(--radius-md);
     font-size: var(--font-size-sm);
     display: inline-flex;

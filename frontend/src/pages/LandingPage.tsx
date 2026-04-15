@@ -35,7 +35,8 @@ export default function LandingPage() {
                     <Button
                         variant="primary"
                         size="md"
-                        fullWidth={false}
+                        fullWidth={true}
+                        maxWidth="300px"
                         onClick={() => handleNavigate(routes[key])}
                         key={key}
                     >

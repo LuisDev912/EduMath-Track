@@ -8,6 +8,7 @@ export function Button({
     fullWidth = false,
     textDirection = 'center',
     children,
+    maxWidth,
     ...props
 }: ButtonProps) {
     return (
@@ -20,6 +21,7 @@ export function Button({
                 fullWidth ? ButtonStyles.fullWidth : '',
                 ButtonStyles[textDirection]
             ].join(' ')}
+            style={{ '--btn-max-width': maxWidth } as React.CSSProperties}
             {...props}
         >
             {children}

@@ -4,6 +4,7 @@ export type ButtonProps = {
     size?: "sm" | "md" | "lg";
     textDirection?: "center" | "left" | "right";
     fullWidth?: boolean
+    maxWidth?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 // primary: main action (blue)
