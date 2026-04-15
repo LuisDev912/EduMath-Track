@@ -1,13 +1,12 @@
 import { Activity, useState } from "react";
 import { useTranslation } from "react-i18next";
-import type { GameConfig } from "./Game.types";
+import type { GameConfig } from "./Game.types.ts";
 import Styles from '../Game.module.css';
-import { NavBar } from "@components/ui/NavBar/NavBar";
 
 // child components
-import AnswerForm from "../AnswerForm";
-import OperationDisplay from "../OperationDisplay";
-import GenerateOperation from "../GenerateOperation";
+import AnswerForm from "../AnswerForm.tsx";
+import OperationDisplay from "../OperationDisplay.tsx";
+import GenerateOperation from "../GenerateOperation.tsx";
 
 function Game() {
     const { t } = useTranslation();
