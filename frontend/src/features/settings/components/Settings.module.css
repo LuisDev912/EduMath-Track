@@ -50,3 +50,13 @@
     list-style: none;
     align-items: center;
 }
+
+.breadcrumbSeparator {
+    font-size: var(--font-size-xl);
+    padding: 0 5px;
+    color: var(--text-secondary);
+}
+
+.breadcrumbCurrent {
+    color: var(--text-secondary);
+}
