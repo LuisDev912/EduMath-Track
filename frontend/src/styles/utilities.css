@@ -2,17 +2,11 @@
 
 .text-center{ text-align: center; }
 
-.max-w-600px{ max-width: 600px; }
-
-.m-auto{ margin: auto; }
-
 .correct-text{ color: #1cdd66; }
 
 .text-lg{ font-size: var(--font-size-lg); }
 
 .home-link { color: var(--text-light); }
-
-.full-width { max-width: 100%; }
 
 /* === flex utilities === */
 .flex { display: flex; }
@@ -30,3 +24,24 @@
 /* --- flex-direction */
 
 .flex-column { flex-direction: column; }
+
+/* === SPACING === */
+
+.full-width { max-width: 100%; }
+
+.max-w-600px { max-width: 600px; }
+
+.m-auto { margin: auto; }
+
+/* --- margin --- */
+.no-mg { margin: 0; }
+.no-mg-top { margin-top: 0; }
+.no-mg-bottom { margin-bottom: 0; }
+.no-mg-left { margin-left: 0; }
+.no-mg-right { margin-right: 0; }
+/* --- padding --- */
+.no-pd { padding: 0; }
+.no-pd-top { padding-top: 0; }
+.no-pd-bottom { padding-bottom: 0; }
+.no-pd-left { padding-left: 0; }
+.no-pd-right { padding-right: 0; }
