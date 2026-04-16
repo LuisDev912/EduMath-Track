@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { SETTINGS_ROUTES } from "./Settings.config.ts";
 import { useLocation } from "react-router";
 import { NavBar } from "@components/ui/NavBar/NavBar.tsx";
+import { NavLink } from "react-router";
 import Styles from "../Settings.module.css";
 import NavItem from "@components/NavItem/NavItem.tsx";
 
@@ -25,9 +26,10 @@ function SettingsHeader() {
             <nav aria-label="breadcrumb" className={Styles.breadcrumbNav}>
                 <ol>
                     <li>
-                        <NavItem to="/settings">
+                        {/* use NavLink instead of NavItem to avoid the accent style. That avoids user confusion */}
+                        <NavLink to="/settings" className={Styles.breadcrumbLink}>
                             {t("settings.title")}
-                        </NavItem>
+                        </NavLink>
                     </li>
 
                     {currentRoute && (
@@ -43,7 +45,11 @@ function SettingsHeader() {
                 </ol>
             </nav>
 
-            <NavBar aria-label="Main navigation" className={Styles.navBar}>
+            <NavBar
+                aria-label="Main navigation"
+                className={Styles.navBar}
+                showOverflow={true}
+            >
                 {SETTINGS_ROUTES.map(route => (
                     <li key={route.path}>
                         <NavItem to={`/settings/${route.path}`}>

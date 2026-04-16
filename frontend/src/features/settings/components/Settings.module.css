@@ -67,3 +67,8 @@
 .breadcrumbCurrent {
     color: var(--text-secondary);
 }
+
+.breadcrumbLink {
+    color: var(--text-primary);
+    text-decoration: none;
+}
