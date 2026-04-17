@@ -50,7 +50,7 @@ export function Header() {
                 </li>
 
                 <li className={SemanticStyles.navItem}>
-                    <NavItem to='/404'>
+                    <NavItem to='/game'>
                         {t('nav.practice')}
                     </NavItem>
                 </li>
