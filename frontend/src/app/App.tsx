@@ -42,16 +42,15 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/game" element={<GamePage/>} />
           <Route path='*' element={<NotFoundPage />} />
-        </Route>
 
-        {/* settings layout */}
-        <Route element={<SettingsLayout />}>
-          <Route path="/settings" element={<SettingsPage />} />
-          <Route path="/settings/profile" element={<ProfilePage />} />
-          <Route path="/settings/preferences" element={<PreferencesPage />} />
+          {/* settings layout */}
+          <Route path="/settings" element={<SettingsLayout />}>
+            <Route index element={<SettingsPage />} />
+            <Route path="profile" element={<ProfilePage />} />
+            <Route path="preferences" element={<PreferencesPage />} />
+          </Route>
         </Route>
       </Routes>
-
     </Suspense>
   );
 };

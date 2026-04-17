@@ -31,9 +31,8 @@
 
 .max-w-600px { max-width: 600px; }
 
-.m-auto { margin: auto; }
-
 /* --- margin --- */
+.m-auto { margin: auto; }
 .no-mg { margin: 0; }
 .no-mg-top { margin-top: 0; }
 .no-mg-bottom { margin-bottom: 0; }
