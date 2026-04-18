@@ -31,7 +31,7 @@ function SettingsItem({
                     </Button>
                 )}
                 {actionType === 'link' && (
-                    <a href="#" onClick={() => action?.()}>
+                    <a href={value}>
                         Go to settings
                     </a>
                 )}

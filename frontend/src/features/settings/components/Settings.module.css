@@ -8,8 +8,7 @@
 .settingsContent {
     max-width: 1200px;
     margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
+    padding: var(--space-xs);
 }
 
 @media (min-width: 455px) {
@@ -23,6 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-block: var(--space-lg) var(--space-lg);
 }
 
 /* --- information --- */
@@ -36,6 +36,8 @@
     align-self: flex-end;
     margin-bottom: var(--space-xs);
 }
+
+.description{ margin-top: 0; }
 
 /* === NAV === */
 .navBar{
