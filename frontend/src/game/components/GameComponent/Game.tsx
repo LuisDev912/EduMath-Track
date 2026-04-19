@@ -1,6 +1,6 @@
 import { Activity, useState } from "react";
 import { useTranslation } from "react-i18next";
-import type { GameConfig } from "./Game.types.ts";
+import type { GameConfig } from "../../types/Game.types.ts";
 import Styles from '../Game.module.css';
 
 // child components
