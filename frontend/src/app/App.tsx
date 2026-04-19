@@ -40,7 +40,7 @@ function App() {
 
         {/* main layout */}
         <Route element={<MainLayout />}>
-          <Route path="/game" element={<GamePage/>} />
+          <Route path="/game/:mode" element={<GamePage/>} />
           <Route path='*' element={<NotFoundPage />} />
 
           {/* settings layout */}
