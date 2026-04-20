@@ -23,16 +23,6 @@ export default function PreferencesSettings() {
                     localStorage.setItem("language", value);
                 }}
             />
-
-            <SettingsItem
-                title={t("settings.preferences.changeLanguage")}
-                actionType="select"
-                value={""}
-                options={[
-                    { value: "en", label: t("English") },
-                    { value: "es", label: t("Español") }
-                ]}
-            />
         </div>
     );
 };
