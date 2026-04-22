@@ -1,8 +1,3 @@
-export type GameConfig = {
-    firstNumber: number;
-    secondNumber: number;
-};
-
 export type GameMode =
     | "addition"
     | "subtraction"
@@ -12,6 +7,8 @@ export type GameMode =
 export type Difficulty = "tutorial" | "easy" | "medium" | "hard";
 
 export type Question = {
+    firstNumber: number;
+    secondNumber: number;
     operator: string;
     answer: number;
 }
