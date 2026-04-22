@@ -1,18 +1,15 @@
-import { useTranslation } from "react-i18next";
+import type { Question } from "../types/Game.types";
 
-type Numbers = {
-    firstNum: number;
-    secondNum: number;
+type Props = {
+    question: Question
 }
 
-function OperationDisplay({ firstNum, secondNum }: Numbers) {
-    const { t } = useTranslation();
-
+function OperationDisplay({ question }: Props) {
     return (
         <p className="text-lg">
-            {t("game.operation", { firstNum, secondNum })}
+            {question.firstNumber} {question.operator} {question.secondNumber}
         </p>
-    );
-};
+    )
+}
 
 export default OperationDisplay;
