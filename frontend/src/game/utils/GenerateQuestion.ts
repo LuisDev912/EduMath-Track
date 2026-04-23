@@ -13,41 +13,43 @@ export function generateQuestion(
 
     const max = ranges[difficulty]
 
-    let firstNumber = Math.floor(Math.random() * max) + 1
-    let secondNumber = Math.floor(Math.random() * max) + 1
+    let a = Math.floor(Math.random() * max) + 1
+    let b = Math.floor(Math.random() * max) + 1
 
     switch (mode) {
         case "addition":
             return {
+                a, b,
                 operator: "+",
-                answer: firstNumber + secondNumber
+                answer: a + b
             };
 
         case "subtraction":
-            if (firstNumber < secondNumber) { // ensure the first number is greater than the second to avoid negative answers
-                [firstNumber, secondNumber] = [secondNumber, firstNumber]
-            };
-            
+            if (a < b) [a, b] = [b, a];
+
             return {
+                a, b,
                 operator: "-",
-                answer: firstNumber - secondNumber
+                answer: a - b
             };
 
         case "multiplication":
             return {
+                a, b,
                 operator: "X",
-                answer: firstNumber * secondNumber
+                answer: a * b
             };
 
         case "division":
-            while (secondNumber === 0 || firstNumber % secondNumber !== 0) { // ensure the second number is not zero and the first number is divisible by the second to avoid fractional answers
-                firstNumber = Math.floor(Math.random() * max) + 1
-                secondNumber = Math.floor(Math.random() * max) + 1
+            while (b === 0 || a % b !== 0) {
+                a = Math.floor(Math.random() * max) + 1
+                b = Math.floor(Math.random() * max) + 1
             };
 
             return {
+                a, b,
                 operator: "÷",
-                answer: firstNumber / secondNumber
+                answer: a / b
             };
     };
-}
+};

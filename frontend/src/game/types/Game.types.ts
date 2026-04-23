@@ -7,8 +7,8 @@ export type GameMode =
 export type Difficulty = "tutorial" | "easy" | "medium" | "hard";
 
 export type Question = {
-    firstNumber: number;
-    secondNumber: number;
+    a: number;
+    b: number;
     operator: string;
     answer: number;
 }
