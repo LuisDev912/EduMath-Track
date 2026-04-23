@@ -1,32 +1,19 @@
 import { Activity, useState } from "react";
 import { useTranslation } from "react-i18next";
-import type { GameConfig } from "../../types/Game.types.ts";
 import Styles from '../Game.module.css';
 
 // child components
 import AnswerForm from "../AnswerForm.tsx";
 import OperationDisplay from "../OperationDisplay.tsx";
 import GenerateOperation from "../GenerateOperation.tsx";
+import type { useGame } from "src/game/hooks/useGame.tsx";
 
-function Game() {
+type Props = {
+    game: ReturnType<typeof useGame>;
+}
+
+function Game({game}: Props) {
     const { t } = useTranslation();
-    const [result, setResult] = useState<null | boolean>(null);
-    const [points, setPoints] = useState<number>(0);
-    const [gameConfig, setGameConfig] = useState<GameConfig>({
-        firstNumber: 0,
-        secondNumber: 0
-    });
-
-    const generateNumbers = (): void => {
-        const a = Math.floor(Math.random() * 50) + 1;
-        const b = Math.floor(Math.random() * 50) + 1;
-
-        setResult(null);
-        setGameConfig({
-            firstNumber: a,
-            secondNumber: b
-        });
-    };
 
     return (
         <section className={Styles.box}>
