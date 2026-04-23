@@ -6,16 +6,32 @@ export function useGame(
     mode: GameMode,
     difficulty: Difficulty
 ) {
-    // State variables
+    // --- State variables ---
     const [score, setScore] = useState(0);
     const [question, setQuestion] = useState(() => {
         generateQuestion(mode, difficulty);
     });
 
-    // Functions
+    // --- Functions ---
+    const nextQuestion = () => {
+        setQuestion(generateQuestion(mode, difficulty));
+    };
+
+    const handleValidation = (answer: number): void => {
+        const isCorrect = question.answer;
+
+        if (isCorrect) {
+            // use an if-else statement instead of a ternary operator for better readability and change two things at the same time
+            setScore(prev => prev + 1);
+        } else {
+            setScore(0); // this might change in the future, for now we reset score to 0 when the answer is incorrect
+        };
+    };
 
     return {
         score,
-        question
+        question,
+        nextQuestion,
+        handleValidation
     };
 };
