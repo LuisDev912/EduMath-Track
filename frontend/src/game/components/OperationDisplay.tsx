@@ -1,15 +1,15 @@
 import type { Question } from "../types/Game.types";
 
 type Props = {
-    question: Question
-}
+    question: Question;
+};
 
 function OperationDisplay({ question }: Props) {
     return (
         <p className="text-lg">
-            {question.firstNumber} {question.operator} {question.secondNumber}
+            {question.a} {question.operator} {question.b}
         </p>
-    )
-}
+    );
+};
 
 export default OperationDisplay;
