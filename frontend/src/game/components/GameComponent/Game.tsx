@@ -14,12 +14,19 @@ type Props = {
 
 function Game({game}: Props) {
     const { t } = useTranslation();
+    const [result, setResult] = useState<boolean | null>(null);
+
+    const { question, score, handleValidation } = game;
+
+    const handleSubmit = (answer: number) => {
+        const isCorrect = handleValidation(answer)
+        setResult(isCorrect)
+    }
 
     return (
         <section className={Styles.box}>
-            <OperationDisplay firstNum={gameConfig.firstNumber} secondNum={gameConfig.secondNumber} />
-            <GenerateOperation onGenerate={generateNumbers} />
-            <AnswerForm onValidate={handleValidation} />
+            <OperationDisplay question={question} />
+            <AnswerForm onValidate={handleSubmit} />
 
             <Activity mode={result ? "visible" : "hidden"}>
                 <p className="correct-text">
@@ -27,12 +34,12 @@ function Game({game}: Props) {
                 </p>
             </Activity>
 
-            <p>points: {points}</p>
+            <p>points: {score}</p>
 
             <Activity mode={result === false ? "visible" : "hidden"}>
                 <p>
                     {t("game.feedback.incorrect", {
-                        answer: gameConfig.firstNumber + gameConfig.secondNumber
+                        answer: question.answer
                     })}
                 </p>
             </Activity>

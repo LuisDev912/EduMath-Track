@@ -26,7 +26,6 @@ export function useGame(
             setScore(0); // this might change in the future, for now we reset score to 0 when the answer is incorrect
         };
 
-        nextQuestion();
         return isCorrect;
     };
 
