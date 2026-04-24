@@ -1,4 +1,4 @@
-import { Activity, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Styles from '../Game.module.css';
 
@@ -26,23 +26,28 @@ function Game({game}: Props) {
     return (
         <section className={Styles.box}>
             <OperationDisplay question={question} />
+
             <AnswerForm onValidate={handleSubmit} />
 
-            <Activity mode={result ? "visible" : "hidden"}>
-                <p className="correct-text">
+            <GenerateOperation onGenerate={() => game.nextQuestion()} />
+
+            {result === true &&
+                <p
+                    className="correct-text"
+                >
                     {t("game.feedback.correct")}
                 </p>
-            </Activity>
+            }
 
-            <p>points: {score}</p>
-
-            <Activity mode={result === false ? "visible" : "hidden"}>
-                <p>
-                    {t("game.feedback.incorrect", {
-                        answer: question.answer
-                    })}
+            {result === false &&
+                <p
+                    className="incorrect-text"
+                >
+                    {t("game.feedback.incorrect")}
                 </p>
-            </Activity>
+            }
+
+            <p>{t("game.score")}: {score}</p>
         </section>
     );
 };

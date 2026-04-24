@@ -1,10 +1,6 @@
 import type { Question } from "../types/Game.types";
 
-type Props = {
-    question: Question;
-};
-
-function OperationDisplay({ question }: Props) {
+function OperationDisplay({ question }: { question: Question }) {
     return (
         <p className="text-lg">
             {question.a} {question.operator} {question.b}
