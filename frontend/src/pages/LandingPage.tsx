@@ -16,7 +16,7 @@ export default function LandingPage() {
     const routes: Record<string, string> = {
         getStarted: "/register",
         login: "/login",
-        demo: "/game/tutorial"
+        demo: "/game/addition/tutorial"
     };
 
     // functions
