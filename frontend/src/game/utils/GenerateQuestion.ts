@@ -51,5 +51,8 @@ export function generateQuestion(
                 operator: "÷",
                 answer: a / b
             };
+        
+        default:
+            throw new Error(`Invalid game mode: ${mode}`);
     };
 };

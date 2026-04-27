@@ -21,7 +21,7 @@ function Game({game}: Props) {
     const handleSubmit = (answer: number) => {
         const isCorrect = handleValidation(answer)
         setResult(isCorrect)
-    }
+    };
 
     return (
         <section className={Styles.box}>

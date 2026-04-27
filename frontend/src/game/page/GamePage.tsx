@@ -5,16 +5,23 @@ import { useGame } from "../hooks/useGame";
 import Game from "../components/GameComponent/Game";
 
 export default function GamePage() {
-    const { mode } = useParams();
+    const { mode, difficulty } = useParams();
     const { t } = useTranslation();
 
+    const validDifficulties = ["tutorial", "easy", "medium", "hard"];
     const validModes = ["addition", "subtraction", "multiplication", "division"];
-    const difficulty: Difficulty = "easy"; // this will be dynamic in the future, for now we set it to easy
-    const game = useGame(mode as GameMode, difficulty);
+    const game = useGame(
+        mode as GameMode,
+        difficulty as Difficulty
+    );
 
     if (!mode || !validModes.includes(mode)) {
         return <p>Invalid mode</p>
     };
+
+    if (!difficulty || !validDifficulties.includes(difficulty)) {
+        return <p>Invalid difficulty</p>
+    }
 
     return (
         <section className="flex flex-column align-center">
