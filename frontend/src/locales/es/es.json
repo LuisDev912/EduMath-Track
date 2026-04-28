@@ -53,7 +53,7 @@
   "game": {
     "title": "Juego",
     "generate": "Generar",
-    "operation": "{{firstNum}} + {{secondNum}} = ?",
+    "operation": "{{firstNum}} {{operation}} {{secondNum}} = ?",
     "score": "Puntuación: {{score}}",
     "answerForm": {
       "ariaLabel": "Formulario de envío de respuestas",
