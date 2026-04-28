@@ -54,6 +54,7 @@
     "title": "Game",
     "generate": "Generate",
     "operation": "{{firstNum}} + {{secondNum}} = ?",
+    "score": "Score: {{score}}",
     "answerForm": {
       "ariaLabel": "Answer submission form",
       "answerLabel": "Your answer:",

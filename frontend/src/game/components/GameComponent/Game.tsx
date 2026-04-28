@@ -43,11 +43,11 @@ function Game({game}: Props) {
                 <p
                     className="incorrect-text"
                 >
-                    {t("game.feedback.incorrect")}
+                    {t("game.feedback.incorrect", { answer: question.answer })}
                 </p>
             }
 
-            <p>{t("game.score")}: {score}</p>
+            <p>{t("game.score", { score })}</p>
         </section>
     );
 };
