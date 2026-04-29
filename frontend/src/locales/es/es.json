@@ -65,6 +65,23 @@
     "feedback": {
       "correct": "¡Eso es correcto!",
       "incorrect": "Eso no es correcto. La respuesta es: {{answer}}"
+    },
+    "hub": {
+      "title": "Centro de juegos",
+      "description": "Selecciona el tipo de operación y el nivel de dificultad para comenzar a practicar tus habilidades matemáticas.",
+      "modes": {
+        "addition": "Suma",
+        "subtraction": "Resta",
+        "multiplication": "Multiplicación",
+        "division": "División"
+      },
+      "difficulty": {
+        "tutorial": "Tutorial",
+        "easy": "Fácil",
+        "medium": "Medio",
+        "hard": "Difícil"
+      },
+      "startButton": "Comenzar Practica"
     }
   },
   "auth": {

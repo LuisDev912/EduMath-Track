@@ -65,6 +65,23 @@
     "feedback": {
       "correct": "That is correct!",
       "incorrect": "This is not correct. The answer is: {{answer}}"
+    },
+    "hub": {
+      "title": "Game Hub",
+      "description": "Choose your practice mode and difficulty level to start improving your math skills!",
+      "modes": {
+        "addition": "Addition",
+        "subtraction": "Subtraction",
+        "multiplication": "Multiplication",
+        "division": "Division"
+      },
+      "difficulty": {
+        "tutorial": "Tutorial",
+        "easy": "Easy",
+        "medium": "Medium",
+        "hard": "Hard"
+      },
+      "startButton": "Start Practice"
     }
   },
   "auth": {
