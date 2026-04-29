@@ -1,4 +1,4 @@
-import type { Question } from "../types/Game.types";
+import type { Question } from "../types/Game.types.ts";
 import { useTranslation } from "react-i18next";
 
 function OperationDisplay({ question }: { question: Question }) {

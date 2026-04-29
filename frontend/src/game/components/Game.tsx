@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 import Styles from '../Game.module.css';
 
 // child components
-import AnswerForm from "../AnswerForm.tsx";
-import OperationDisplay from "../OperationDisplay.tsx";
-import GenerateOperation from "../GenerateOperation.tsx";
+import AnswerForm from "./AnswerForm.tsx";
+import OperationDisplay from "./OperationDisplay.tsx";
+import GenerateOperation from "./GenerateOperation.tsx";
 import type { useGame } from "src/game/hooks/useGame.tsx";
 
 type Props = {

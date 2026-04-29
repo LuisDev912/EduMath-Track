@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router";
 import type { Difficulty, GameMode } from "../types/Game.types";
-import { useGame } from "../hooks/useGame";
-import Game from "../components/GameComponent/Game";
+import { useGame } from "../hooks/useGame.tsx";
+import Game from "../components/Game.tsx";
 
 export default function GamePage() {
     const { mode, difficulty } = useParams();
@@ -21,7 +21,7 @@ export default function GamePage() {
 
     if (!difficulty || !validDifficulties.includes(difficulty)) {
         return <p>Invalid difficulty</p>
-    }
+    };
 
     return (
         <section className="flex flex-column align-center">
