@@ -14,8 +14,8 @@ const RegisterPage = lazy(() => import('../features/auth/pages/Register.tsx'));
 const LoginPage = lazy(() => import('../features/auth/pages/Login.tsx'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage.tsx'));
 // game page
-const GamePage = lazy(() => import('../game/page/GamePage.tsx'));
-const GameHubPage = lazy(() => import('../game/page/GameHub.tsx'));
+const GamePage = lazy(() => import('../game/gameplay/pages/GamePage.tsx'));
+const GameHubPage = lazy(() => import('../game/hub/pages/GameHub.tsx'));
 // settings pages
 const SettingsPage = lazy(() => import('../features/settings/pages/SettingsPage.tsx'));
 const ProfilePage = lazy(() => import('../features/settings/pages/ProfileSettings.tsx'));
@@ -41,7 +41,7 @@ function App() {
 
         {/* main layout */}
         <Route element={<MainLayout />}>
-          <Route path="/game/:mode/:difficulty" element={<GamePage/>} />
+          <Route path="/game/:mode/:difficulty" element={<GamePage />} />
           <Route path="/game/hub" element={<GameHubPage />} />
           <Route path='*' element={<NotFoundPage />} />
 

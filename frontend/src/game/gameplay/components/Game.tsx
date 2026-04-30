@@ -6,21 +6,21 @@ import Styles from './Game.module.css';
 import AnswerForm from "./AnswerForm.tsx";
 import OperationDisplay from "./OperationDisplay.tsx";
 import GenerateOperation from "./GenerateOperation.tsx";
-import type { useGame } from "src/game/hooks/useGame.tsx";
+import type { useGame } from "../hooks/useGame.tsx";
 
 type Props = {
     game: ReturnType<typeof useGame>;
 }
 
-function Game({game}: Props) {
+function Game({ game }: Props) {
     const { t } = useTranslation();
     const [result, setResult] = useState<boolean | null>(null);
 
     const { question, score, handleValidation } = game;
 
     const handleSubmit = (answer: number) => {
-        const isCorrect = handleValidation(answer)
-        setResult(isCorrect)
+        const isCorrect = handleValidation(answer);
+        setResult(isCorrect);
     };
 
     return (

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { SendButton } from "../../shared/icons/SendButton";
+import { SendButton } from "@shared/icons/SendButton";
 import { Button } from "@components/ui/Button/Button.tsx";
 import { Input } from "@components/ui/Input/Input.tsx";
 import Styles from './Game.module.css';

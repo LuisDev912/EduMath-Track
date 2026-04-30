@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router";
-import type { Difficulty, GameMode } from "../types/Game.types";
+import type { Difficulty, GameMode } from "../types/Game.types.ts";
 import { useGame } from "../hooks/useGame.tsx";
 import Game from "../components/Game.tsx";
 
