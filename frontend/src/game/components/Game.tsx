@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import Styles from '../Game.module.css';
+import Styles from './Game.module.css';
 
 // child components
 import AnswerForm from "./AnswerForm.tsx";
