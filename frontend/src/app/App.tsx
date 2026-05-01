@@ -14,8 +14,8 @@ const RegisterPage = lazy(() => import('../features/auth/pages/Register.tsx'));
 const LoginPage = lazy(() => import('../features/auth/pages/Login.tsx'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage.tsx'));
 // game page
-const GamePage = lazy(() => import('../game/gameplay/pages/GamePage.tsx'));
-const GameHubPage = lazy(() => import('../game/hub/pages/GameHub.tsx'));
+const GamePage = lazy(() => import('@game/gameplay/pages/GamePage.tsx'));
+const GameHubPage = lazy(() => import('@game/hub/pages/GameHub.tsx'));
 // settings pages
 const SettingsPage = lazy(() => import('../features/settings/pages/SettingsPage.tsx'));
 const ProfilePage = lazy(() => import('../features/settings/pages/ProfileSettings.tsx'));
