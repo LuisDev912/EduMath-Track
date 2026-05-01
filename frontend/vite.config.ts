@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import { resolve } from 'node:path';
 
 // https://vite.dev/config/
@@ -14,7 +14,8 @@ export default defineConfig({
   resolve: {
     alias: {
       "@components": resolve(__dirname, "src/shared/components"),
-      "@shared": resolve(__dirname, "src/shared")
+      "@shared": resolve(__dirname, "src/shared"),
+      "@game": resolve(__dirname, "src/game")
     }
   }
-})
+});
