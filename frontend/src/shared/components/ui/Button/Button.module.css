@@ -25,7 +25,7 @@
 }
 
 /* --- variants --- */
-.primary { background: var(--accent); }
+.primary { background: var(--button-background); }
 
 .secondary { background-color: #295aa8; }
 
