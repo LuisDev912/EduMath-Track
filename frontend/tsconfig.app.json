@@ -16,7 +16,7 @@
       "@shared/*": [
         "src/shared/*"
       ],
-      "@game": [
+      "@game/*": [
         "src/game/*"
       ]
     },
