@@ -23,12 +23,12 @@ function SettingsItem({
             <div className={Styles.itemAction}>
                 {actionType === 'button' && (
                     <Button onClick={() => action?.()}>
-                        Go to settings
+                        {title}
                     </Button>
                 )}
                 {actionType === 'link' && (
                     <a href={value}>
-                        Go to settings
+                        {title}
                     </a>
                 )}
 
