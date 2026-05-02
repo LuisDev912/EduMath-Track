@@ -9,10 +9,15 @@ export function Select({
     options,
     action,
 }: SelectProps) {
-    const selectId = useId();
+    const selectId = useId(); // fallback id if none is provided
+
+    const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        action?.(e.target.value);
+    };
 
     return (
         <>
+            {/* label element to improve accessibility */}
             <label htmlFor={id || selectId} className="sr-only">
                 {label}
             </label >
@@ -20,12 +25,12 @@ export function Select({
             <select
                 className={Styles.select}
                 value={value}
-                onChange={action ? (e) => action(e.target.value) : undefined}
+                onChange={handleSelectChange}
                 id={id || selectId}
             >
-                {options.map((opt) => (
-                    <option key={opt} value={opt}>
-                        {opt}
+                {options?.map((opt) => (
+                    <option key={opt.optionValue} value={opt.optionValue}>
+                        {opt.optionLabel}
                     </option>
                 ))}
             </select>
