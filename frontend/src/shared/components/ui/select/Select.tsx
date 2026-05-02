@@ -10,7 +10,25 @@ export function Select({
     action,
 }: SelectProps) {
     const selectId = useId();
+
     return (
-        <select id={id || selectId} className={Styles.select}></select>
+        <>
+            <label htmlFor={id || selectId} className="sr-only">
+                {label}
+            </label >
+
+            <select
+                className={Styles.select}
+                value={value}
+                onChange={action ? (e) => action(e.target.value) : undefined}
+                id={id || selectId}
+            >
+                {options.map((opt) => (
+                    <option key={opt} value={opt}>
+                        {opt}
+                    </option>
+                ))}
+            </select>
+        </>
     );
 };
