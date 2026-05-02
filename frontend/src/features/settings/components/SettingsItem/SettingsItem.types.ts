@@ -8,7 +8,6 @@ export type SettingItemProps = {
     description?: string;
     actionType: 'link' | 'button' | 'select';
     options?: SelectOption[];
-    value?: string;
-    id?: string;
+    value: string;
     action?: (value?: string) => void;
 };

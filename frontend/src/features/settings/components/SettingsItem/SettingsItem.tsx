@@ -1,6 +1,6 @@
 import type { SettingItemProps } from './SettingsItem.types';
 import { Button } from '@components/ui/Button/Button.tsx';
-import { useId } from 'react';
+import { Select } from '@components/ui/Select/Select';
 import Styles from '../Settings.module.css';
 
 function SettingsItem({
@@ -9,17 +9,8 @@ function SettingsItem({
     actionType,
     options,
     value,
-    action,
-    id
+    action
 }: SettingItemProps) {
-
-    const generatedId = useId();
-    const finalId = id || generatedId;
-
-    const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        action?.(e.target.value);
-    };
-
     return (
         <article className={Styles.settingsItem}>
             <div className={Styles.itemInformation}>
@@ -42,18 +33,16 @@ function SettingsItem({
                 )}
 
                 {actionType === 'select' && options && (
-                    <select
-                        className={Styles.select}
+                    <Select
+                        id="settings-select"
+                        label={title}
                         value={value}
-                        onChange={handleSelectChange}
-                        id={finalId}
-                    >
-                        {options.map((opt) => (
-                            <option key={opt.value} value={opt.value}>
-                                {opt.label}
-                            </option>
-                        ))}
-                    </select>
+                        action={(val) => action?.(val)}
+                        options={options.map(opt => ({
+                            optionLabel: opt.label,
+                            optionValue: opt.value
+                        }))}
+                    />
                 )}
             </div>
         </article>
