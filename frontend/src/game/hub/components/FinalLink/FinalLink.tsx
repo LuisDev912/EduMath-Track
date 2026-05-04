@@ -1,4 +1,5 @@
 import type { FinalLinkProps } from "./FinalLink.types.ts";
+import NavItem from "@components/NavItem/NavItem.tsx";
 
 function FinalLink({
     mode,
@@ -8,7 +9,7 @@ function FinalLink({
     const finalMode = mode || "addition";
     const finalDifficulty = difficulty || "easy";
 
-    return <a href="#">test</a>
+    return <NavItem to={`/game/${finalMode}/${finalDifficulty}`}>Test</NavItem>;
 };
 
 export default FinalLink;
