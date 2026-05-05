@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Select } from '@components/ui/Select/Select.tsx';
 import Styles from '../../gameplay/components/Game.module.css';
 
 import FinalLink from "../components/FinalLink/FinalLink";
@@ -10,9 +11,37 @@ export default function GameHub() {
 
     return (
         <section className="flex flex-column align-center">
+            <h1>{t("game.hub.title")}</h1>
+
             <div className={Styles.box}>
-                <h1>{t("game.hub.title")}</h1>
                 <p>{t("game.hub.description")}</p>
+
+                <div>
+                    <Select
+                        id="game-mode-select"
+                        label={t("game.hub.selectMode")}
+                        value="addition"
+                        options={[
+                            { optionLabel: t("game.modes.addition"), optionValue: "addition" },
+                            { optionLabel: t("game.modes.subtraction"), optionValue: "subtraction" },
+                            { optionLabel: t("game.modes.multiplication"), optionValue: "multiplication" },
+                            { optionLabel: t("game.modes.division"), optionValue: "division" }
+                        ]}
+                        action={(val) => console.log(val)}
+                    />
+
+                    <Select
+                        id="difficulty-select"
+                        label={t("game.hub.selectDifficulty")}
+                        value="easy"
+                        options={[
+                            { optionLabel: t("game.difficulties.easy"), optionValue: "easy" },
+                            { optionLabel: t("game.difficulties.medium"), optionValue: "medium" },
+                            { optionLabel: t("game.difficulties.hard"), optionValue: "hard" }
+                        ]}
+                        action={(val) => console.log(val)}
+                    />
+                </div>
                 
                 {/* hardcoded for testing purposes */}
                 <FinalLink
