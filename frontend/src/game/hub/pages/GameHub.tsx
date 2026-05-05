@@ -22,10 +22,10 @@ export default function GameHub() {
                         label={t("game.hub.selectMode")}
                         value="addition"
                         options={[
-                            { optionLabel: t("game.modes.addition"), optionValue: "addition" },
-                            { optionLabel: t("game.modes.subtraction"), optionValue: "subtraction" },
-                            { optionLabel: t("game.modes.multiplication"), optionValue: "multiplication" },
-                            { optionLabel: t("game.modes.division"), optionValue: "division" }
+                            { optionLabel: t("game.hub.modes.addition"), optionValue: "addition" },
+                            { optionLabel: t("game.hub.modes.subtraction"), optionValue: "subtraction" },
+                            { optionLabel: t("game.hub.modes.multiplication"), optionValue: "multiplication" },
+                            { optionLabel: t("game.hub.modes.division"), optionValue: "division" }
                         ]}
                         action={(val) => console.log(val)}
                     />
@@ -35,9 +35,9 @@ export default function GameHub() {
                         label={t("game.hub.selectDifficulty")}
                         value="easy"
                         options={[
-                            { optionLabel: t("game.difficulties.easy"), optionValue: "easy" },
-                            { optionLabel: t("game.difficulties.medium"), optionValue: "medium" },
-                            { optionLabel: t("game.difficulties.hard"), optionValue: "hard" }
+                            { optionLabel: t("game.hub.difficulty.easy"), optionValue: "easy" },
+                            { optionLabel: t("game.hub.difficulty.medium"), optionValue: "medium" },
+                            { optionLabel: t("game.hub.difficulty.hard"), optionValue: "hard" }
                         ]}
                         action={(val) => console.log(val)}
                     />
