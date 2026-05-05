@@ -70,12 +70,14 @@
       "title": "Centro de juegos",
       "description": "Selecciona el tipo de operación y el nivel de dificultad para comenzar a practicar tus habilidades matemáticas.",
       "modes": {
+        "select": "Seleccionar modo",
         "addition": "Suma",
         "subtraction": "Resta",
         "multiplication": "Multiplicación",
         "division": "División"
       },
       "difficulty": {
+        "select": "Seleccionar dificultad",
         "tutorial": "Tutorial",
         "easy": "Fácil",
         "medium": "Medio",

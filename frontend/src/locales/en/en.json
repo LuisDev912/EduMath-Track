@@ -70,12 +70,14 @@
       "title": "Game Hub",
       "description": "Choose your practice mode and difficulty level to start improving your math skills!",
       "modes": {
+        "select": "Select mode",
         "addition": "Addition",
         "subtraction": "Subtraction",
         "multiplication": "Multiplication",
         "division": "Division"
       },
       "difficulty": {
+        "select": "Select difficulty",
         "tutorial": "Tutorial",
         "easy": "Easy",
         "medium": "Medium",

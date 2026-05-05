@@ -19,8 +19,8 @@ export default function GameHub() {
                 <div>
                     <Select
                         id="game-mode-select"
-                        label={t("game.hub.selectMode")}
-                        value="addition"
+                        label={t("game.hub.modes.select")}
+                        value={t("game.hub.modes.addition")}
                         options={[
                             { optionLabel: t("game.hub.modes.addition"), optionValue: "addition" },
                             { optionLabel: t("game.hub.modes.subtraction"), optionValue: "subtraction" },
@@ -32,8 +32,8 @@ export default function GameHub() {
 
                     <Select
                         id="difficulty-select"
-                        label={t("game.hub.selectDifficulty")}
-                        value="easy"
+                        label={t("game.hub.difficulty.select")}
+                        value={t("game.hub.difficulty.easy")}
                         options={[
                             { optionLabel: t("game.hub.difficulty.easy"), optionValue: "easy" },
                             { optionLabel: t("game.hub.difficulty.medium"), optionValue: "medium" },
