@@ -8,16 +8,15 @@
     "types": ["vite/client"],
     "skipLibCheck": true,
     "ignoreDeprecations": "6.0",
-    "baseUrl": ".",
     "paths": {
       "@components/*": [
-        "src/shared/components/*"
+        "./src/shared/components/*"
       ],
       "@shared/*": [
-        "src/shared/*"
+        "./src/shared/*"
       ],
       "@game/*": [
-        "src/game/*"
+        "./src/game/*"
       ]
     },
 
