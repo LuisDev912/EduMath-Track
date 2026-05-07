@@ -4,31 +4,34 @@ import Styles from './Select.module.css';
 
 export function Select({
     id,
+    name,
     label,
     value,
     options,
     action,
+    hideLabel = true,
 }: SelectProps) {
-    const selectId = useId(); // fallback id if none is provided
+    const generatedId = useId();
+    const selectId = id || generatedId;
 
     const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        action?.(e.target.value);
+        action(e.target.value);
     };
 
     return (
         <>
-            {/* label element to improve accessibility */}
-            <label htmlFor={id || selectId} className="sr-only">
+            <label htmlFor={selectId} className={hideLabel ? 'sr-only' : undefined}>
                 {label}
-            </label >
+            </label>
 
             <select
                 className={Styles.select}
                 value={value}
                 onChange={handleSelectChange}
-                id={id || selectId}
+                id={selectId}
+                name={name}
             >
-                {options?.map((opt) => (
+                {options.map((opt) => (
                     <option key={opt.optionValue} value={opt.optionValue}>
                         {opt.optionLabel}
                     </option>
