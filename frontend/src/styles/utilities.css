@@ -35,6 +35,9 @@
 
 /* --- margin --- */
 .m-auto { margin: auto; }
+
+.m-sm{ margin: var(--space-sm); }
+
 .no-mg { margin: 0; }
 .no-mg-top { margin-top: 0; }
 .no-mg-bottom { margin-bottom: 0; }
