@@ -1,11 +1,11 @@
 .select {
     margin-top: var(--space-xs);
     padding: var(--space-sm);
-    background-color: var(--background);
+    background-color: var(--button-background);
     border: 0;
     border-radius: var(--radius-lg);
     font-size: var(--font-size-sm);
-    color: var(--text-light);
+    color: var(--color-text);
     cursor: pointer;
     transition: background-color var(--transition-fast), outline var(--transition-fast);
     appearance: none;
