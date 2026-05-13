@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { NavBar } from '@components/ui/NavBar/NavBar';
-import UserMenu from '../UserMenu/UserMenu';
-import NavItem from '../NavItem/NavItem';
+import { NavBar } from '@components/ui/NavBar/NavBar.tsx';
+import UserMenu from '../UserMenu/UserMenu.tsx';
+import NavItem from '../NavItem/NavItem.tsx';
 import SemanticStyles from './Semantic.module.css';
 
 export function Footer() {
@@ -18,8 +18,7 @@ export function Footer() {
                 <br />
 
                 <small
-                    className='small-text'
-                    style={{ opacity: '0.7' }}
+                    className='small-text opaque-text'
                 >
                     {t('footer.version', { version: '0.0.0' })}
                 </small>
