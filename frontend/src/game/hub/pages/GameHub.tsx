@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import Styles from '../../gameplay/components/Game.module.css';
 
 import FinalLink from "../components/FinalLink/FinalLink.tsx";
-import GameSelect from "../components/GameSelect.tsx";
+import GameSelect from "../components/GameSelect/GameSelect.tsx";
 
 // this is the hub page for the game. Here, the user will select the wanted game mode and difficulty. The user will also be able to see their stats and achievements.
 
