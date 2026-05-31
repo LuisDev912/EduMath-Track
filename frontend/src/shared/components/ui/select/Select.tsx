@@ -1,15 +1,13 @@
 import { useId } from 'react';
-import type { SelectProps } from './Select.types';
+import type { SelectProps } from './Select.types.ts';
 import Styles from './Select.module.css';
 
 export function Select({
     id,
-    name,
     label,
     value,
     options,
-    action,
-    hideLabel = true,
+    action
 }: SelectProps) {
     const generatedId = useId();
     const selectId = id || generatedId;
@@ -20,7 +18,7 @@ export function Select({
 
     return (
         <>
-            <label htmlFor={selectId} className={hideLabel ? 'sr-only' : undefined}>
+            <label htmlFor={selectId} className='sr-only'>
                 {label}
             </label>
 
@@ -29,7 +27,6 @@ export function Select({
                 value={value}
                 onChange={handleSelectChange}
                 id={selectId}
-                name={name}
             >
                 {options.map((opt) => (
                     <option key={opt.optionValue} value={opt.optionValue}>
