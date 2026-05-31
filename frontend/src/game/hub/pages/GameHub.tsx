@@ -1,17 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import { Select } from '@components/ui/Select/Select.tsx';
 import Styles from '../../gameplay/components/Game.module.css';
 
-import FinalLink from "../components/FinalLink/FinalLink";
+import FinalLink from "../components/FinalLink/FinalLink.tsx";
+import GameSelect from "../components/GameSelect.tsx";
 
 // this is the hub page for the game. Here, the user will select the wanted game mode and difficulty. The user will also be able to see their stats and achievements.
 
 export default function GameHub() {
     const { t } = useTranslation();
-
-    const [mode, setMode] = useState("addition");
-    const [difficulty, setDifficulty] = useState("easy");
 
     return (
         <section className="flex flex-column align-center">
@@ -20,34 +16,8 @@ export default function GameHub() {
             <div className={Styles.box}>
                 <p>{t("game.hub.description")}</p>
 
-                <div>
-                    <Select
-                        id="game-mode-select"
-                        label={t("game.hub.modes.select")}
-                        value={mode}
-                        options={[
-                            { optionLabel: t("game.hub.modes.addition"), optionValue: "addition" },
-                            { optionLabel: t("game.hub.modes.subtraction"), optionValue: "subtraction" },
-                            { optionLabel: t("game.hub.modes.multiplication"), optionValue: "multiplication" },
-                            { optionLabel: t("game.hub.modes.division"), optionValue: "division" }
-                        ]}
-                        action={setMode}
-                    />
+                <GameSelect />
 
-                    <Select
-                        id="difficulty-select"
-                        label={t("game.hub.difficulty.select")}
-                        value={difficulty}
-                        options={[
-                            { optionLabel: t("game.hub.difficulty.easy"), optionValue: "easy" },
-                            { optionLabel: t("game.hub.difficulty.medium"), optionValue: "medium" },
-                            { optionLabel: t("game.hub.difficulty.hard"), optionValue: "hard" }
-                        ]}
-                        action={setDifficulty}
-                    />
-                </div>
-                
-                {/* hardcoded for testing purposes */}
                 <FinalLink
                     mode={mode}
                     difficulty={difficulty}
