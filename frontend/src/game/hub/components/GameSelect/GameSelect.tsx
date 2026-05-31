@@ -1,13 +1,15 @@
-import { useState } from 'react';
 import { Select } from '@components/ui/Select/Select.tsx';
 import { useTranslation } from 'react-i18next';
 
-function GameSelect() { 
+import type { GameSelectProps } from './GameSelect.types.ts';
+
+function GameSelect({ 
+    mode,
+    difficulty,
+    setMode,
+    setDifficulty
+}: GameSelectProps) { 
     const { t } = useTranslation();
-
-    const [mode, setMode] = useState("addition");
-    const [difficulty, setDifficulty] = useState("easy");
-
     return (
         <section>
             <Select

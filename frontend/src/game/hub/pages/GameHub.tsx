@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import Styles from '../../gameplay/components/Game.module.css';
 
@@ -9,6 +10,9 @@ import GameSelect from "../components/GameSelect/GameSelect.tsx";
 export default function GameHub() {
     const { t } = useTranslation();
 
+    const [mode, setMode] = useState("addition");
+    const [difficulty, setDifficulty] = useState("easy");
+
     return (
         <section className="flex flex-column align-center">
             <h1>{t("game.hub.title")}</h1>
@@ -16,7 +20,12 @@ export default function GameHub() {
             <div className={Styles.box}>
                 <p>{t("game.hub.description")}</p>
 
-                <GameSelect />
+                <GameSelect
+                    mode={mode}
+                    difficulty={difficulty}
+                    setMode={setMode}
+                    setDifficulty={setDifficulty}
+                />
 
                 <FinalLink
                     mode={mode}
