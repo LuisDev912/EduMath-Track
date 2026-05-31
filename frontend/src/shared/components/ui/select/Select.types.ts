@@ -7,6 +7,6 @@ export type SelectProps = {
     label: string;
     value: string;
     options: Options[];
-    action: (value?: string) => void;
+    action: (value: string) => void;
     id?: string;
 };
