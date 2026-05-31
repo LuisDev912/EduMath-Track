@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 import { Select } from '@components/ui/Select/Select.tsx';
 import Styles from '../../gameplay/components/Game.module.css';
 
@@ -8,6 +9,9 @@ import FinalLink from "../components/FinalLink/FinalLink";
 
 export default function GameHub() {
     const { t } = useTranslation();
+
+    const [mode, setMode] = useState("addition");
+    const [difficulty, setDifficulty] = useState("easy");
 
     return (
         <section className="flex flex-column align-center">
@@ -20,33 +24,33 @@ export default function GameHub() {
                     <Select
                         id="game-mode-select"
                         label={t("game.hub.modes.select")}
-                        value={t("game.hub.modes.addition")}
+                        value={mode}
                         options={[
                             { optionLabel: t("game.hub.modes.addition"), optionValue: "addition" },
                             { optionLabel: t("game.hub.modes.subtraction"), optionValue: "subtraction" },
                             { optionLabel: t("game.hub.modes.multiplication"), optionValue: "multiplication" },
                             { optionLabel: t("game.hub.modes.division"), optionValue: "division" }
                         ]}
-                        action={(val) => console.log(val)}
+                        action={setMode}
                     />
 
                     <Select
                         id="difficulty-select"
                         label={t("game.hub.difficulty.select")}
-                        value={t("game.hub.difficulty.easy")}
+                        value={difficulty}
                         options={[
                             { optionLabel: t("game.hub.difficulty.easy"), optionValue: "easy" },
                             { optionLabel: t("game.hub.difficulty.medium"), optionValue: "medium" },
                             { optionLabel: t("game.hub.difficulty.hard"), optionValue: "hard" }
                         ]}
-                        action={(val) => console.log(val)}
+                        action={setDifficulty}
                     />
                 </div>
                 
                 {/* hardcoded for testing purposes */}
                 <FinalLink
-                    mode="addition"
-                    difficulty="easy"
+                    mode={mode}
+                    difficulty={difficulty}
                 />
             </div>
 
