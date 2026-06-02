@@ -10,8 +10,9 @@ function GameSelect({
     setDifficulty
 }: GameSelectProps) { 
     const { t } = useTranslation();
+
     return (
-        <section>
+        <form>
             <Select
                 id="game-mode-select"
                 label={t("game.hub.modes.select")}
@@ -36,7 +37,8 @@ function GameSelect({
                 ]}
                 action={setDifficulty}
             />
-        </section>
+        </form>
     );
 };
+
 export default GameSelect;
