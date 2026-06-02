@@ -14,7 +14,7 @@ export default function GameHub() {
     const [difficulty, setDifficulty] = useState("easy");
 
     return (
-        <section className="flex flex-column align-center">
+        <section className="flex flex-column">
             <h1>{t("game.hub.title")}</h1>
 
             <div className={Styles.box}>
@@ -27,10 +27,12 @@ export default function GameHub() {
                     setDifficulty={setDifficulty}
                 />
 
-                <FinalLink
-                    mode={mode}
-                    difficulty={difficulty}
-                />
+                <div className="flex justify-center">
+                    <FinalLink
+                        mode={mode}
+                        difficulty={difficulty}
+                    />
+                </div>
             </div>
 
         </section>
