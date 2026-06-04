@@ -1,5 +1,6 @@
 import { Select } from '@components/ui/Select/Select.tsx';
 import { useTranslation } from 'react-i18next';
+import Styles from '../HubComponents.module.css';
 
 import type { GameSelectProps } from './GameSelect.types.ts';
 
@@ -12,7 +13,7 @@ function GameSelect({
     const { t } = useTranslation();
 
     return (
-        <form>
+        <form className={Styles.selectForm}>
             <Select
                 id="game-mode-select"
                 label={t("game.hub.modes.select")}
