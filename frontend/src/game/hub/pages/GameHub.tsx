@@ -14,7 +14,7 @@ export default function GameHub() {
     const [difficulty, setDifficulty] = useState("easy");
 
     return (
-        <section className="flex flex-column">
+        <section className="flex flex-column align-center">
             <h1>{t("game.hub.title")}</h1>
 
             <div className={Styles.box}>
