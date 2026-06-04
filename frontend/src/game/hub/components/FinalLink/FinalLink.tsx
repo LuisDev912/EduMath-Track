@@ -1,4 +1,6 @@
 import type { FinalLinkProps } from "./FinalLink.types.ts";
+import { useTranslation } from "react-i18next";
+
 import NavItem from "@components/NavItem/NavItem.tsx";
 
 function FinalLink({
@@ -9,7 +11,9 @@ function FinalLink({
     const finalMode = mode || "addition";
     const finalDifficulty = difficulty || "easy";
 
-    return <NavItem to={`/game/${finalMode}/${finalDifficulty}`}>Test</NavItem>;
+    const { t } = useTranslation();
+
+    return <NavItem to={`/game/${finalMode}/${finalDifficulty}`}>{t("game.hub.startButton")}</NavItem>;
 };
 
 export default FinalLink;
