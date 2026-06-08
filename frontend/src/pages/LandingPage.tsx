@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
 import { Button } from "@components/ui/Button/Button.tsx";
-import type { cardsTranslation } from "@shared/types/Card.types";
+import type { cardsTranslation } from "@components/Cards/Card.types";
 import Card from "@components/Cards/Card.tsx";
 
 export default function LandingPage() {

@@ -13,9 +13,15 @@ function FinalLink({
 
     const { t } = useTranslation();
 
-    return <div className={Styles.gameLink}>
-        <NavItem to={`/game/${finalMode}/${finalDifficulty}`}>{t("game.hub.startButton")}</NavItem>
-    </div>;
+    return (
+        <div className={Styles.gameLink}>
+            <NavItem
+                to={`/game/${finalMode}/${finalDifficulty}`}
+            >
+                {t("game.hub.startButton")}
+            </NavItem>
+        </div>
+    );
 };
 
 export default FinalLink;
