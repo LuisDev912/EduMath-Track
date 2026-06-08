@@ -1,5 +1,5 @@
 import { Outlet } from "react-router";
-import SettingsHeader from "../components/SettingsHeader/SettingsHeader";
+import SettingsHeader from "../components/SettingsHeader/SettingsHeader.tsx";
 import Styles from '../components/Settings.module.css';
 
 export default function SettingsLayout() {

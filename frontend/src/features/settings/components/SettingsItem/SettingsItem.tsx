@@ -36,7 +36,7 @@ function SettingsItem({
                     <Select
                         id="settings-select"
                         label={title}
-                        value={value}
+                        value={value?? options[0].value}
                         action={(val) => action?.(val)}
                         options={options.map(opt => ({
                             optionLabel: opt.label,

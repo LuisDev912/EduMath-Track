@@ -1,4 +1,4 @@
-import SettingsItem from "../components/SettingsItem/SettingsItem";
+import SettingsItem from "../components/SettingsItem/SettingsItem.tsx";
 
 export default function SettingsPage() {
     return (
