@@ -46,7 +46,7 @@ function SettingsHeader() {
             </nav>
 
             <NavBar
-                aria-label="Main navigation"
+                aria-label={t("nav.mainAriaLabel")}
                 className={Styles.navBar}
                 showOverflow={true}
             >
