@@ -1,4 +1,4 @@
-import type { Difficulty, GameMode, Question } from "../types/Game.types";
+import type { Difficulty, GameMode, Question } from "../types/Game.types.ts";
 
 export function generateQuestion(
     mode: GameMode,
