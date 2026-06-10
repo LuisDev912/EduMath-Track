@@ -16,6 +16,7 @@ export function useGame(
     // --- Functions ---
     const nextQuestion = () => {
         setQuestion(generateQuestion(mode, difficulty));
+        setIsAnswered(false);
     };
 
     const handleValidation = (answer: number): boolean => {
