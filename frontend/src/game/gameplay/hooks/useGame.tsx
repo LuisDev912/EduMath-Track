@@ -7,7 +7,6 @@ export function useGame(
     difficulty: Difficulty
 ) {
     // --- State variables ---
-    const [isAnswered, setIsAnswered] = useState(false);
     const [score, setScore] = useState(0);
     const [question, setQuestion] = useState(() => {
         return generateQuestion(mode, difficulty);
@@ -16,7 +15,6 @@ export function useGame(
     // --- Functions ---
     const nextQuestion = () => {
         setQuestion(generateQuestion(mode, difficulty));
-        setIsAnswered(false);
     };
 
     const handleValidation = (answer: number): boolean => {
@@ -28,7 +26,6 @@ export function useGame(
             setScore(0); // this might change in the future, for now we reset score to 0 when the answer is incorrect
         };
 
-        setIsAnswered(true);
         return isCorrect;
     };
 
@@ -36,7 +33,6 @@ export function useGame(
         score,
         question,
         nextQuestion,
-        handleValidation,
-        isAnswered
+        handleValidation
     };
 };

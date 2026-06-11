@@ -15,14 +15,23 @@ type Props = {
 function Game({ game }: Props) {
     const { t } = useTranslation();
     const [result, setResult] = useState<boolean | null>(null);
+    const [isAnswered, setIsAnswered] = useState(false);
 
-    const { question, score, handleValidation, isAnswered } = game;
+    const { question, score, handleValidation } = game;
 
     const handleSubmit = (answer: number) => {
         if (isAnswered) return; // prevent validating the answer multiple times
 
         const isCorrect = handleValidation(answer);
+
         setResult(isCorrect);
+        setIsAnswered(true);
+    };
+
+    const handleNextQuestion = () => {
+        game.nextQuestion();
+        setResult(null);
+        setIsAnswered(false);
     };
 
     return (
@@ -34,7 +43,7 @@ function Game({ game }: Props) {
                 disabled={isAnswered}
             />
 
-            <GenerateOperation onGenerate={() => game.nextQuestion()} />
+            <GenerateOperation onGenerate={handleNextQuestion} />
 
             {result === true &&
                 <p
