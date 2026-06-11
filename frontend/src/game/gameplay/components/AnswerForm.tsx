@@ -28,6 +28,7 @@ function AnswerForm({ onValidate, disabled }: { onValidate: (answer: number) => 
         >
             <Input
                 label={t("game.answerForm.label")}
+                disableInput={disabled}
                 name="answer-input"
                 id="answer-input"
                 type="number"
