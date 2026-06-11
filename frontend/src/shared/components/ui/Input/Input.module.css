@@ -32,11 +32,13 @@
     box-shadow: var(--shadow-strong);
 }
 
-.input[type="submit"]:disabled {
+/* --- disabled --- */
+
+.input:disabled {
     opacity: 0.6;
     cursor: not-allowed;
 }
 
-.input[type="submit"]:disabled:hover {
+.input:disabled:hover {
     box-shadow: none;
 }

@@ -8,7 +8,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((
         id,
         disableInput,
         ...props
-}: InputProps, ref) => {
+    }: InputProps, ref) => {
     return (
         <div>
             
