@@ -16,9 +16,11 @@ function Game({ game }: Props) {
     const { t } = useTranslation();
     const [result, setResult] = useState<boolean | null>(null);
 
-    const { question, score, handleValidation } = game;
+    const { question, score, handleValidation, isAnswered } = game;
 
     const handleSubmit = (answer: number) => {
+        if (isAnswered) return; // prevent validating the answer multiple times
+
         const isCorrect = handleValidation(answer);
         setResult(isCorrect);
     };
@@ -27,7 +29,10 @@ function Game({ game }: Props) {
         <section className={Styles.box}>
             <OperationDisplay question={question} />
 
-            <AnswerForm onValidate={handleSubmit} />
+            <AnswerForm
+                onValidate={handleSubmit}
+                disabled={isAnswered}
+            />
 
             <GenerateOperation onGenerate={() => game.nextQuestion()} />
 

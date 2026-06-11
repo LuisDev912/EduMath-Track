@@ -5,7 +5,7 @@ import { Button } from "@components/ui/Button/Button.tsx";
 import { Input } from "@components/ui/Input/Input.tsx";
 import Styles from './Game.module.css';
 
-function AnswerForm({ onValidate }: { onValidate: (answer: number) => void }) {
+function AnswerForm({ onValidate, disabled }: { onValidate: (answer: number) => void; disabled: boolean }) {
     const { t } = useTranslation();
     const answerRef = useRef<HTMLInputElement | null>(null);
 
