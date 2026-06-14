@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Styles from './Game.module.css';
 
@@ -19,6 +19,8 @@ function Game({ game }: Props) {
 
     const { question, score, handleValidation } = game;
 
+    const TIMEOUT_DURATION = 3000;
+
     const handleSubmit = (answer: number) => {
         if (isAnswered) return; // prevent validating the answer multiple times
 
@@ -33,6 +35,17 @@ function Game({ game }: Props) {
         setResult(null);
         setIsAnswered(false);
     };
+
+    useEffect(() => { 
+        if (result === null) return;
+
+        const timer = setTimeout(() => {
+            setResult(null);
+            handleNextQuestion();
+        }, TIMEOUT_DURATION);
+        
+        return () => clearTimeout(timer);
+    }, [result]);
 
     return (
         <section className={Styles.box}>
