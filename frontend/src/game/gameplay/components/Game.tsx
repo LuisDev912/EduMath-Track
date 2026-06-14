@@ -14,13 +14,16 @@ type Props = {
 
 function Game({ game }: Props) {
     const { t } = useTranslation();
+    // state variables
     const [result, setResult] = useState<boolean | null>(null);
     const [isAnswered, setIsAnswered] = useState(false);
 
+    // destructure game state and functions
     const { question, score, handleValidation } = game;
 
     const TIMEOUT_DURATION = 3000;
 
+    // functions to handle user interactions
     const handleSubmit = (answer: number) => {
         if (isAnswered) return; // prevent validating the answer multiple times
 
@@ -36,6 +39,7 @@ function Game({ game }: Props) {
         setIsAnswered(false);
     };
 
+    // side effect to reset result and load next question after a delay
     useEffect(() => { 
         if (result === null) return;
 
@@ -47,6 +51,7 @@ function Game({ game }: Props) {
         return () => clearTimeout(timer);
     }, [result]);
 
+    // render the game interface
     return (
         <section className={Styles.box}>
             <OperationDisplay question={question} />
