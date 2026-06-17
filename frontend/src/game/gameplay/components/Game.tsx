@@ -6,6 +6,7 @@ import Styles from './Game.module.css';
 import AnswerForm from "./AnswerForm.tsx";
 import OperationDisplay from "./OperationDisplay.tsx";
 import GenerateOperation from "./GenerateOperation.tsx";
+import NextQuestionCountdown from "./NextQuestionCountdown/NextQuestionCountdown.tsx";
 import type { useGame } from "../hooks/useGame.tsx";
 
 type Props = {
@@ -78,6 +79,8 @@ function Game({ game }: Props) {
                     {t("game.feedback.incorrect", { answer: question.answer })}
                 </p>
             }
+
+            {isAnswered && <NextQuestionCountdown countdown={TIMEOUT_DURATION / 1000} />}
 
             <p>{t("game.score", { score })}</p>
         </section>
