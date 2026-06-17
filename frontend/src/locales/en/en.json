@@ -55,7 +55,7 @@
     "generate": "Generate",
     "operation": "{{firstNum}} {{operation}} {{secondNum}} = ?",
     "score": "Score: {{score}}",
-    "nextQuestion": "Next question in {{countdown}} seconds",
+    "nextQuestion": "Next question in {{countdown}}...",
     "answerForm": {
       "ariaLabel": "Answer submission form",
       "answerLabel": "Your answer:",
