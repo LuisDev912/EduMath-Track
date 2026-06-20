@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import Styles from './Game.module.css';
 
@@ -25,20 +25,20 @@ function Game({ game }: Props) {
     const TIMEOUT_DURATION = 3000;
 
     // functions to handle user interactions
-    const handleSubmit = (answer: number) => {
+    const handleSubmit = useCallback((answer: number) => {
         if (isAnswered) return; // prevent validating the answer multiple times
 
         const isCorrect = handleValidation(answer);
 
         setResult(isCorrect);
         setIsAnswered(true);
-    };
+    }, [isAnswered, handleValidation]);
 
-    const handleNextQuestion = () => {
+    const handleNextQuestion = useCallback(() => {
         game.nextQuestion();
         setResult(null);
         setIsAnswered(false);
-    };
+    }, [game]);
 
     // side effect to reset result and load next question after a delay
     useEffect(() => { 
@@ -50,7 +50,7 @@ function Game({ game }: Props) {
         }, TIMEOUT_DURATION);
         
         return () => clearTimeout(timer);
-    }, [result]);
+    }, [result, handleNextQuestion]);
 
     // render the game interface
     return (

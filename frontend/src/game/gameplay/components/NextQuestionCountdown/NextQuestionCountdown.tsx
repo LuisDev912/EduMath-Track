@@ -7,18 +7,17 @@ function NextQuestionCountdown({ countdown }: NextQuestionCountdownProps) {
     const displayCountdown = Math.ceil(countdown);
     const [seconds, setSeconds] = useState(displayCountdown);
 
+    // timer to update the countdown every second
     useEffect(() => {
         const timer = setInterval(() => {
             setSeconds((prev) => {
-                if (prev > 0) {
-                    return prev - 1;
-                } else {
-                    clearInterval(timer);
-                    return 0;
-                }
-            });
+                if (prev > 0) return prev - 1;
 
+                clearInterval(timer);
+                return 0;
+            });
         }, 1000);
+
         return () => clearInterval(timer);
     }, [displayCountdown]);
 
