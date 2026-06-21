@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router";
 import type { Difficulty, GameMode } from "../types/Game.types.ts";
-import { useGame } from "../hooks/useGame.tsx";
+import { useGame } from "../hooks/useGame.ts";
 import Game from "../components/Game.tsx";
 
 export default function GamePage() {

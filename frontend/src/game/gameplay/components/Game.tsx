@@ -7,7 +7,7 @@ import AnswerForm from "./AnswerForm.tsx";
 import OperationDisplay from "./OperationDisplay.tsx";
 import GenerateOperation from "./GenerateOperation.tsx";
 import NextQuestionCountdown from "./NextQuestionCountdown.tsx";
-import type { useGame } from "../hooks/useGame.tsx";
+import type { useGame } from "../hooks/useGame.ts";
 
 type Props = {
     game: ReturnType<typeof useGame>;
