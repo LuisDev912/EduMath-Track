@@ -1,5 +1,24 @@
 import { useState, useEffect } from "react";
 
-export function useTimer(duration: number) { 
-    return duration / 1000; // convert milliseconds to seconds for easier use in the countdown component
-}
+export function useTimer(initialTime: number) { 
+    const [timeLeft, setTime] = useState(initialTime);
+
+    useEffect(() => {
+        if (timeLeft <= 0) return;
+
+        const intervalId = setInterval(() => {
+            setTime(prev => prev + 1)
+        }, 1000);
+
+        return () => clearInterval(intervalId);
+    }, [timeLeft]);
+
+    const reset = () => {
+        setTime(initialTime);
+    };
+
+    return {
+        timeLeft,
+        reset
+    };
+};  
