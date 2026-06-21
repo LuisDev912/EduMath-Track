@@ -6,7 +6,7 @@ import Styles from './Game.module.css';
 import AnswerForm from "./AnswerForm.tsx";
 import OperationDisplay from "./OperationDisplay.tsx";
 import GenerateOperation from "./GenerateOperation.tsx";
-import NextQuestionCountdown from "./NextQuestionCountdown/NextQuestionCountdown.tsx";
+import NextQuestionCountdown from "./NextQuestionCountdown.tsx";
 import type { useGame } from "../hooks/useGame.tsx";
 
 type Props = {

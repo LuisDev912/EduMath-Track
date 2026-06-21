@@ -1,11 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
-import type { NextQuestionCountdownProps } from "./NextQuestionCountdown.types.ts";
+import type { Timer } from "../types/Game.types.ts";
 
-function NextQuestionCountdown({ countdown }: NextQuestionCountdownProps) {
+function NextQuestionCountdown({ countdown }: Timer) {
     const { t } = useTranslation();
-    const displayCountdown = Math.ceil(countdown);
-    const [seconds, setSeconds] = useState(displayCountdown);
+    const [seconds, setSeconds] = useState(countdown);
 
     // timer to update the countdown every second
     useEffect(() => {
@@ -19,7 +18,7 @@ function NextQuestionCountdown({ countdown }: NextQuestionCountdownProps) {
         }, 1000);
 
         return () => clearInterval(timer);
-    }, [displayCountdown]);
+    }, [countdown]);
 
     return (
         <p aria-live="polite">

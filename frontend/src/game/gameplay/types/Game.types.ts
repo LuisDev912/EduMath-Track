@@ -11,4 +11,8 @@ export type Question = {
     b: number;
     operator: string;
     answer: number;
-}
+};
+
+export type Timer = {
+    countdown: number;
+};
