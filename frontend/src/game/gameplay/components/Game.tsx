@@ -7,6 +7,7 @@ import AnswerForm from "./AnswerForm.tsx";
 import OperationDisplay from "./OperationDisplay.tsx";
 import GenerateOperation from "./GenerateOperation.tsx";
 import NextQuestionCountdown from "./NextQuestionCountdown.tsx";
+import Timer from "./Timer.tsx";
 
 import { useGame } from "../hooks/useGame.ts";
 
@@ -58,6 +59,7 @@ function Game({ game }: Props) {
     // render the game interface
     return (
         <section className={Styles.box}>
+            <Timer timeLeft={10} />
             <OperationDisplay question={question} />
 
             <AnswerForm
