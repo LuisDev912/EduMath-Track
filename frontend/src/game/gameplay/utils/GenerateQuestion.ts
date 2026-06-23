@@ -4,14 +4,14 @@ export function generateQuestion(
     mode: GameMode,
     difficulty: Difficulty
 ): Question {
-    const ranges = {
+    const RANGES_BY_DIFFICULTY = {
         tutorial: 5,
         easy: 10,
         medium: 50,
         hard: 100
     }
 
-    const max = ranges[difficulty]
+    const max = RANGES_BY_DIFFICULTY[difficulty]
 
     let a = Math.floor(Math.random() * max) + 1
     let b = Math.floor(Math.random() * max) + 1

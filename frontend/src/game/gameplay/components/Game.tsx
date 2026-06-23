@@ -7,7 +7,8 @@ import AnswerForm from "./AnswerForm.tsx";
 import OperationDisplay from "./OperationDisplay.tsx";
 import GenerateOperation from "./GenerateOperation.tsx";
 import NextQuestionCountdown from "./NextQuestionCountdown.tsx";
-import type { useGame } from "../hooks/useGame.ts";
+
+import { useGame } from "../hooks/useGame.ts";
 
 type Props = {
     game: ReturnType<typeof useGame>;
@@ -21,6 +22,8 @@ function Game({ game }: Props) {
 
     // destructure game state and functions
     const { question, score, handleValidation } = game;
+
+    // const { reset, timeLeft } = useTimer(10);
 
     const TIMEOUT_DURATION = 3000;
 
