@@ -1,8 +1,8 @@
-function Timer({ timeLeft }: { timeLeft: number; }) { 
+function Timer({ timeLeft, maxTime }: { timeLeft: number; maxTime: number }) { 
     return (
         <div>
-            <label htmlFor="timer">Time Left: {timeLeft} seconds</label>
-            <progress value={timeLeft} max="100" className="timer">
+            <label htmlFor="timer" className="sr-only">Time Left: {timeLeft} seconds</label>
+            <progress value={timeLeft} max={maxTime} className="timer">
                 {timeLeft}
             </progress>
         </div>
