@@ -13,12 +13,12 @@ export function useTimer(initialTime: number) {
         return () => clearInterval(intervalId);
     }, [timeLeft]);
 
-    const reset = () => {
+    const timerReset = () => {
         setTime(initialTime);
     };
 
     return {
         timeLeft,
-        reset
+        timerReset
     };
 };  
