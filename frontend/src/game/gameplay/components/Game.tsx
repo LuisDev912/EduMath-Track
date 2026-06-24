@@ -25,7 +25,7 @@ function Game({ game }: Props) {
     // destructure game state and functions
     const { question, score, handleValidation } = game;
 
-    const { timeLeft } = useTimer(1);
+    const { timeLeft, timerReset } = useTimer(1);
 
     const TIMEOUT_DURATION = 3000;
 
@@ -45,6 +45,14 @@ function Game({ game }: Props) {
         setIsAnswered(false);
     }, [game]);
 
+    const handleTimerEnd = useCallback(() => {
+        if (!isAnswered) {
+            setResult(false);
+            setIsAnswered(true);
+        }
+        timerReset();
+    }, [isAnswered, timerReset]);
+
     // side effect to reset result and load next question after a delay
     useEffect(() => { 
         if (result === null) return;
@@ -60,7 +68,7 @@ function Game({ game }: Props) {
     // render the game interface
     return (
         <section className={Styles.box}>
-            <Timer timeLeft={timeLeft} maxTime={10} />
+            <Timer timeLeft={timeLeft} maxTime={10} onEnd={handleTimerEnd} />
             <OperationDisplay question={question} />
 
             <AnswerForm
