@@ -7,7 +7,7 @@ import AnswerForm from "./AnswerForm.tsx";
 import OperationDisplay from "./OperationDisplay.tsx";
 import GenerateOperation from "./GenerateOperation.tsx";
 import NextQuestionCountdown from "./NextQuestionCountdown.tsx";
-import Timer from "./Timer.tsx";
+import Timer from "./Timer/Timer.tsx";
 
 import { useGame } from "../hooks/useGame.ts";
 import { useTimer } from "../hooks/useTimer.ts";
