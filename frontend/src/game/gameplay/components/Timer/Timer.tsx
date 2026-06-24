@@ -1,4 +1,9 @@
-function Timer({ timeLeft, maxTime, onEnd }: { timeLeft: number; maxTime: number; onEnd: () => void }) { 
+import type { TimerProps } from "./Timer.types.ts";
+
+function Timer({
+    timeLeft,
+    maxTime,
+    onEnd }: TimerProps) { 
     return (
         <div>
             <label htmlFor="timer" className="sr-only">Time Left: {timeLeft} seconds</label>
