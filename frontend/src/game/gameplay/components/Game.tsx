@@ -43,7 +43,8 @@ function Game({ game }: Props) {
         game.nextQuestion();
         setResult(null);
         setIsAnswered(false);
-    }, [game]);
+        timerReset();
+    }, [game, timerReset]);
 
     const handleTimerEnd = useCallback(() => {
         if (!isAnswered) {
