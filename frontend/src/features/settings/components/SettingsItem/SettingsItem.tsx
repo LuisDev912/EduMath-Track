@@ -1,6 +1,6 @@
 import type { SettingItemProps } from './SettingsItem.types';
 import { Button } from '@components/ui/Button/Button.tsx';
-import { Select } from '@components/ui/Select/Select';
+import { Select } from '@components/ui/select/Select.tsx';
 import Styles from '../Settings.module.css';
 
 function SettingsItem({
@@ -37,7 +37,7 @@ function SettingsItem({
                         id="settings-select"
                         label={title}
                         value={value?? options[0].value}
-                        action={(val) => action?.(val)}
+                        action={(val: string) => action?.(val)}
                         options={options.map(opt => ({
                             optionLabel: opt.label,
                             optionValue: opt.value

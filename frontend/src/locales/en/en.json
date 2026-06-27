@@ -85,6 +85,13 @@
         "hard": "Hard"
       },
       "startButton": "Start Practice"
+    },
+    "timer": {
+      "timeLeft": "Time left: {{seconds}} seconds",
+      "enable": "Enable timer",
+      "disable": "Disable timer",
+      "pause": "Pause timer",
+      "resume": "Resume timer"
     }
   },
   "auth": {

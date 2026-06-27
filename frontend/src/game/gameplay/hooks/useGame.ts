@@ -32,6 +32,7 @@ export function useGame(
     return {
         score,
         question,
+        difficulty,
         nextQuestion,
         handleValidation
     };

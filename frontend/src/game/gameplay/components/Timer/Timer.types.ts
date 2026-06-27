@@ -1,5 +1,8 @@
 export type TimerProps = {
     timeLeft: number;
     maxTime: number;
-    onEnd: () => void;
+    isEnabled: boolean;
+    isPaused: boolean;
+    onToggleEnabled: () => void;
+    onTogglePaused: () => void;
 };
