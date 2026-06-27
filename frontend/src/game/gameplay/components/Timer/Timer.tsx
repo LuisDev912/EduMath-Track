@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import type { TimerProps } from "./Timer.types.ts";
+import { Button } from "@components/ui/Button/Button.tsx";
 
 function Timer({
     timeLeft,
@@ -21,12 +22,12 @@ function Timer({
             </progress>
 
             <div className="flex justify-center">
-                <button type="button" onClick={onToggleEnabled}>
+                <Button onClick={onToggleEnabled}>
                     {isEnabled ? t("game.timer.disable") : t("game.timer.enable")}
-                </button>
-                <button type="button" onClick={onTogglePaused} disabled={!isEnabled}>
+                </Button>
+                <Button onClick={onTogglePaused} disabled={!isEnabled}>
                     {isPaused ? t("game.timer.resume") : t("game.timer.pause")}
-                </button>
+                </Button>
             </div>
         </div>
     );
