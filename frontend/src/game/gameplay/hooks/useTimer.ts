@@ -1,24 +1,36 @@
-import { useState, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 
-export function useTimer(initialTime: number) { 
-    const [timeLeft, setTime] = useState(initialTime);
+export function useTimer(initialTime: number, isRunning = true, onComplete?: () => void) {
+    const [timeLeft, setTimeLeft] = useState(initialTime);
 
     useEffect(() => {
-        if (timeLeft <= 0) return;
+        setTimeLeft(initialTime);
+    }, [initialTime]);
 
-        const intervalId = setInterval(() => {
-            setTime(prev => prev + 1)
+    useEffect(() => {
+        if (!isRunning || timeLeft <= 0) return;
+
+        const intervalId = window.setInterval(() => {
+            setTimeLeft(prev => {
+                const nextTime = Math.max(prev - 1, 0);
+
+                if (nextTime === 0) {
+                    window.setTimeout(() => onComplete?.(), 0);
+                }
+
+                return nextTime;
+            });
         }, 1000);
 
-        return () => clearInterval(intervalId);
-    }, [timeLeft]);
+        return () => window.clearInterval(intervalId);
+    }, [isRunning, onComplete, timeLeft]);
 
-    const timerReset = () => {
-        setTime(initialTime);
-    };
+    const timerReset = useCallback(() => {
+        setTimeLeft(initialTime);
+    }, [initialTime]);
 
     return {
         timeLeft,
         timerReset
     };
-};  
+};

@@ -85,6 +85,13 @@
         "hard": "Difícil"
       },
       "startButton": "Comenzar Practica"
+    },
+    "timer": {
+      "timeLeft": "Tiempo restante: {{seconds}} segundos",
+      "enable": "Activar temporizador",
+      "disable": "Desactivar temporizador",
+      "pause": "Pausar temporizador",
+      "resume": "Reanudar temporizador"
     }
   },
   "auth": {

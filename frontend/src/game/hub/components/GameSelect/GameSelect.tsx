@@ -1,4 +1,4 @@
-import { Select } from '@components/ui/Select/Select.tsx';
+import { Select } from '@components/ui/select/Select.tsx';
 import { useTranslation } from 'react-i18next';
 import Styles from '../HubComponents.module.css';
 
