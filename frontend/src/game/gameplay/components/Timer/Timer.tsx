@@ -2,6 +2,9 @@ import { useTranslation } from "react-i18next";
 import type { TimerProps } from "./Timer.types.ts";
 import { Button } from "@components/ui/Button/Button.tsx";
 
+import { PauseIcon } from "@shared/icons/Pause.tsx";
+import { ContinueIcon } from "@shared/icons/Continue.tsx";
+
 function Timer({
     timeLeft,
     maxTime,
