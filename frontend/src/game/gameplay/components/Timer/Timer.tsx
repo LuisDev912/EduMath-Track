@@ -25,11 +25,20 @@ function Timer({
             </progress>
 
             <div className="flex justify-center">
-                <Button onClick={onToggleEnabled}>
+                {/* <Button
+                    onClick={onToggleEnabled}
+                    aria-label={isEnabled ? t("game.timer.disable") : t("game.timer.enable")}>
                     {isEnabled ? t("game.timer.disable") : t("game.timer.enable")}
-                </Button>
-                <Button onClick={onTogglePaused} disabled={!isEnabled}>
-                    {isPaused ? t("game.timer.resume") : t("game.timer.pause")}
+                </Button> 
+                this button is commented out because the option to enable/disable the timer has to be in the settings menu, not in the game itself.
+                */}
+
+                <Button
+                    onClick={onTogglePaused}
+                    disabled={!isEnabled}
+                    aria-label={isPaused ? t("game.timer.resume") : t("game.timer.pause")}
+                >
+                    {isPaused ? <PauseIcon /> : <ContinueIcon />}
                 </Button>
             </div>
         </div>
