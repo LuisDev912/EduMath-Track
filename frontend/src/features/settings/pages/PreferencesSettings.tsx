@@ -27,14 +27,14 @@ export default function PreferencesSettings() {
             <SettingsItem
                 title={t("settings.preferences.timer.title")}
                 actionType="select"
-                value={localStorage.getItem("timerEnabled") === "true" ? "enable" : "disable"}
+                value={localStorage.getItem("gameTimerEnabled") === "true" ? "true" : "false"}
                 options={[
-                    { value: "enable", label: t("settings.preferences.timer.enable") },
-                    { value: "disable", label: t("settings.preferences.timer.disable") }
+                    { value: "true", label: t("settings.preferences.timer.enable") },
+                    { value: "false", label: t("settings.preferences.timer.disable") }
                 ]}
                 action={(value) => {
                     if (!value) return;
-                    localStorage.setItem("timerEnabled", value === "enable" ? "true" : "false");
+                    localStorage.setItem("gameTimerEnabled", value === "true" ? "true" : "false");
                 }}
             />
         </div>
