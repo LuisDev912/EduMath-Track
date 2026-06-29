@@ -88,8 +88,6 @@
     },
     "timer": {
       "timeLeft": "Tiempo restante: {{seconds}} segundos",
-      "enable": "Activar temporizador",
-      "disable": "Desactivar temporizador",
       "pause": "Pausar temporizador",
       "resume": "Reanudar temporizador"
     }
@@ -128,7 +126,12 @@
     "preferences": {
       "title": "Preferencias",
       "changeLanguage": "Cambiar idioma",
-      "theme": "Tema"
+      "theme": "Tema",
+      "timer": {
+        "title": "Temporizador",
+        "enable": "Habilitar temporizador",
+        "disable": "Deshabilitar temporizador"
+      }
     }
   }
 }

@@ -88,8 +88,6 @@
     },
     "timer": {
       "timeLeft": "Time left: {{seconds}} seconds",
-      "enable": "Enable timer",
-      "disable": "Disable timer",
       "pause": "Pause timer",
       "resume": "Resume timer"
     }
@@ -128,7 +126,12 @@
     "preferences": {
       "title": "Preferences",
       "changeLanguage": "Change language",
-      "theme": "Theme"
+      "theme": "Theme",
+      "timer": {
+        "title": "Timer",
+        "enable": "Enable timer",
+        "disable": "Disable timer"
+      }
     }
   }
 }
