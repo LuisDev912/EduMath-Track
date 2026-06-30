@@ -100,14 +100,15 @@ function Game({ game }: Props) {
     // render the game interface
     return (
         <section className={Styles.box}>
-            <Timer
-                timeLeft={timeLeft}
-                maxTime={maxTime}
-                isEnabled={isTimerEnabled}
-                isPaused={isTimerPaused}
+            {isTimerEnabled && (
+                <Timer
+                    timeLeft={timeLeft}
+                    maxTime={maxTime}
+                    isEnabled={isTimerEnabled}
+                    isPaused={isTimerPaused}
                 onToggleEnabled={handleToggleTimerEnabled}
                 onTogglePaused={handleToggleTimerPaused}
-            />
+            /> )}
             <OperationDisplay question={question} />
 
             <AnswerForm
