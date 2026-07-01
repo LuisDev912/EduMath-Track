@@ -11,6 +11,38 @@
 
 /* --- timer --- */
 
+/* base styles */
+.timer {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Deletes default styles */
+
+    width: 100%;
+    height: var(--space-lg);
+    border: none;
+    background-color: var(--neutral);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+/* background colour and animation */
+.timer::-webkit-progress-bar {
+    background-color: var(--neutral);
+}
+
+.timer::-webkit-progress-value {
+    background-color: var(--accent);
+    border-radius: var(--radius-lg);
+    transition: width 1s linear;
+}
+
+.timer::-moz-progress-bar {
+    background-color: var(--accent);
+    border-radius: var(--radius-lg);
+    transition: width 1s linear;
+}
+
 
 /* --- game form --- */
 
