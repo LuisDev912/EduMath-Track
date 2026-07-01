@@ -3,6 +3,5 @@ export type TimerProps = {
     maxTime: number;
     isEnabled: boolean;
     isPaused: boolean;
-    onToggleEnabled: () => void;
     onTogglePaused: () => void;
 };

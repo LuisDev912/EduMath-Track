@@ -10,7 +10,6 @@ function Timer({
     maxTime,
     isEnabled,
     isPaused,
-    onToggleEnabled,
     onTogglePaused
 }: TimerProps) {
     const { t } = useTranslation();
@@ -25,14 +24,7 @@ function Timer({
             </progress>
 
             <div className="flex justify-center">
-                {/* <Button
-                    onClick={onToggleEnabled}
-                    aria-label={isEnabled ? t("game.timer.disable") : t("game.timer.enable")}>
-                    {isEnabled ? t("game.timer.disable") : t("game.timer.enable")}
-                </Button> 
-                this button is commented out because the option to enable/disable the timer has to be in the settings menu, not in the game itself.
-                */}
-
+                
                 <Button
                     onClick={onTogglePaused}
                     disabled={!isEnabled}
