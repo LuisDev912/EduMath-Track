@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import Styles from './Game.module.css';
 
 // child components
-import AnswerForm from "./AnswerForm.tsx";
+import AnswerForm from "./AnswerForm/AnswerForm.tsx";
 import OperationDisplay from "./OperationDisplay.tsx";
 import GenerateOperation from "./GenerateOperation.tsx";
 import NextQuestionCountdown from "./NextQuestionCountdown.tsx";
@@ -34,7 +34,7 @@ function Game({ game }: Props) {
     // state variables
     const [result, setResult] = useState<boolean | null>(null);
     const [isAnswered, setIsAnswered] = useState(false);
-    const [isTimerEnabled, setIsTimerEnabled] = useState(getSavedTimerEnabled);
+    const isTimerEnabled = getSavedTimerEnabled();
     const [isTimerPaused, setIsTimerPaused] = useState(false);
 
     // destructure game state and functions
@@ -70,17 +70,6 @@ function Game({ game }: Props) {
         timerReset();
     }, [game, timerReset]);
 
-    const handleToggleTimerEnabled = useCallback(() => {
-        setIsTimerEnabled(prev => {
-            const nextValue = !prev;
-            localStorage.setItem(TIMER_STORAGE_KEY, String(nextValue));
-
-            return nextValue;
-        });
-        setIsTimerPaused(false);
-        timerReset();
-    }, [timerReset]);
-
     const handleToggleTimerPaused = useCallback(() => {
         setIsTimerPaused(prev => !prev);
     }, []);
@@ -106,7 +95,6 @@ function Game({ game }: Props) {
                     maxTime={maxTime}
                     isEnabled={isTimerEnabled}
                     isPaused={isTimerPaused}
-                onToggleEnabled={handleToggleTimerEnabled}
                 onTogglePaused={handleToggleTimerPaused}
             /> )}
             <OperationDisplay question={question} />
