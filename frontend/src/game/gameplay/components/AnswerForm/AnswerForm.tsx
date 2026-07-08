@@ -3,9 +3,10 @@ import { useTranslation } from "react-i18next";
 import { SendButton } from "@shared/icons/SendButton.tsx";
 import { Button } from "@components/ui/Button/Button.tsx";
 import { Input } from "@components/ui/Input/Input.tsx";
+import type { AnswerProps } from "./AnswerForm.types.ts";
 import Styles from '../Game.module.css';
 
-function AnswerForm({ onValidate, disabled }: { onValidate: (answer: number) => void; disabled: boolean }) {
+function AnswerForm({ onValidate, disabled }: AnswerProps) {
     const { t } = useTranslation();
     const answerRef = useRef<HTMLInputElement | null>(null);
 
