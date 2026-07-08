@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { SendButton } from "@shared/icons/SendButton.tsx";
 import { Button } from "@components/ui/Button/Button.tsx";
 import { Input } from "@components/ui/Input/Input.tsx";
-import Styles from './Game.module.css';
+import Styles from '../Game.module.css';
 
 function AnswerForm({ onValidate, disabled }: { onValidate: (answer: number) => void; disabled: boolean }) {
     const { t } = useTranslation();

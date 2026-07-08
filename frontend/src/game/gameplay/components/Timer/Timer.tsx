@@ -25,7 +25,6 @@ function Timer({
             </progress>
 
             <div className="flex justify-center">
-
                 <Button
                     onClick={onTogglePaused}
                     disabled={!isEnabled}
