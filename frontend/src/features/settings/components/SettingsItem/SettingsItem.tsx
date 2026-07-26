@@ -34,7 +34,7 @@ function SettingsItem({
 
                 {actionType === 'select' && options && (
                     <Select
-                        id="settings-select"
+                        id={`settings-select-${title}`}
                         label={title}
                         value={value?? options[0].value}
                         action={(val: string) => action?.(val)}
