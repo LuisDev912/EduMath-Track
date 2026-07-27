@@ -41,7 +41,7 @@ export function generateQuestion(
             };
 
         case "division":
-            while (b === 0 || a % b !== 0) {
+            while ((b === 0 || a % b !== 0) || (a === b)) {
                 a = Math.floor(Math.random() * max) + 1
                 b = Math.floor(Math.random() * max) + 1
             };
