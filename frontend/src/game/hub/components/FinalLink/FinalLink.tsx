@@ -1,8 +1,8 @@
 import type { FinalLinkProps } from "./FinalLink.types.ts";
 import { useTranslation } from "react-i18next";
-import Styles from "../HubComponents.module.css";
 
-import NavItem from "@components/NavItem/NavItem.tsx";
+import { Button } from '@components/ui/Button/Button.tsx';
+import { ArrowIcon } from '@shared/icons/ArrowIcon.tsx';
 
 function FinalLink({
     mode,
@@ -14,13 +14,17 @@ function FinalLink({
     const { t } = useTranslation();
 
     return (
-        <div className={Styles.gameLink}>
-            <NavItem
-                to={`/game/${finalMode}/${finalDifficulty}`}
-            >
-                {t("game.hub.startButton")}
-            </NavItem>
-        </div>
+        <Button
+            variant="primary"
+            size="lg"
+            textDirection="center"
+            onClick={() => {
+                window.location.href = `/game/${finalMode}/${finalDifficulty}`;
+            }}
+        >
+            {t("game.hub.startButton")}
+            <ArrowIcon />
+        </Button>
     );
 };
 
