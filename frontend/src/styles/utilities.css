@@ -13,6 +13,8 @@
 
 .text-start{ text-align: start; }
 
+.text-sm{ font-size: var(--font-size-sm); }
+
 /* === FLEX UTILITIES === */
 .flex { display: flex; }
 
