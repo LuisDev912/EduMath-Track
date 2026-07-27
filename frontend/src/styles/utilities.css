@@ -1,7 +1,5 @@
 .pointer{ cursor: pointer; }
 
-.text-center{ text-align: center; }
-
 .correct-text{ color: #1cdd66; }
 
 .text-lg{ font-size: var(--font-size-lg); }
@@ -10,7 +8,12 @@
 
 .home-link { color: var(--text-light); }
 
-/* === flex utilities === */
+/* === TEXT UTILITIES === */
+.text-center{ text-align: center; }
+
+.text-start{ text-align: start; }
+
+/* === FLEX UTILITIES === */
 .flex { display: flex; }
 
 /* --- justify-content */

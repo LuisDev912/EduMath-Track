@@ -18,7 +18,7 @@ export default function GameHub() {
             <h1>{t("game.hub.title")}</h1>
 
             <div className={Styles.box}>
-                <p>{t("game.hub.description")}</p>
+                <p className="text-start">{t("game.hub.description")}</p>
 
                 <GameSelect
                     mode={mode}
