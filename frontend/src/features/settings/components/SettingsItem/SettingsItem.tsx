@@ -1,6 +1,6 @@
 import type { SettingItemProps } from './SettingsItem.types';
 import { Button } from '@components/ui/Button/Button.tsx';
-import { Select } from '@components/ui/select/Select.tsx';
+import { Select } from '@components/ui/Select/Select.tsx';
 import Styles from '../Settings.module.css';
 
 function SettingsItem({
