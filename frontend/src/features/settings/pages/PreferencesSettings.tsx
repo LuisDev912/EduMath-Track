@@ -37,6 +37,20 @@ export default function PreferencesSettings() {
                     localStorage.setItem("gameTimerEnabled", value === "true" ? "true" : "false");
                 }}
             />
+
+            <SettingsItem
+                title={t("settings.preferences.changeDifficulty.title")}
+                actionType="select"
+                value={localStorage.getItem("changeGameDifficulty") || "medium"}
+                options={[
+                    { value: "enable", label: t("settings.preferences.changeDifficulty.enable") },
+                    { value: "disable", label: t("settings.preferences.changeDifficulty.disable") },
+                ]}
+                action={(value) => {
+                    if (!value) return;
+                    localStorage.setItem("changeGameDifficulty", value);
+                }}
+            />
         </div>
     );
 };
