@@ -34,7 +34,7 @@ export default function PreferencesSettings() {
                 ]}
                 action={(value) => {
                     if (!value) return;
-                    localStorage.setItem("gameTimerEnabled", value === "true" ? "true" : "false");
+                    localStorage.setItem("gameTimerEnabled", value);
                 }}
             />
 
