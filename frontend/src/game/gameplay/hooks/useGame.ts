@@ -1,6 +1,7 @@
 import { useState } from "react";
-import type { Difficulty, GameMode } from "../types/Game.types";
-import { generateQuestion } from "../utils/GenerateQuestion";
+import { useNavigate } from "react-router-dom"
+import type { Difficulty, GameMode } from "../types/Game.types.ts";
+import { generateQuestion } from "../utils/GenerateQuestion.ts";
 
 export function useGame(
     mode: GameMode,
@@ -11,6 +12,7 @@ export function useGame(
     const [question, setQuestion] = useState(() => {
         return generateQuestion(mode, difficulty);
     });
+    const navigate = useNavigate();
 
     // --- Functions ---
     const nextQuestion = () => {
@@ -20,13 +22,18 @@ export function useGame(
     const handleValidation = (answer: number): boolean => {
         const isCorrect = answer === question.answer;
         if (isCorrect) {
-            // use an if-else statement instead of a ternary operator for better readability and change two things at the same time
             setScore(prev => prev + 1);
         } else {
-            setScore(0); // this might change in the future, for now we reset score to 0 when the answer is incorrect
+            setScore(0);
         };
 
         return isCorrect;
+    };
+
+    const handleDifficultyChange = (score: number, difficulty: string): void => {
+        if (score > 3 && difficulty === "tutorial") { 
+            navigate("/")
+        };
     };
 
     return {
@@ -34,6 +41,7 @@ export function useGame(
         question,
         difficulty,
         nextQuestion,
-        handleValidation
+        handleValidation,
+        handleDifficultyChange
     };
 };
