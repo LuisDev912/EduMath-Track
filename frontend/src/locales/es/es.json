@@ -129,8 +129,8 @@
       "theme": "Tema",
       "timer": {
         "title": "Temporizador",
-        "enable": "Habilitar temporizador",
-        "disable": "Deshabilitar temporizador",
+        "enable": "Habilitar",
+        "disable": "Deshabilitar",
         "description": "Al habilitarlo, habrá un temporizador de cuenta regresiva en el juego."
       },
       "changeDifficulty": {

@@ -129,8 +129,8 @@
       "theme": "Theme",
       "timer": {
         "title": "Timer",
-        "enable": "Enable timer",
-        "disable": "Disable timer",
+        "enable": "Enable",
+        "disable": "Disable",
         "description": "When enabled, a countdown timer will be displayed in the game."
       },
       "changeDifficulty": {
