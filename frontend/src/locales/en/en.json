@@ -130,12 +130,14 @@
       "timer": {
         "title": "Timer",
         "enable": "Enable timer",
-        "disable": "Disable timer"
+        "disable": "Disable timer",
+        "description": "When enabled, a countdown timer will be displayed in the game."
       },
       "changeDifficulty": {
         "title": "Change difficulty",
         "enable": "Enable",
-        "disable": "Disable"
+        "disable": "Disable",
+        "description": "When enabled, the game will change the difficulty based on your score."
       }
     }
   }

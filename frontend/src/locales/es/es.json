@@ -130,12 +130,14 @@
       "timer": {
         "title": "Temporizador",
         "enable": "Habilitar temporizador",
-        "disable": "Deshabilitar temporizador"
+        "disable": "Deshabilitar temporizador",
+        "description": "Al habilitarlo, habrá un temporizador de cuenta regresiva en el juego."
       },
       "changeDifficulty": {
         "title": "Cambiar dificultad",
         "enable": "Habilitar",
-        "disable": "Deshabilitar"
+        "disable": "Deshabilitar",
+        "description": "Al habilitarlo, el juego cambiará la dificultad según tu puntuación automáticamente."
       }
     }
   }
