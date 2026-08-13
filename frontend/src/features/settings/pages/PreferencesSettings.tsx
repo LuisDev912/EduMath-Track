@@ -26,6 +26,7 @@ export default function PreferencesSettings() {
 
             <SettingsItem
                 title={t("settings.preferences.timer.title")}
+                description={t("settings.preferences.timer.description")}
                 actionType="select"
                 value={localStorage.getItem("gameTimerEnabled") === "true" ? "true" : "false"}
                 options={[
@@ -40,6 +41,7 @@ export default function PreferencesSettings() {
 
             <SettingsItem
                 title={t("settings.preferences.changeDifficulty.title")}
+                description={t("settings.preferences.changeDifficulty.description")}
                 actionType="select"
                 value={localStorage.getItem("changeGameDifficulty") || "medium"}
                 options={[
