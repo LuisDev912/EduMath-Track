@@ -131,6 +131,11 @@
         "title": "Temporizador",
         "enable": "Habilitar temporizador",
         "disable": "Deshabilitar temporizador"
+      },
+      "changeDifficulty": {
+        "title": "Cambiar dificultad",
+        "enable": "Habilitar",
+        "disable": "Deshabilitar"
       }
     }
   }

@@ -131,6 +131,11 @@
         "title": "Timer",
         "enable": "Enable timer",
         "disable": "Disable timer"
+      },
+      "changeDifficulty": {
+        "title": "Change difficulty",
+        "enable": "Enable",
+        "disable": "Disable"
       }
     }
   }
