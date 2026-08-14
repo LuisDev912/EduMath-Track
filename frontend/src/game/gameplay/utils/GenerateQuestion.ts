@@ -17,7 +17,7 @@ export function generateQuestion(
     let b = Math.floor(Math.random() * max) + 1
 
     switch (mode) {
-        case "addition":
+        default:
             return {
                 a, b,
                 operator: "+",
@@ -51,8 +51,5 @@ export function generateQuestion(
                 operator: "÷",
                 answer: a / b
             };
-        
-        default:
-            throw new Error(`Invalid game mode: ${mode}`);
     };
 };
