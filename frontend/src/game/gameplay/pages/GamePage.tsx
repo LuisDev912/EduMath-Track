@@ -29,8 +29,12 @@ export default function GamePage() {
             console.warn(`Invalid mode or difficulty: ${mode}, ${difficulty}. Redirecting to default game.`);
 
             navigate("/game/addition/easy");
-        }});
 
+            setTimeout(() => {
+                console.clear();
+            }, 7000);
+        }
+    });
 
     // Render the game page
     return (
