@@ -1,15 +1,18 @@
 import { useTranslation } from "react-i18next";
 import { useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+
 import type { Difficulty, GameMode } from "../types/Game.types.ts";
 import { useGame } from "../hooks/useGame.ts";
 import Game from "../components/Game.tsx";
-import { useEffect } from "react";
 
 export default function GamePage() {
+    // destructure hooks and params
     const { mode, difficulty } = useParams();
     const { t } = useTranslation();
     const navigate = useNavigate();
 
+    // Define valid difficulties and modes
     const validDifficulties = ["tutorial", "easy", "medium", "hard"];
     const validModes = ["addition", "subtraction", "multiplication", "division"];
     const game = useGame(
@@ -17,12 +20,19 @@ export default function GamePage() {
         difficulty as Difficulty
     );
 
+    // Check if the mode and difficulty are valid
+    const isValidMode = validModes.includes(mode as string);
+    const isValidDifficulty = validDifficulties.includes(difficulty as string);
+
     useEffect(() => {
-        if (!validDifficulties.includes(difficulty as string) || !validModes.includes(mode as string)) {
+        if (!isValidDifficulty || !isValidMode) {
             console.warn(`Invalid mode or difficulty: ${mode}, ${difficulty}. Redirecting to default game.`);
+
             navigate("/game/addition/easy");
         }});
 
+
+    // Render the game page
     return (
         <section className="flex flex-column align-center">
             <h1 className="heading-primary">{t("game.title")}</h1>
