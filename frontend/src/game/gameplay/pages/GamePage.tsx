@@ -30,9 +30,7 @@ export default function GamePage() {
 
             navigate("/game/addition/easy");
 
-            setTimeout(() => {
-                console.clear();
-            }, 7000);
+            window.location.reload();
         }
     });
 
