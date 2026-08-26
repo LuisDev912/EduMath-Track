@@ -1,0 +1,174 @@
+/* === TOAST === */
+
+/* --- container --- */
+.toast {
+    position: fixed;
+    top: var(--space-md);
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    padding-inline: var(--space-md);
+
+    z-index: 9999;
+
+    /* animation */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition:
+        opacity var(--transition-medium),
+        transform var(--transition-medium);
+}
+
+.toast-content {
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    width: 100%;
+    max-width: 400px;
+    box-shadow: var(--shadow-medium);
+}
+
+.toast__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- content --- */
+.toast__title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--weight-semibold);
+    color: var(--text-light);
+}
+
+.toast__message {
+    font-size: var(--font-size-md);
+    color: var(--text-light);
+    margin-top: var(--space-xs);
+}
+
+.toast__close {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+    padding: var(--space-xxs);
+    transition: color var(--transition-fast);
+
+    inline-size: var(--space-xl);
+    block-size: var(--space-xl);
+
+    display: grid;
+    place-items: center;
+
+    border-radius: var(--radius-full);
+}
+
+.toast__close:hover {
+    color: var(--text-muted);
+}
+
+.toast__close:active {
+    color: var(--text-secondary);
+}
+
+/* --- animation --- */
+.toast.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* --- different types of toasts --- */
+.toast--example .toast-content {
+    background-color: var(--color-card-bg);
+}
+
+.toast--success .toast-content {
+    background-color: var(--accent);
+}
+
+.toast--error .toast-content {
+    background-color: #dc2626;
+}
+
+/* --- accessibility --- */
+@media (prefers-reduced-motion: reduce) {
+
+    .toast,
+    .toast__close {
+        transition: none;
+    }
+}
+
+/* === BUTTON === */
+
+.button {
+    display: block;
+    margin: 0 auto;
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-md);
+    color: var(--text-light);
+    background-color: var(--button-background);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    width: 100%;
+    max-width: 200px;
+}
+
+/* --- variants --- */
+
+/* example */
+.button.example {
+    background-color: var(--button-background);
+}
+
+.button.example:hover {
+    background-color: var(--button-hover);
+}
+
+.button.example:active {
+    background-color: var(--button-active);
+}
+
+/* success */
+.button.success {
+    background-color: #16a34a;
+}
+
+.button.success:hover {
+    background-color: #15803d;
+}
+
+.button.success:active {
+    background-color: #166534;
+}
+
+/* error */
+.button.error {
+    background-color: #dc2626;
+}
+
+.button.error:hover {
+    background-color: #b91c1c;
+}
+
+.button.error:active {
+    background-color: #991b1b;
+}
+
+/* --- layout --- */
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}

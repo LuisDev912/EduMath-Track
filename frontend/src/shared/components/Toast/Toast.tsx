@@ -1,8 +1,10 @@
 import type { ToastProps } from './Toast.types.ts';
+import { Button } from '../ui/Button/Button.tsx';
+import Styles from './Toast.module.css';
 
 export function Toast({
-    title,
-    content,
+    title = "Notification",
+    content = "Hello World",
     variant = "default",
     durationTime = 3
 }: ToastProps) { 
@@ -20,7 +22,7 @@ export function Toast({
                         className="toast__title"
                         id="toast-title"
                     >
-                        Notification
+                        { title }
                     </strong>
 
                     <button
@@ -36,7 +38,7 @@ export function Toast({
                     className="toast__message"
                     id="toast-message"
                 >
-                    This is a toast notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    { content }
                 </p>
             </div>
         </div>
