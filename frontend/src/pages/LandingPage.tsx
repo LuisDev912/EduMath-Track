@@ -4,6 +4,9 @@ import { Button } from "@components/ui/Button/Button.tsx";
 import type { cardsTranslation } from "@components/Cards/Card.types";
 import Card from "@components/Cards/Card.tsx";
 
+// test
+import { Toast } from '../shared/components/Toast/Toast.tsx';
+
 export default function LandingPage() {
     // variables
     const { t } = useTranslation();
@@ -54,6 +57,12 @@ export default function LandingPage() {
                     />
                 ))}
             </section>
+
+            <Toast
+                title="test"
+                content="hello world"
+                variant="default"
+            />
         </section>
     );
 };
