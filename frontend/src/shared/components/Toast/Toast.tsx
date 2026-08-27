@@ -1,6 +1,6 @@
 import type { ToastProps } from './Toast.types.ts';
 import { Button } from '../ui/Button/Button.tsx';
-import Styles from './Toast.module.css';
+import Style from './Toast.module.css';
 
 export function Toast({
     title = "Notification",

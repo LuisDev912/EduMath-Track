@@ -24,7 +24,7 @@
         transform var(--transition-medium);
 }
 
-.toast-content {
+.content {
     padding: var(--space-md) var(--space-lg);
     border-radius: var(--radius-md);
     width: 100%;
@@ -32,26 +32,26 @@
     box-shadow: var(--shadow-medium);
 }
 
-.toast__heading {
+.heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 /* --- content --- */
-.toast__title {
+.title {
     font-size: var(--font-size-lg);
     font-weight: var(--weight-semibold);
     color: var(--text-light);
 }
 
-.toast__message {
+.message {
     font-size: var(--font-size-md);
     color: var(--text-light);
     margin-top: var(--space-xs);
 }
 
-.toast__close {
+.closeButton {
     background: none;
     border: none;
     color: var(--text-light);
@@ -69,11 +69,11 @@
     border-radius: var(--radius-full);
 }
 
-.toast__close:hover {
+.closeButton:hover {
     color: var(--text-muted);
 }
 
-.toast__close:active {
+.closeButton:active {
     color: var(--text-secondary);
 }
 
@@ -84,24 +84,11 @@
     transform: translateY(0);
 }
 
-/* --- different types of toasts --- */
-.toast--example .toast-content {
-    background-color: var(--color-card-bg);
-}
-
-.toast--success .toast-content {
-    background-color: var(--accent);
-}
-
-.toast--error .toast-content {
-    background-color: #dc2626;
-}
-
 /* --- accessibility --- */
 @media (prefers-reduced-motion: reduce) {
 
     .toast,
-    .toast__close {
+    .closeButton {
         transition: none;
     }
 }
