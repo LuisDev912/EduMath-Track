@@ -10,23 +10,23 @@ export function Toast({
 }: ToastProps) { 
     return (
         <div
-            className="toast"
+            className={Style.toast}
             role="status"
             aria-live="polite"
             aria-labelledby="toast-title"
             aria-describedby="toast-message"
         >
-            <div className="toast-content">
-                <div className="toast__heading">
+            <div className={Style.content}>
+                <div className={Style.heading}>
                     <strong
-                        className="toast__title"
+                        className={Style.title}
                         id="toast-title"
                     >
                         { title }
                     </strong>
 
                     <button
-                        className="toast__close"
+                        className={Style.closeButton}
                         type="button"
                         aria-label="Close notification"
                     >
@@ -35,7 +35,7 @@ export function Toast({
                 </div>
 
                 <p
-                    className="toast__message"
+                    className={Style.message}
                     id="toast-message"
                 >
                     { content }
