@@ -2,10 +2,6 @@
 
 /* --- container --- */
 .toast {
-    position: fixed;
-    top: var(--space-md);
-    left: 0;
-
     width: 100%;
 
     display: flex;
@@ -13,15 +9,19 @@
 
     padding-inline: var(--space-md);
 
-    z-index: 9999;
+    z-index: 9999; 
+    /* position: fixed;
+    top: var(--space-md);
+    left: 0;
 
-    /* animation */
+
+    /* animation
     opacity: 0;
     pointer-events: none;
     transform: translateY(-20px);
     transition:
         opacity var(--transition-medium),
-        transform var(--transition-medium);
+        transform var(--transition-medium); */
 }
 
 .content {
@@ -85,13 +85,13 @@
 }
 
 /* --- accessibility --- */
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
 
     .toast,
     .closeButton {
         transition: none;
     }
-}
+} */
 
 /* === BUTTON === */
 
