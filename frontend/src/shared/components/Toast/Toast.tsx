@@ -25,13 +25,12 @@ export function Toast({
                         { title }
                     </strong>
 
-                    <button
+                    <Button
+                        children="&times;"
+                        variant="ghost"
+                        size="md"
                         className={Style.closeButton}
-                        type="button"
-                        aria-label="Close notification"
-                    >
-                        &times;
-                    </button>
+                    />
                 </div>
 
                 <p
