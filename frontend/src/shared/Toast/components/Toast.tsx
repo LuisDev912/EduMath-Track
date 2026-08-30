@@ -1,5 +1,5 @@
-import type { ToastProps } from './Toast.types.ts';
-import { Button } from '../ui/Button/Button.tsx';
+import type { ToastProps } from '../Toast.types.ts';
+import { Button } from '../../components/ui/Button/Button.tsx';
 import Style from './Toast.module.css';
 
 export function Toast({
