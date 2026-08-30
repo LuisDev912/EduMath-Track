@@ -91,3 +91,10 @@
         transition: none;
     }
 }
+
+/* --- variants --- */
+.default{ background-color: var(--primary); }
+
+.danger{ background-color: var(--danger); }
+
+.success{ background-color: var(--success); }
