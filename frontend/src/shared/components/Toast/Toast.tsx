@@ -7,10 +7,12 @@ export function Toast({
     content = "Hello World",
     variant = "default",
     durationTime = 3
-}: ToastProps) { 
+}: ToastProps) {
+    const combinedClasses = `${Style.toast} ${Style[variant]}`.trim();
+
     return (
         <div
-            className={Style.toast}
+            className={combinedClasses}
             role="status"
             aria-live="polite"
             aria-labelledby="toast-title"
