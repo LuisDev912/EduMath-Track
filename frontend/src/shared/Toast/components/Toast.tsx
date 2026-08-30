@@ -9,17 +9,17 @@ export function Toast({
     id,
     onClose
 }: ToastProps) {
-    const combinedClasses = `${Style.toast} ${Style[variant]}`.trim();
+    const combinedClasses = `${Style.content} ${Style[variant]}`.trim();
 
     return (
         <div
-            className={combinedClasses}
+            className={Style.toast}
             role="status"
             aria-live="polite"
             aria-labelledby={`toast-title-${id}`}
             aria-describedby={`toast-message-${title}`}
         >
-            <div className={Style.content}>
+            <div className={combinedClasses}>
                 <div className={Style.heading}>
                     <strong
                         className={Style.title}
