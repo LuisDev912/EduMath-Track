@@ -62,6 +62,7 @@ export default function LandingPage() {
                 title="test"
                 content="hello world"
                 variant="default"
+                id="test-toast"
             />
         </section>
     );
