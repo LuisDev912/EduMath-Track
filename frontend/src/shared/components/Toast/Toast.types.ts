@@ -1,6 +1,7 @@
 export type ToastProps = {
     title: string;
     content: string;
-    variant: "danger" | "default";
+    variant: string;
     durationTime?: number;
-}
+    onClose: () => void;
+};

@@ -6,7 +6,7 @@ export function Toast({
     title = "Notification",
     content = "Hello World",
     variant = "default",
-    durationTime = 3
+    onClose
 }: ToastProps) {
     const combinedClasses = `${Style.toast} ${Style[variant]}`.trim();
 
@@ -28,6 +28,7 @@ export function Toast({
                     </strong>
 
                     <Button
+                        onClick={onClose}
                         children="&times;"
                         variant="ghost"
                         size="md"
