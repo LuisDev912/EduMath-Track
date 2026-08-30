@@ -5,7 +5,7 @@ import type { cardsTranslation } from "@components/Cards/Card.types";
 import Card from "@components/Cards/Card.tsx";
 
 // test
-import { Toast } from '../shared/components/Toast/Toast.tsx';
+import { Toast } from '@shared/Toast/components/Toast.tsx';
 
 export default function LandingPage() {
     // variables
