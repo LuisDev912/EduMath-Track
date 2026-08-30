@@ -3,5 +3,6 @@ export type ToastProps = {
     content: string;
     variant: string;
     durationTime?: number;
+    id: string;
     onClose: () => void;
 };

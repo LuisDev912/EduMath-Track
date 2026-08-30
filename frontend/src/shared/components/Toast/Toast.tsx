@@ -6,6 +6,7 @@ export function Toast({
     title = "Notification",
     content = "Hello World",
     variant = "default",
+    id,
     onClose
 }: ToastProps) {
     const combinedClasses = `${Style.toast} ${Style[variant]}`.trim();
@@ -15,14 +16,14 @@ export function Toast({
             className={combinedClasses}
             role="status"
             aria-live="polite"
-            aria-labelledby="toast-title"
-            aria-describedby="toast-message"
+            aria-labelledby={`toast-title-${id}`}
+            aria-describedby={`toast-message-${title}`}
         >
             <div className={Style.content}>
                 <div className={Style.heading}>
                     <strong
                         className={Style.title}
-                        id="toast-title"
+                        id={`toast-title-${id}`}
                     >
                         { title }
                     </strong>
@@ -38,7 +39,7 @@ export function Toast({
 
                 <p
                     className={Style.message}
-                    id="toast-message"
+                    id={`toast-message-${title}`}
                 >
                     { content }
                 </p>
