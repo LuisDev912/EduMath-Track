@@ -36,6 +36,10 @@
     --button-hover: #145a97;
     --button-active: #003569;
 
+    /* other */
+    --danger: #c62828;
+    --success: #16a34a;
+
     /* ----- Spacing System ----- */
     --space-xxs: 0.25rem;
     --space-xs: 0.5rem;
