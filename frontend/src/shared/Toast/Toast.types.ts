@@ -10,5 +10,8 @@ export type ToastData = {
     content: string;
     variant: ToastVariant;
     durationTime: number;
+};
+
+export type ToastProps = ToastData & {
     onClose: () => void;
 };
