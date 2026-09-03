@@ -1,8 +1,14 @@
-export type ToastProps = {
+export type ToastVariant =
+    | "default"
+    | "success"
+    | "warning"
+    | "error";
+
+export type ToastData = {
+    id: string;
     title: string;
     content: string;
-    variant: string;
-    durationTime?: number;
-    id: string;
-    onClose?: () => void;
+    variant: ToastVariant;
+    durationTime: number;
+    onClose: () => void;
 };
