@@ -29,7 +29,7 @@
 
 .secondary { background-color: #295aa8; }
 
-.danger { background: #d93f3f; }
+.danger { background: var(--danger); }
 
 .danger:hover { background-color: #a03131; }
 
