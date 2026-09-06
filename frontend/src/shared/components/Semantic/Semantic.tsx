@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { NavBar } from '@components/ui/NavBar/NavBar.tsx';
-import UserMenu from '../UserMenu/UserMenu.tsx';
-import NavItem from '../NavItem/NavItem.tsx';
+import UserMenu from '@components/UserMenu/UserMenu.tsx';
+import NavItem from '@components/NavItem/NavItem.tsx';
 import SemanticStyles from './Semantic.module.css';
 
 export function Footer() {
@@ -10,8 +10,6 @@ export function Footer() {
 
     return (
         <footer>
-            <p className='italic'></p>
-
             <div className={SemanticStyles.footerInfo}>
                 © {new Date().getFullYear()}
 
