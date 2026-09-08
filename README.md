@@ -57,9 +57,15 @@ frontend/
         services/
 
       game/ 
-        components/
-        hooks/
-        utils/
+        gameplay/ # Contains the gameplay part of the game
+          components/
+          hooks/
+          pages/
+          types/
+          utils/
+        hub/ # Contains the selector of the mode and difficulty of the game
+          components/
+          pages/
 
       stats/
         components/
@@ -76,6 +82,8 @@ frontend/
       hooks/
       utils/
       types/
+      Toast/
+      icons/
 
     styles/ # Contains global UI
 
