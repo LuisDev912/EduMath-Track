@@ -15,7 +15,7 @@ export default defineConfig({
     alias: {
       "@components": resolve(__dirname, "src/shared/components"),
       "@shared": resolve(__dirname, "src/shared"),
-      "@game": resolve(__dirname, "src/game")
+      "@game": resolve(__dirname, "src/features/game")
     }
   }
 });
