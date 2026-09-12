@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router";
 import { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Footer, Header } from "@components/Semantic/Semantic.tsx";
+import { Button } from "@components/ui/Button/Button.tsx";
 
 function MainLayout() {
     const { t } = useTranslation();
@@ -16,15 +17,14 @@ function MainLayout() {
         <>
             <Header />
 
-            <button
+            <Button
                 className="skip-link"
                 onClick={() => {
-                    mainRef.current?.focus()
+                    mainRef.current?.focus();
                 }}
             >
                 {t("layout.skipToContent")}
-            </button>
-
+            </Button>
             <main
                 id="public-content"
                 tabIndex={-1}
