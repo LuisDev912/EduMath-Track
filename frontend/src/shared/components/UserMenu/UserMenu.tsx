@@ -1,11 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
+
+// components
 import UserMenuButton from './UserMenuButton/UserMenuButton.tsx';
 import UserMenuDropdown from './UserMenuDropdown/UserMenuDropdown.tsx';
-import Styles from './UserMenu.module.css';
 
-export type UserMenuProps = {
-    userName?: string;
-};
+// other
+import Styles from './UserMenu.module.css';
+import type { UserMenuProps } from './UserMenu.types.ts';
 
 function UserMenu({ userName }: UserMenuProps) {
     const [isOpen, setIsOpen] = useState(false);
