@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { SETTINGS_ROUTES } from "./Settings.config.ts";
-import { useLocation } from "react-router";
+import { useLocation, NavLink } from "react-router";
 import { NavBar } from "@components/ui/NavBar/NavBar.tsx";
-import { NavLink } from "react-router";
 import Styles from "../Settings.module.css";
 import NavItem from "@components/NavItem/NavItem.tsx";
 
